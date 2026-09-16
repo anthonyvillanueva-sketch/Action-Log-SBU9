@@ -744,7 +744,7 @@ function LayoutView(props){
   }
   function asignar(personId, elementId){
     var asign=Object.assign({},st.asignaciones);
-    Object.keys(asign).forEach(function(k+;if(asign[k]===personId)delete asign[k];}); // una persona, un puesto
+    Object.keys(asign).forEach(function(k){if(asign[k]===personId)delete asign[k];}); // una persona, un puesto
     asign[elementId]=personId;
     setSt(Object.assign({},st,{asignaciones:asign}));
   }
