@@ -11,6 +11,18 @@
       "resuelto": false,
       "id": "1a2b2c8a-74c8-4617-a2d5-1acd8131c745",
       "createdAt": "2026-09-17T14:06:53.710Z"
+    },
+    {
+      "fecha": "2026-09-17",
+      "pilar": "Gestión de Paquetes",
+      "tarea": "Solución de problemas",
+      "accion": "Revisar los 13 casos que están a la fecha. ",
+      "responsable": "Kevin y Flor",
+      "fechaLimite": "2026-09-18",
+      "progreso": 0,
+      "resuelto": false,
+      "id": "98ce980b-a1e6-4599-9f6c-154b5e164222",
+      "createdAt": "2026-09-17T14:17:36.005Z"
     }
   ],
   "calcState": null,
