@@ -11,18 +11,6 @@
       "resuelto": false,
       "id": "2fd64f61-8d33-4aba-8998-f6dd4ab6185a",
       "createdAt": "2026-09-17T12:51:01.849Z"
-    },
-    {
-      "fecha": "2026-09-17",
-      "pilar": "Sorteo",
-      "tarea": "aaaaaaaaaaaaaaa",
-      "accion": "aaaaaaaaa",
-      "responsable": "sssssssss",
-      "fechaLimite": "",
-      "progreso": 0,
-      "resuelto": false,
-      "id": "2e5e6cbf-3434-4210-b34e-df2ca53ecb69",
-      "createdAt": "2026-09-17T13:18:27.892Z"
     }
   ],
   "calcState": null,
