@@ -698,17 +698,19 @@ function LayoutView(props){
 
   function agregarElemento(kind, tipo){
     var nuevo={id:genId(), kind:kind, tipo:tipo, x:40+Math.random()*200, y:40+Math.random()*200, isla:'General', critico:false};
-    setSt(Object.assign({},st,{elements:st.elements.concat([nuevo])}));
+    setSt(function(prev){return Object.assign({},prev,{elements:prev.elements.concat([nuevo])});});
   }
   function eliminarElemento(id){
-    var asign=Object.assign({},st.asignaciones); delete asign[id];
-    setSt(Object.assign({},st,{elements:st.elements.filter(function(e){return e.id!==id;}),asignaciones:asign}));
+    setSt(function(prev){
+      var asign=Object.assign({},prev.asignaciones); delete asign[id];
+      return Object.assign({},prev,{elements:prev.elements.filter(function(e){return e.id!==id;}),asignaciones:asign});
+    });
   }
   function moverElemento(id,x,y){
     setSt(function(prev){return Object.assign({},prev,{elements:prev.elements.map(function(e){return e.id===id?Object.assign({},e,{x:x,y:y}):e;})});});
   }
   function toggleCritico(id){
-    setSt(Object.assign({},st,{elements:st.elements.map(function(e){return e.id===id?Object.assign({},e,{critico:!e.critico}):e;})}));
+    setSt(function(prev){return Object.assign({},prev,{elements:prev.elements.map(function(e){return e.id===id?Object.assign({},e,{critico:!e.critico}):e;})});});
   }
 
   // drag de elementos ya puestos en el canvas (reposicionar)
@@ -735,26 +737,32 @@ function LayoutView(props){
   // roster
   function agregarPersona(){
     var n=nuevoNombre.trim(); if(!n) return;
-    setSt(Object.assign({},st,{roster:st.roster.concat([{id:genId(),nombre:n,presente:true,scores:{}}])}));
+    setSt(function(prev){return Object.assign({},prev,{roster:prev.roster.concat([{id:genId(),nombre:n,presente:true,scores:{}}])});});
     setNuevoNombre('');
   }
   function togglePresente(id){
-    setSt(Object.assign({},st,{roster:st.roster.map(function(p){return p.id===id?Object.assign({},p,{presente:!p.presente}):p;})}));
+    setSt(function(prev){return Object.assign({},prev,{roster:prev.roster.map(function(p){return p.id===id?Object.assign({},p,{presente:!p.presente}):p;})});});
   }
   function quitarPersona(id){
-    var asign=Object.assign({},st.asignaciones);
-    Object.keys(asign).forEach(function(k){if(asign[k]===id)delete asign[k];});
-    setSt(Object.assign({},st,{roster:st.roster.filter(function(p){return p.id!==id;}),asignaciones:asign}));
+    setSt(function(prev){
+      var asign=Object.assign({},prev.asignaciones);
+      Object.keys(asign).forEach(function(k){if(asign[k]===id)delete asign[k];});
+      return Object.assign({},prev,{roster:prev.roster.filter(function(p){return p.id!==id;}),asignaciones:asign});
+    });
   }
   function asignar(personId, elementId){
-    var asign=Object.assign({},st.asignaciones);
-    Object.keys(asign).forEach(function(k){if(asign[k]===personId)delete asign[k];}); // una persona, un puesto
-    asign[elementId]=personId;
-    setSt(Object.assign({},st,{asignaciones:asign}));
+    setSt(function(prev){
+      var asign=Object.assign({},prev.asignaciones);
+      Object.keys(asign).forEach(function(k){if(asign[k]===personId)delete asign[k];}); // una persona, un puesto
+      asign[elementId]=personId;
+      return Object.assign({},prev,{asignaciones:asign});
+    });
   }
   function desasignar(elementId){
-    var asign=Object.assign({},st.asignaciones); delete asign[elementId];
-    setSt(Object.assign({},st,{asignaciones:asign}));
+    setSt(function(prev){
+      var asign=Object.assign({},prev.asignaciones); delete asign[elementId];
+      return Object.assign({},prev,{asignaciones:asign});
+    });
   }
   function personaAsignada(elementId){
     var pid=st.asignaciones[elementId]; if(!pid) return null;
@@ -762,13 +770,17 @@ function LayoutView(props){
   }
 
   function setMinimo(tipo,val){
-    var m=Object.assign({},st.minimos); m[tipo]=parseInt(val)||0;
-    setSt(Object.assign({},st,{minimos:m}));
+    setSt(function(prev){
+      var m=Object.assign({},prev.minimos); m[tipo]=parseInt(val)||0;
+      return Object.assign({},prev,{minimos:m});
+    });
   }
 
   function correrAutomatico(){
-    var asign = asignarAutomatico(st.elements, st.roster, st.minimos, estrategia);
-    setSt(Object.assign({},st,{asignaciones:asign}));
+    setSt(function(prev){
+      var asign = asignarAutomatico(prev.elements, prev.roster, prev.minimos, estrategia);
+      return Object.assign({},prev,{asignaciones:asign});
+    });
     showToast('Asignación automática aplicada ('+ESTRATEGIAS.find(function(e){return e.k===estrategia;}).label+')');
   }
 
