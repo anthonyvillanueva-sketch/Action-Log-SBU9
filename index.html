@@ -115,13 +115,16 @@ tr.mine td{box-shadow:inset 3px 0 0 var(--accent)}
 <script>
 
 var CONFIG = {
-  GH_TOKEN: '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', // Generá un fine-grained token con permiso Contents:Read&Write solo sobre este repo.
   GH_REPO: 'anthonyvillanueva-sketch/Action-Log-SBU9',
   DATA_FILE: 'data.json',
   SITE_NAME: 'SBU9'
 };
 var GH_API='https://api.github.com/repos/'+CONFIG.GH_REPO+'/contents/'+CONFIG.DATA_FILE;
-var GH_HDRS={'Authorization':'token '+CONFIG.GH_TOKEN,'Accept':'application/vnd.github.v3+json','Content-Type':'application/json'};
+var TOKEN_KEY='al_gh_token_sbu9';
+function getToken(){ try{ return localStorage.getItem(TOKEN_KEY)||''; }catch(e){ return ''; } }
+function setToken(t){ try{ localStorage.setItem(TOKEN_KEY,t); }catch(e){} }
+function clearToken(){ try{ localStorage.removeItem(TOKEN_KEY); }catch(e){} }
+function ghHeaders(){ return {'Authorization':'token '+getToken(),'Accept':'application/vnd.github.v3+json','Content-Type':'application/json'}; }
 var _useState=React.useState,_useEffect=React.useEffect,_useRef=React.useRef,_useMemo=React.useMemo,_useCallback=React.useCallback;
 var h=React.createElement;
 
@@ -151,7 +154,7 @@ function defaultData(){
 // ── Persistencia GitHub (contents API) ──
 async function ghFetchCurrent(){
   try{
-    var resp = await fetch(GH_API+'?_cb='+Date.now(),{headers:GH_HDRS,cache:'no-store'});
+    var resp = await fetch(GH_API+'?_cb='+Date.now(),{headers:ghHeaders(),cache:'no-store'});
     if(resp.status===404) return {sha:null, data:defaultData()};
     if(!resp.ok) throw new Error('HTTP '+resp.status);
     var json = await resp.json();
@@ -175,9 +178,10 @@ async function ghSave(patchFn, message){
     content: b64enc(JSON.stringify(merged, null, 2))
   };
   if(cur.sha) body.sha = cur.sha;
-  var resp = await fetch(GH_API, {method:'PUT', headers:GH_HDRS, body:JSON.stringify(body)});
+  var resp = await fetch(GH_API, {method:'PUT', headers:ghHeaders(), body:JSON.stringify(body)});
   if(!resp.ok){
     var errTxt = await resp.text();
+    if(resp.status===401){ clearToken(); throw new Error('Token inválido o vencido. Recargá la página para ingresar uno nuevo.'); }
     throw new Error('No se pudo guardar (HTTP '+resp.status+'): '+errTxt.slice(0,200));
   }
   return merged;
@@ -572,7 +576,7 @@ function MantenimientoView(props){
   return h('div',null,
     h('div',{className:'toolbar'},
       h('span',{className:'count-pill'},items.length+' incidencias'),
-      h('button',{className:"btn btn-primary",onClick:function(){setEditing({});}},'+ Nueva incidencia')
+      h('button',{className:'btn btn-primary',onClick:function(){setEditing({});}},'+ Nueva incidencia')
     ),
     h('div',{className:'card'},
       items.length===0?h('div',{className:'empty-state'},'Sin incidencias registradas.'):
@@ -870,7 +874,7 @@ function App(props){
     ghFetchCurrent().then(function(res){
       setData(res.data);
       setLoading(false);
-      if(res.error) showToast('No se pudo cargar data.json (¿ya pegaste tu GH_TOKEN?)','error');
+      if(res.error) showToast('No se pudo cargar data.json. Verificá tu token de GitHub.','error');
     });
   },[]);
 
@@ -927,15 +931,39 @@ function App(props){
   );
 }
 
+function TokenScreen(props){
+  var ts=_useState(''); var val=ts[0],setVal=ts[1];
+  function guardar(){
+    var t=val.trim(); if(!t) return;
+    setToken(t);
+    props.onSaved();
+  }
+  return h('div',{className:'login-wrap'},
+    h('div',{className:'login-card'},
+      h('div',{className:'login-logo'},'AL'),
+      h('div',{className:'login-title'},'Conectar con GitHub'),
+      h('div',{className:'login-sub'},'Pegá tu token de acceso personal (fine-grained) con permiso Contents: Read and write sobre este repo. Se guarda solo en este navegador, nunca se sube al repositorio.'),
+      h('div',{className:'login-label'},'Token'),
+      h('input',{className:'login-input',type:'password',placeholder:'github_pat_...',value:val,
+        onChange:function(e){setVal(e.target.value);},
+        onKeyDown:function(e){if(e.key==='Enter')guardar();}}),
+      h('button',{className:'login-btn',disabled:!val.trim(),onClick:guardar},'Guardar y continuar')
+    )
+  );
+}
+
 function Root(){
   var LS_USER='al_current_user';
   var us=_useState(null); var user=us[0],setUser=us[1];
+  var tokS=_useState(false); var hasToken=tokS[0],setHasToken=tokS[1];
   _useEffect(function(){
     try{var u=localStorage.getItem(LS_USER); if(u)setUser(u);}catch(e){}
+    setHasToken(!!getToken());
   },[]);
   function onLogin(n){ try{localStorage.setItem(LS_USER,n);}catch(e){} setUser(n); }
   function onLogout(){ try{localStorage.removeItem(LS_USER);}catch(e){} setUser(null); }
   if(!user) return h(LoginScreen,{onLogin:onLogin});
+  if(!hasToken) return h(TokenScreen,{onSaved:function(){setHasToken(true);}});
   return h(App,{currentUser:user,onLogout:onLogout});
 }
 
