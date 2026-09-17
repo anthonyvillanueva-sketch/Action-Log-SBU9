@@ -1,18 +1,5 @@
 {
-  "entries": [
-    {
-      "fecha": "2026-09-17",
-      "pilar": "Sorteo",
-      "tarea": "aaaaaaaaaaaaaaa",
-      "accion": "aaaaaaaaa",
-      "responsable": "sssssssss",
-      "fechaLimite": "",
-      "progreso": 0,
-      "resuelto": false,
-      "id": "2e5e6cbf-3434-4210-b34e-df2ca53ecb69",
-      "createdAt": "2026-09-17T13:18:27.892Z"
-    }
-  ],
+  "entries": [],
   "calcState": null,
   "tier1": {
     "current": {},
