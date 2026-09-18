@@ -325,6 +325,128 @@ body.dark .mant-table tbody tr:nth-child(even){background:rgba(255,255,255,.02)}
 .layroot .vo-role-t{font-size:13.5px;font-weight:800;display:flex;align-items:center;gap:6px;margin-bottom:6px}
 .layroot .vo-person{font-size:13.5px;font-weight:600;display:flex;justify-content:space-between;align-items:center;padding:2px 0}
 .layroot .vo-add-sel{width:100%;margin-top:5px;border:1.5px solid var(--border);border-radius:5px;padding:5px 6px;font-size:12px;font-family:inherit;color:var(--text);background:#fff}
+.collab-banner{background:linear-gradient(90deg,rgba(255,230,0,.12),rgba(255,230,0,.05));border:1px solid rgba(255,230,0,.3);border-radius:8px;padding:10px 16px;margin-bottom:16px;font-size:13px;color:var(--text);display:flex;align-items:center;gap:8px}
+.stats-bar{display:flex;gap:12px;margin-bottom:20px;flex-wrap:wrap}
+.stat-chip{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:7px 18px;font-size:13px;font-weight:600;color:var(--text);display:flex;align-items:center;gap:7px;box-shadow:var(--shadow)}
+.stat-chip .stat-num{font-size:16px;font-weight:700}
+.stat-chip.total .stat-num{color:var(--navy)}
+.stat-chip.resueltas .stat-num{color:#10b981}
+.stat-chip.pendientes .stat-num{color:#f59e0b}
+.stat-chip.vencidas .stat-num{color:#ef4444}
+.stat-chip.vencidas{border-color:rgba(239,68,68,.35)}
+.stat-chip.resueltas{border-color:rgba(16,185,129,.35)}
+.filter-bar{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:14px 18px;display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:16px;box-shadow:var(--shadow)}
+.filter-input{background:var(--bg);border:1px solid var(--border);color:var(--text);border-radius:6px;padding:7px 10px;font-size:13px;outline:none;transition:border-color .15s;font-family:inherit}
+.filter-input:focus{border-color:var(--accent)}
+.filter-search{position:relative;flex:1;min-width:180px}
+.filter-search-icon{position:absolute;left:9px;top:50%;transform:translateY(-50%);color:var(--text-muted);font-size:14px;pointer-events:none}
+.filter-search input{width:100%;padding-left:30px}
+.table-container{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+.table-header-row{padding:12px 18px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--border)}
+.table-title{font-size:14px;font-weight:700;color:var(--text)}
+.table-count{font-size:12px;color:var(--text-muted);margin-left:8px}
+tbody tr.resolved{opacity:.65}
+tbody tr.resolved td:first-child{border-left:3px solid #10b981;padding-left:9px}
+tbody tr.my-task{background:rgba(255,230,0,.06)}
+tbody tr.my-task:hover{background:rgba(255,230,0,.1)}
+.cell-num{color:var(--text-muted);font-size:12px}
+.cell-tarea{font-weight:600;max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.cell-accion{color:var(--text-muted);max-width:220px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.cell-overdue{color:#ef4444;font-weight:600}
+.progress-cell{display:flex;align-items:center;gap:6px}
+.progress-track{height:6px;background:var(--border);border-radius:3px;overflow:hidden;width:60px;flex-shrink:0}
+.progress-fill{height:100%;border-radius:3px;transition:width .3s}
+.progress-label{font-size:11px;color:var(--text-muted);min-width:28px}
+.cell-check input{cursor:pointer;width:16px;height:16px}
+.cell-actions{display:flex;gap:6px;align-items:center;white-space:nowrap}
+.pilar-pill{border-radius:20px;padding:3px 10px;font-size:11px;font-weight:700;white-space:nowrap;display:inline-block}
+.my-badge{background:#ffe600;color:#1a1f2e;border-radius:4px;font-size:10px;font-weight:700;padding:1px 5px;margin-left:4px;vertical-align:middle}
+.btn-cancel{background:var(--bg);border:1px solid var(--border);color:var(--text)}
+.btn-del-confirm{background:#ef4444;color:#fff}
+.btn-icon{background:none;border:none;cursor:pointer;padding:4px 7px;border-radius:5px;font-size:14px;transition:background .15s;color:var(--text-muted)}
+.btn-icon:hover{background:var(--border)}
+.btn-icon.edit:hover{color:#3b82f6}
+.btn-icon.del:hover{color:#ef4444}
+.modal-box{background:var(--surface);border-radius:12px;width:100%;max-width:600px;max-height:90vh;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 20px 60px rgba(0,0,0,.3);animation:fadeIn .2s ease}
+.modal-header{padding:18px 20px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center}
+.modal-header-title{font-size:15px;font-weight:700}
+.modal-close{background:none;border:none;cursor:pointer;font-size:18px;color:var(--text-muted);padding:2px 6px;border-radius:4px}
+.modal-close:hover{background:var(--border);color:var(--text)}
+.modal-tabs{display:flex;border-bottom:1px solid var(--border);padding:0 20px}
+.modal-tab{background:none;border:none;cursor:pointer;padding:10px 14px;font-size:13px;font-weight:600;color:var(--text-muted);border-bottom:2px solid transparent;transition:color .15s;font-family:inherit}
+.modal-tab.active{color:var(--navy);border-bottom-color:var(--accent)}
+.modal-body{padding:20px;overflow-y:auto;flex:1}
+.modal-footer{padding:14px 20px;border-top:1px solid var(--border);display:flex;justify-content:flex-end;gap:10px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.form-group{display:flex;flex-direction:column;gap:5px}
+.form-group.full{grid-column:1/-1}
+.form-label{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.4px;color:var(--text-muted)}
+.form-control{background:var(--bg);border:1px solid var(--border);color:var(--text);border-radius:6px;padding:8px 10px;font-size:13px;outline:none;font-family:inherit;transition:border-color .15s}
+.form-control:focus{border-color:var(--accent)}
+.form-control:read-only{opacity:.6;cursor:not-allowed}
+textarea.form-control{resize:vertical}
+.range-row{display:flex;align-items:center;gap:10px}
+.range-row input[type=range]{flex:1}
+.range-val{font-weight:700;font-size:14px;min-width:36px;text-align:right}
+.form-inline{display:flex;align-items:center;gap:8px;padding-top:8px}
+.req{color:#ef4444}
+.readonly-badge{background:var(--bg);border:1px solid var(--border);border-radius:6px;padding:8px 12px;font-size:13px;color:var(--text-muted);font-style:italic}
+.evo-progress-bar-wrap{margin-bottom:16px}
+.evo-progress-label{display:flex;justify-content:space-between;margin-bottom:6px;font-size:13px}
+.evo-progress-track{height:10px;background:var(--border);border-radius:5px;overflow:hidden}
+.evo-progress-fill{height:100%;border-radius:5px;transition:width .3s}
+.evo-list{margin-bottom:14px;display:flex;flex-direction:column;gap:8px}
+.evo-entry{background:var(--bg);border:1px solid var(--border);border-radius:6px;padding:10px 12px}
+.evo-entry-header{display:flex;justify-content:space-between;margin-bottom:4px}
+.evo-entry-meta{font-size:11px;color:var(--text-muted)}
+.evo-entry-text{font-size:13px}
+.evo-empty{color:var(--text-muted);font-size:13px;text-align:center;padding:20px}
+.evo-add-form{border-top:1px solid var(--border);padding-top:14px;display:flex;flex-direction:column;gap:8px}
+.evo-add-label{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.4px;color:var(--text-muted)}
+.photo-upload-area{border:2px dashed var(--border);border-radius:8px;padding:24px;text-align:center;cursor:pointer;margin-bottom:14px;transition:border-color .15s}
+.photo-upload-area:hover{border-color:var(--accent)}
+.photo-upload-icon{font-size:28px;margin-bottom:6px}
+.photo-upload-text{font-size:13px;font-weight:600}
+.photo-upload-sub{font-size:11px;color:var(--text-muted);margin-top:2px}
+.photo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:10px}
+.photo-thumb{border:1px solid var(--border);border-radius:6px;overflow:hidden;position:relative}
+.photo-thumb-img{width:100%;aspect-ratio:1;object-fit:cover;cursor:pointer;display:block}
+.photo-info{padding:4px 6px}
+.photo-name{font-size:11px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;display:block}
+.photo-date{font-size:10px;color:var(--text-muted)}
+.photo-del{position:absolute;top:4px;right:4px;background:rgba(0,0,0,.5);color:#fff;border:none;border-radius:50%;width:20px;height:20px;cursor:pointer;font-size:11px;display:flex;align-items:center;justify-content:center}
+.photo-empty{color:var(--text-muted);font-size:13px;text-align:center;padding:20px}
+.lightbox{position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:2000;display:flex;align-items:center;justify-content:center}
+.lightbox-img{max-width:90vw;max-height:90vh;border-radius:8px}
+.lightbox-close{position:absolute;top:20px;right:20px;background:rgba(255,255,255,.15);border:none;color:#fff;width:36px;height:36px;border-radius:50%;cursor:pointer;font-size:18px}
+.toast-container{position:fixed;bottom:24px;right:24px;z-index:3000;display:flex;flex-direction:column;gap:8px}
+.toast{background:#1a1f2e;color:#fff;border-radius:8px;padding:10px 16px;font-size:13px;box-shadow:0 4px 12px rgba(0,0,0,.25);animation:slideIn .25s ease;max-width:320px}
+.toast.success{background:#065f46;border-left:3px solid #10b981}
+.toast.error{background:#7f1d1d;border-left:3px solid #ef4444}
+.toast.info{background:#1e3a5f;border-left:3px solid #3b82f6}
+@keyframes slideIn{from{transform:translateY(20px);opacity:0}to{transform:translateY(0);opacity:1}}
+.empty-icon{font-size:40px;margin-bottom:12px}
+.empty-text{font-size:14px}
+.confirm-overlay{position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:1500;display:flex;align-items:center;justify-content:center;padding:20px}
+.confirm-box{background:var(--surface);border-radius:10px;padding:24px;max-width:380px;width:100%;box-shadow:0 10px 40px rgba(0,0,0,.3)}
+.confirm-title{font-size:16px;font-weight:700;margin-bottom:8px;color:var(--text)}
+.confirm-text{font-size:13px;color:var(--text-muted);margin-bottom:20px;line-height:1.5}
+.confirm-btns{display:flex;justify-content:flex-end;gap:10px}
+@media(max-width:768px){.form-grid{grid-template-columns:1fr}.photo-grid{grid-template-columns:repeat(2,1fr)}.main{padding:12px}.user-grid{grid-template-columns:1fr}}
+.nav-tabs{background:var(--navy);display:flex;gap:0;border-bottom:2px solid rgba(255,255,255,.1)}
+.nav-tab{background:none;border:none;color:rgba(255,255,255,.6);padding:0 24px;height:44px;font-size:13px;font-weight:600;cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-2px;transition:all .15s;font-family:inherit;display:flex;align-items:center;gap:7px}
+.nav-tab:hover{color:#fff;background:rgba(255,255,255,.05)}
+.nav-tab.active{color:#ffe600;border-bottom-color:#ffe600}
+.analytics-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:20px;margin-top:4px}
+.chart-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}
+.chart-title{font-size:13px;font-weight:700;color:var(--text);margin-bottom:4px}
+.chart-sub{font-size:11px;color:var(--text-muted);margin-bottom:16px}
+.kpi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:20px}
+.kpi-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:16px 20px;box-shadow:var(--shadow);text-align:center}
+.kpi-num{font-size:28px;font-weight:800;line-height:1.1;margin-bottom:4px}
+.kpi-label{font-size:11px;color:var(--text-muted);text-transform:uppercase;letter-spacing:.4px}
+@media(max-width:768px){.kpi-grid{grid-template-columns:repeat(2,1fr)}.analytics-grid{grid-template-columns:1fr}}
+/* ── DOTACION STYLES ── */
 </style>
 </head>
 <body>
@@ -443,15 +565,45 @@ function LoginScreen(props){
   );
 }
 
-// ── Acciones ──
-var PILARES = ['SHE','5S','Sorteo','Inventario','Despacho','RTS','Devoluciones','Gestión de Paquetes'];
-function estadoBadge(e){
-  var progreso=e.progreso||0;
-  if(e.resuelto) return h('span',{className:'badge badge-ok'},'Resuelto');
-  if(isOverdue(e.fechaLimite,e.resuelto)) return h('span',{className:'badge badge-bad'},'Vencido');
-  if(progreso>0) return h('span',{className:'badge badge-warn'},'En curso '+progreso+'%');
-  return h('span',{className:'badge badge-warn'},'Pendiente');
+// ── Acciones (portado del repo original) ──
+var PILARES = [
+  {id:'SHE',color:'#fca5a5',text:'#7f1d1d'},
+  {id:'5S',color:'#bfdbfe',text:'#1e3a5f'},
+  {id:'Sorteo',color:'#bbf7d0',text:'#14532d'},
+  {id:'Inventario',color:'#e9d5ff',text:'#581c87'},
+  {id:'Despacho',color:'#99f6e4',text:'#134e4a'},
+  {id:'RTS',color:'#6d28d9',text:'#ffffff'},
+  {id:'Devoluciones',color:'#3b82f6',text:'#ffffff'},
+  {id:'Gestión de Paquetes',color:'#dc2626',text:'#ffffff'}
+];
+var PILAR_MAP={}; PILARES.forEach(function(p){PILAR_MAP[p.id]=p;});
+
+function PilarPill(props){
+  var p=PILAR_MAP[props.id];
+  if(!p) return h('span',null,props.id);
+  return h('span',{className:'pilar-pill',style:{background:p.color,color:p.text}},p.id);
 }
+function progColor(p){return p>=100?'#10b981':p>=60?'#f59e0b':'#3b82f6';}
+function isMyTask(entry,user){
+  if(!entry||!entry.responsables||!user) return false;
+  return entry.responsables.toLowerCase().indexOf(user.toLowerCase())>=0;
+}
+function sendNotificationEmail(entry,isNew){
+  var emails=(entry.emails||'').trim(); if(!emails) return;
+  var site=CONFIG.SITE_NAME;
+  var subject=encodeURIComponent((isNew?'[Nueva Acción] ':'[Actualización] ')+entry.tarea+' - '+site);
+  var body=encodeURIComponent('Hola,\n\n'+(isNew?'Se te asignó una nueva acción:':'Se actualizó una acción:')+
+    '\n\nTarea: '+entry.tarea+'\nPilar: '+entry.pilar+'\nAcción: '+(entry.accion||'-')+
+    '\nResponsable(s): '+(entry.responsables||'-')+'\nFecha límite: '+fmtDate(entry.fechaLimite)+
+    '\nProgreso: '+entry.progreso+'%\nEstado: '+(entry.resuelto?'Resuelto':'Pendiente')+
+    '\n\nVer app: '+window.location.href+'\n\nSaludos,\nAction Log '+site);
+  var a=document.createElement('a');
+  a.href='mailto:'+emails+'?subject='+subject+'&body='+body;
+  a.style.display='none';
+  document.body.appendChild(a); a.click();
+  setTimeout(function(){document.body.removeChild(a);},500);
+}
+
 function ConfirmModal(props){
   return h('div',{className:'modal-overlay',onClick:props.onCancel},
     h('div',{className:'modal',onClick:function(e){e.stopPropagation();}},
@@ -464,140 +616,364 @@ function ConfirmModal(props){
     )
   );
 }
-function AccionFormModal(props){
-  var initial = props.entry || {fecha:todayISO(),pilar:PILARES[0],tarea:'',accion:'',responsable:'',fechaLimite:'',progreso:0,resuelto:false,actualizaciones:[]};
-  if(!initial.actualizaciones) initial=Object.assign({},initial,{actualizaciones:[]});
-  var fs_=_useState(Object.assign({},initial)); var form=fs_[0],setForm=fs_[1];
-  var cs_=_useState(''); var comentario=cs_[0],setComentario=cs_[1];
-  function upd(k,v){setForm(Object.assign({},form,(function(o){o[k]=v;return o;})({})));}
-  function set(k){return function(e){var f=Object.assign({},form); f[k]=e.target.value; setForm(f);};}
-  function guardar(){
-    if(!form.tarea.trim()){showToast('La tarea es obligatoria','error');return;}
-    props.onSave(form);
-  }
-  function agregarComentario(){
-    var texto=comentario.trim(); if(!texto) return;
-    var nueva={id:genId(), fecha:new Date().toISOString(), autor:props.currentUser||'—', texto:texto};
-    var lista=[nueva].concat(form.actualizaciones);
-    setForm(Object.assign({},form,{actualizaciones:lista}));
-    setComentario('');
-    if(form.id && props.onAddUpdate){
-      props.onAddUpdate(form.id, lista).then(function(){showToast('✓ Actualización agregada','success');});
+
+function EvoTab(props){
+  var entry=props.entry, onUpdate=props.onUpdate;
+  var ts=_useState(''); var texto=ts[0],setTexto=ts[1];
+  function addEvo(){
+    var t=texto.trim(); if(!t) return;
+    var nueva={id:genId(),texto:t,fecha:new Date().toISOString(),autor:props.currentUser||'—'};
+    var lista=[nueva].concat(entry.evolutivo||[]);
+    onUpdate(Object.assign({},entry,{evolutivo:lista}));
+    setTexto('');
+    if(entry.id && props.onAddUpdate){
+      props.onAddUpdate(entry.id, lista).then(function(){showToast('✓ Actualización agregada','success');});
     }
   }
-  return h('div',{className:'modal-overlay',onClick:props.onCancel},
-    h('div',{className:'modal',style:{width:520},onClick:function(e){e.stopPropagation();}},
-      h('h3',null,props.entry?'Editar tarea':'Nueva tarea'),
-      h('div',{className:'form-grid'},
-        h('div',{className:'form-field'},h('label',null,'Fecha'),h('input',{type:'date',value:form.fecha,onChange:set('fecha')})),
-        h('div',{className:'form-field'},h('label',null,'Pilar'),h('select',{value:form.pilar,onChange:set('pilar')},PILARES.map(function(p){return h('option',{key:p,value:p},p);}))),
-        h('div',{className:'form-field',style:{gridColumn:'1 / -1'}},h('label',null,'Tarea'),h('input',{value:form.tarea,onChange:set('tarea')})),
-        h('div',{className:'form-field',style:{gridColumn:'1 / -1'}},h('label',null,'Acción'),h('textarea',{rows:2,value:form.accion,onChange:set('accion')})),
-        h('div',{className:'form-field'},h('label',null,'Responsable'),h('input',{value:form.responsable,onChange:set('responsable')})),
-        h('div',{className:'form-field'},h('label',null,'Fecha límite'),h('input',{type:'date',value:form.fechaLimite,onChange:set('fechaLimite')})),
-        h('div',{className:'form-field'},h('label',null,'Progreso %'),h('input',{type:'number',min:0,max:100,value:form.progreso,onChange:function(e){var f=Object.assign({},form);f.progreso=Math.max(0,Math.min(100,parseInt(e.target.value)||0));setForm(f);}})),
-        h('div',{className:'form-field'},h('label',null,'Estado'),
-          h('select',{value:form.resuelto?'r':'p',onChange:function(e){var f=Object.assign({},form);f.resuelto=e.target.value==='r';if(f.resuelto)f.progreso=100;setForm(f);}},
-            h('option',{value:'p'},'Pendiente / En curso'), h('option',{value:'r'},'Resuelto'))),
-        h('div',{className:'form-field',style:{gridColumn:'1 / -1'}},
-          h('label',null,'Historial de actualizaciones'),
-          h('div',{style:{maxHeight:150,overflowY:'auto',border:'1.5px solid var(--border)',borderRadius:7,padding:8,background:'var(--bg)',marginBottom:8}},
-            form.actualizaciones.length===0
-              ? h('div',{style:{fontSize:12,color:'var(--text-muted)'}},'Todavía no hay actualizaciones.')
-              : form.actualizaciones.map(function(u){
-                  return h('div',{key:u.id,style:{fontSize:12,marginBottom:7,paddingBottom:7,borderBottom:'1px solid var(--border)'}},
-                    h('div',{style:{fontWeight:700,color:'var(--text-muted)',marginBottom:2}}, fmtFechaHora(u.fecha)+' — '+u.autor),
-                    h('div',null, u.texto)
-                  );
-                })
-          ),
-          h('div',{style:{display:'flex',gap:6}},
-            h('input',{value:comentario,placeholder:'Agregar actualización... (ej: avanzaron con 10 envíos)',style:{flex:1},
-              onChange:function(e){setComentario(e.target.value);},
-              onKeyDown:function(e){if(e.key==='Enter'){e.preventDefault();agregarComentario();}}}),
-            h('button',{className:'btn btn-primary',type:'button',onClick:agregarComentario,disabled:!form.id},'Agregar')
-          ),
-          !form.id && h('div',{style:{fontSize:11,color:'var(--text-muted)',marginTop:4}},'Guardá la tarea primero para poder agregar actualizaciones.')
-        )
+  var evoList=entry.evolutivo||[];
+  return h('div',null,
+    h('div',{className:'evo-progress-bar-wrap'},
+      h('div',{className:'evo-progress-label'},h('span',null,'Progreso actual'),h('span',{style:{fontWeight:700,color:progColor(entry.progreso)}},entry.progreso+'%')),
+      h('div',{className:'evo-progress-track'},h('div',{className:'evo-progress-fill',style:{width:entry.progreso+'%',background:progColor(entry.progreso)}}))
+    ),
+    h('div',{className:'evo-list'},
+      evoList.length===0
+        ? h('div',{className:'evo-empty'},'No hay actualizaciones todavía.')
+        : evoList.map(function(evo){
+            return h('div',{key:evo.id,className:'evo-entry'},
+              h('div',{className:'evo-entry-header'},
+                h('span',{className:'evo-entry-meta'},fmtFechaHora(evo.fecha)),
+                h('span',{className:'evo-entry-meta',style:{fontStyle:'italic'}},evo.autor||'-')
+              ),
+              h('div',{className:'evo-entry-text'},evo.texto)
+            );
+          })
+    ),
+    h('div',{className:'evo-add-form'},
+      h('span',{className:'evo-add-label'},'Agregar actualización'),
+      h('textarea',{className:'form-control',rows:3,placeholder:'Describí el avance... (ej: avanzaron con 10 envíos)',value:texto,
+        onChange:function(e){setTexto(e.target.value);},style:{marginBottom:8}}),
+      h('button',{className:'btn btn-primary',type:'button',onClick:addEvo,disabled:!texto.trim()},'Guardar actualización')
+    )
+  );
+}
+
+function FotosTab(props){
+  var entry=props.entry, onUpdate=props.onUpdate;
+  var fileRef=_useRef();
+  var lbs=_useState(null); var lightbox=lbs[0],setLightbox=lbs[1];
+  function handleFiles(files){
+    var arr=Array.from(files); var results=[]; var pending=arr.length;
+    if(!pending) return;
+    arr.forEach(function(file){
+      if(file.size>5*1024*1024){ showToast('"'+file.name+'" supera 5MB','error'); pending--; return; }
+      var reader=new FileReader();
+      reader.onload=function(ev){
+        results.push({id:genId(),nombre:file.name,dataUrl:ev.target.result,fecha:new Date().toISOString()});
+        pending--;
+        if(pending===0) onUpdate(Object.assign({},entry,{fotos:(entry.fotos||[]).concat(results)}));
+      };
+      reader.readAsDataURL(file);
+    });
+  }
+  var fotos=entry.fotos||[];
+  return h('div',null,
+    h('div',{className:'photo-upload-area',
+      onClick:function(){fileRef.current&&fileRef.current.click();},
+      onDrop:function(e){e.preventDefault();handleFiles(e.dataTransfer.files);},
+      onDragOver:function(e){e.preventDefault();}},
+      h('div',{className:'photo-upload-icon'},'📷'),
+      h('div',{className:'photo-upload-text'},'Hacé clic o arrastrá imágenes acá'),
+      h('div',{className:'photo-upload-sub'},'PNG, JPG, GIF — máx. 5MB'),
+      h('input',{ref:fileRef,type:'file',accept:'image/*',multiple:true,style:{display:'none'},
+        onChange:function(e){handleFiles(e.target.files);e.target.value='';}})
+    ),
+    fotos.length===0
+      ? h('div',{className:'photo-empty'},'No hay fotos de evidencia.')
+      : h('div',{className:'photo-grid'}, fotos.map(function(foto){
+          return h('div',{key:foto.id,className:'photo-thumb'},
+            h('img',{src:foto.dataUrl,alt:foto.nombre,className:'photo-thumb-img',onClick:function(){setLightbox(foto.dataUrl);}}),
+            h('div',{className:'photo-info'},
+              h('span',{className:'photo-name',title:foto.nombre},foto.nombre),
+              h('div',{className:'photo-date'},fmtDate(foto.fecha?foto.fecha.slice(0,10):''))
+            ),
+            h('button',{className:'photo-del',onClick:function(){onUpdate(Object.assign({},entry,{fotos:fotos.filter(function(f){return f.id!==foto.id;})}));}},'✕')
+          );
+        })),
+    lightbox && h('div',{className:'lightbox',onClick:function(){setLightbox(null);}},
+      h('button',{className:'lightbox-close',onClick:function(e){e.stopPropagation();setLightbox(null);}},'✕'),
+      h('img',{src:lightbox,alt:'foto',className:'lightbox-img',onClick:function(e){e.stopPropagation();}})
+    )
+  );
+}
+
+function ActionModal(props){
+  var init=props.entry, isNew=props.isNew;
+  var es_=_useState(function(){return Object.assign({evolutivo:[],fotos:[],emails:''},init);});
+  var entry=es_[0],setEntry=es_[1];
+  var ts=_useState('datos'); var tab=ts[0],setTab=ts[1];
+  function upd(field,val){setEntry(function(prev){var f=Object.assign({},prev);f[field]=val;return f;});}
+  function handleSave(){
+    if(!entry.tarea.trim()){showToast('La tarea es obligatoria','error');return;}
+    var finalEntry=Object.assign({},entry,{id:entry.id||genId(),createdAt:entry.createdAt||new Date().toISOString()});
+    props.onSave(finalEntry);
+    sendNotificationEmail(finalEntry,isNew);
+  }
+  var evoCount=(entry.evolutivo||[]).length;
+  var fotosCount=(entry.fotos||[]).length;
+  return h('div',{className:'modal-overlay',onClick:props.onClose},
+    h('div',{className:'modal-box',onClick:function(e){e.stopPropagation();}},
+      h('div',{className:'modal-header'},
+        h('span',{className:'modal-header-title'},isNew?'Nueva Acción':entry.tarea),
+        h('button',{className:'modal-close',onClick:props.onClose},'✕')
       ),
-      h('div',{className:'modal-actions'},
-        h('button',{className:'btn btn-ghost',onClick:props.onCancel},'Cerrar'),
-        h('button',{className:'btn btn-primary',onClick:guardar},'Guardar')
+      h('div',{className:'modal-tabs'},
+        h('button',{className:'modal-tab'+(tab==='datos'?' active':''),onClick:function(){setTab('datos');}},'Datos'),
+        h('button',{className:'modal-tab'+(tab==='evolutivo'?' active':''),onClick:function(){setTab('evolutivo');}},'Evolutivo ('+evoCount+')'),
+        h('button',{className:'modal-tab'+(tab==='fotos'?' active':''),onClick:function(){setTab('fotos');}},'Fotos ('+fotosCount+')')
+      ),
+      h('div',{className:'modal-body'},
+        tab==='datos' && h('div',{className:'form-grid'},
+          h('div',{className:'form-group'},h('label',{className:'form-label'},'Fecha ',h('span',{className:'req'},'*')),
+            h('input',{type:'date',className:'form-control',value:entry.fecha,onChange:function(e){upd('fecha',e.target.value);}})),
+          h('div',{className:'form-group'},h('label',{className:'form-label'},'Pilar'),
+            h('select',{className:'form-control',value:entry.pilar,onChange:function(e){upd('pilar',e.target.value);}},
+              PILARES.map(function(p){return h('option',{key:p.id,value:p.id},p.id);}))),
+          h('div',{className:'form-group full'},h('label',{className:'form-label'},'Tarea ',h('span',{className:'req'},'*')),
+            h('input',{type:'text',className:'form-control',value:entry.tarea,onChange:function(e){upd('tarea',e.target.value);}})),
+          h('div',{className:'form-group full'},h('label',{className:'form-label'},'Acción'),
+            h('textarea',{className:'form-control',rows:3,value:entry.accion,onChange:function(e){upd('accion',e.target.value);}})),
+          h('div',{className:'form-group full'},h('label',{className:'form-label'},'Responsables'),
+            h('input',{type:'text',className:'form-control',placeholder:'Ej: Juan López, María García',value:entry.responsables,onChange:function(e){upd('responsables',e.target.value);}})),
+          h('div',{className:'form-group full'},h('label',{className:'form-label'},'✉ Emails para notificar ',h('span',{style:{color:'var(--text-muted)',fontWeight:400,fontSize:11}},'(opcional)')),
+            h('input',{type:'text',className:'form-control',placeholder:'email1@empresa.com, email2@...',value:entry.emails||'',onChange:function(e){upd('emails',e.target.value);}})),
+          h('div',{className:'form-group'},h('label',{className:'form-label'},'Fecha límite'),
+            h('input',{type:'date',className:'form-control',value:entry.fechaLimite,onChange:function(e){upd('fechaLimite',e.target.value);}})),
+          h('div',{className:'form-group'},h('label',{className:'form-label',style:{opacity:0}},'_'),
+            h('div',{className:'form-inline'},
+              h('input',{type:'checkbox',id:'res-chk',checked:entry.resuelto,onChange:function(e){upd('resuelto',e.target.checked);if(e.target.checked)upd('progreso',100);}}),
+              h('label',{htmlFor:'res-chk'},'Marcar como Resuelto'))),
+          h('div',{className:'form-group full'},h('label',{className:'form-label'},'Progreso'),
+            h('div',{className:'range-row'},
+              h('input',{type:'range',min:0,max:100,step:5,value:entry.progreso,onChange:function(e){upd('progreso',Number(e.target.value));}}),
+              h('span',{className:'range-val'},entry.progreso+'%')))
+        ),
+        tab==='evolutivo' && h(EvoTab,{entry:entry,onUpdate:setEntry,currentUser:props.currentUser,onAddUpdate:props.onAddUpdate}),
+        tab==='fotos' && h(FotosTab,{entry:entry,onUpdate:setEntry})
+      ),
+      h('div',{className:'modal-footer'},
+        h('button',{className:'btn btn-ghost',onClick:props.onClose},'Cancelar'),
+        h('button',{className:'btn btn-primary',onClick:handleSave},
+          (entry.emails&&entry.emails.trim())?(isNew?'✉ Crear y Notificar':'✉ Guardar y Notificar'):(isNew?'Crear Acción':'Guardar cambios'))
       )
     )
   );
 }
+
+function AnalyticsView(props){
+  var entries=props.entries;
+  var pilarRef=_useRef(),pilarChart=_useRef();
+  var respRef=_useRef(),respChart=_useRef();
+  var estadoRef=_useRef(),estadoChart=_useRef();
+  var progRef=_useRef(),progChart=_useRef();
+
+  _useEffect(function(){
+    if(!window.Chart) return;
+    var Chart=window.Chart;
+    var pilarLabels=PILARES.map(function(p){return p.id;});
+
+    var pilarCounts={},pilarResueltas={};
+    pilarLabels.forEach(function(id){pilarCounts[id]=0;pilarResueltas[id]=0;});
+    entries.forEach(function(e){pilarCounts[e.pilar]=(pilarCounts[e.pilar]||0)+1;if(e.resuelto)pilarResueltas[e.pilar]=(pilarResueltas[e.pilar]||0)+1;});
+    if(pilarChart.current)pilarChart.current.destroy();
+    pilarChart.current=new Chart(pilarRef.current,{type:'bar',data:{labels:pilarLabels,datasets:[
+      {label:'Total',data:pilarLabels.map(function(l){return pilarCounts[l]||0;}),backgroundColor:'rgba(26,31,46,0.7)',borderRadius:4},
+      {label:'Resueltas',data:pilarLabels.map(function(l){return pilarResueltas[l]||0;}),backgroundColor:'#10b981',borderRadius:4}
+    ]},options:{responsive:true,maintainAspectRatio:true,plugins:{legend:{position:'bottom'}},scales:{y:{beginAtZero:true,ticks:{stepSize:1}}}}});
+
+    var respMap={};
+    entries.forEach(function(e){
+      (e.responsables||'').split(',').map(function(r){return r.trim();}).filter(Boolean).forEach(function(r){
+        if(!respMap[r])respMap[r]={total:0,resueltas:0};
+        respMap[r].total++; if(e.resuelto)respMap[r].resueltas++;
+      });
+    });
+    var respLabels=Object.keys(respMap).sort(function(a,b){return respMap[b].total-respMap[a].total;});
+    if(respChart.current)respChart.current.destroy();
+    respChart.current=new Chart(respRef.current,{type:'bar',data:{labels:respLabels,datasets:[
+      {label:'Pendientes',data:respLabels.map(function(r){return respMap[r].total-respMap[r].resueltas;}),backgroundColor:'#f59e0b',borderRadius:4},
+      {label:'Resueltas',data:respLabels.map(function(r){return respMap[r].resueltas;}),backgroundColor:'#10b981',borderRadius:4}
+    ]},options:{responsive:true,maintainAspectRatio:true,indexAxis:'y',plugins:{legend:{position:'bottom'}},scales:{x:{stacked:true,beginAtZero:true,ticks:{stepSize:1}},y:{stacked:true}}}});
+
+    var resueltasN=entries.filter(function(e){return e.resuelto;}).length;
+    var vencidasN=entries.filter(function(e){return isOverdue(e.fechaLimite,e.resuelto);}).length;
+    var pendientesN=entries.length-resueltasN-vencidasN;
+    if(estadoChart.current)estadoChart.current.destroy();
+    estadoChart.current=new Chart(estadoRef.current,{type:'doughnut',data:{labels:['Resueltas','Pendientes','Vencidas'],datasets:[{data:[resueltasN,pendientesN,vencidasN],backgroundColor:['#10b981','#f59e0b','#ef4444'],borderWidth:2}]},options:{responsive:true,maintainAspectRatio:true,plugins:{legend:{position:'bottom'}},cutout:'65%'}});
+
+    var pilarProg={}; pilarLabels.forEach(function(id){pilarProg[id]=[];});
+    entries.forEach(function(e){if(pilarProg[e.pilar])pilarProg[e.pilar].push(e.progreso);});
+    var pilarAvg=pilarLabels.map(function(l){var arr=pilarProg[l];return arr.length?Math.round(arr.reduce(function(a,b){return a+b;},0)/arr.length):0;});
+    if(progChart.current)progChart.current.destroy();
+    progChart.current=new Chart(progRef.current,{type:'bar',data:{labels:pilarLabels,datasets:[{label:'Progreso promedio %',data:pilarAvg,backgroundColor:pilarAvg.map(function(v){return v>=100?'#10b981':v>=60?'#f59e0b':'#3b82f6';}),borderRadius:4}]},options:{responsive:true,maintainAspectRatio:true,plugins:{legend:{display:false}},scales:{y:{beginAtZero:true,max:100}}}});
+
+    return function(){
+      if(pilarChart.current)pilarChart.current.destroy();
+      if(respChart.current)respChart.current.destroy();
+      if(estadoChart.current)estadoChart.current.destroy();
+      if(progChart.current)progChart.current.destroy();
+    };
+  },[entries]);
+
+  var resueltas=entries.filter(function(e){return e.resuelto;}).length;
+  var vencidas=entries.filter(function(e){return isOverdue(e.fechaLimite,e.resuelto);}).length;
+  var pct=entries.length?Math.round(resueltas/entries.length*100):0;
+  var resolved=entries.filter(function(e){return e.resuelto&&e.createdAt&&e.fechaLimite;});
+  var avgDays=0;
+  if(resolved.length){
+    var totalDays=resolved.reduce(function(acc,e){var d1=new Date(e.createdAt),d2=new Date(e.fechaLimite);return acc+Math.max(0,Math.round((d2-d1)/(1000*60*60*24)));},0);
+    avgDays=Math.round(totalDays/resolved.length);
+  }
+  return h('div',null,
+    h('div',{className:'kpi-grid'},
+      h('div',{className:'kpi-card'},h('div',{className:'kpi-num',style:{color:'var(--navy)'}},entries.length),h('div',{className:'kpi-label'},'Total Acciones')),
+      h('div',{className:'kpi-card'},h('div',{className:'kpi-num',style:{color:'#10b981'}},pct+'%'),h('div',{className:'kpi-label'},'Completado')),
+      h('div',{className:'kpi-card'},h('div',{className:'kpi-num',style:{color:'#ef4444'}},vencidas),h('div',{className:'kpi-label'},'Vencidas')),
+      h('div',{className:'kpi-card'},h('div',{className:'kpi-num',style:{color:'#3b82f6'}},avgDays+'d'),h('div',{className:'kpi-label'},'Plazo promedio'))
+    ),
+    h('div',{className:'analytics-grid'},
+      h('div',{className:'chart-card'},h('div',{className:'chart-title'},'Acciones por Pilar'),h('div',{className:'chart-sub'},'Total vs resueltas por cada pilar'),h('canvas',{ref:pilarRef,height:220})),
+      h('div',{className:'chart-card'},h('div',{className:'chart-title'},'Estado General'),h('div',{className:'chart-sub'},'Distribución de acciones por estado'),h('canvas',{ref:estadoRef,height:220})),
+      h('div',{className:'chart-card'},h('div',{className:'chart-title'},'Carga por Responsable'),h('div',{className:'chart-sub'},'Cantidad de acciones asignadas por persona'),h('canvas',{ref:respRef,height:260})),
+      h('div',{className:'chart-card'},h('div',{className:'chart-title'},'Progreso Promedio por Pilar'),h('div',{className:'chart-sub'},'Avance promedio en cada pilar'),h('canvas',{ref:progRef,height:220}))
+    )
+  );
+}
+
 function AccionesView(props){
   var entries=props.entries, currentUser=props.currentUser;
+  var accTabS=_useState('registro'); var accTab=accTabS[0],setAccTab=accTabS[1];
   var qs=_useState(''); var query=qs[0],setQuery=qs[1];
-  var es=_useState(null); var editing=es[0],setEditing=es[1]; // entry siendo editada, o {} para nueva
+  var fpS=_useState(''); var filterPilar=fpS[0],setFilterPilar=fpS[1];
+  var feS=_useState(''); var filterEstado=feS[0],setFilterEstado=feS[1];
+  var fmS=_useState(false); var filterMis=fmS[0],setFilterMis=fmS[1];
+  var edS=_useState(null); var editingEntry=edS[0],setEditingEntry=edS[1];
+  var isNewS=_useState(false); var isNewFlag=isNewS[0],setIsNewFlag=isNewS[1];
   var ds=_useState(null); var toDelete=ds[0],setToDelete=ds[1];
 
-  var filtered = _useMemo(function(){
-    var q=query.trim().toLowerCase();
-    if(!q) return entries;
-    return entries.filter(function(e){
-      return [e.tarea,e.accion,e.responsable,e.pilar].some(function(f){return (f||'').toLowerCase().indexOf(q)>=0;});
-    });
-  },[entries,query]);
+  var myEntries=_useMemo(function(){return entries.filter(function(e){return isMyTask(e,currentUser);});},[entries,currentUser]);
 
-  function guardarEntry(form){
+  var filtered=_useMemo(function(){
+    var q=query.trim().toLowerCase();
+    return entries.filter(function(e){
+      if(filterPilar && e.pilar!==filterPilar) return false;
+      if(filterEstado==='Pendientes' && e.resuelto) return false;
+      if(filterEstado==='Resueltas' && !e.resuelto) return false;
+      if(filterMis && !isMyTask(e,currentUser)) return false;
+      if(q && ![e.tarea,e.accion,e.responsables,e.pilar].some(function(f){return (f||'').toLowerCase().indexOf(q)>=0;})) return false;
+      return true;
+    });
+  },[entries,query,filterPilar,filterEstado,filterMis,currentUser]);
+
+  var stats=_useMemo(function(){
+    var resueltas=entries.filter(function(e){return e.resuelto;}).length;
+    var vencidas=entries.filter(function(e){return isOverdue(e.fechaLimite,e.resuelto);}).length;
+    return {total:entries.length,resueltas:resueltas,vencidas:vencidas,pendientes:entries.length-resueltas-vencidas};
+  },[entries]);
+
+  function handleNew(){
+    setIsNewFlag(true);
+    setEditingEntry({fecha:todayISO(),pilar:PILARES[0].id,tarea:'',accion:'',responsables:'',emails:'',fechaLimite:'',progreso:0,resuelto:false,evolutivo:[],fotos:[]});
+  }
+  function handleEdit(entry){ setIsNewFlag(false); setEditingEntry(entry); }
+  function handleSave(finalEntry){
     var updated;
-    if(form.id){
-      updated = entries.map(function(e){return e.id===form.id?Object.assign({},e,form):e;});
+    if(entries.some(function(e){return e.id===finalEntry.id;})){
+      updated=entries.map(function(e){return e.id===finalEntry.id?finalEntry:e;});
     }else{
-      var nuevo=Object.assign({},form,{id:genId(),createdAt:new Date().toISOString()});
-      updated = entries.concat([nuevo]);
+      updated=entries.concat([finalEntry]);
     }
-    setEditing(null);
+    setEditingEntry(null);
     props.onSave(updated);
   }
-  function confirmarBorrado(){
-    var updated = entries.filter(function(e){return e.id!==toDelete.id;});
+  function toggleResuelto(id,val){
+    var updated=entries.map(function(e){return e.id===id?Object.assign({},e,{resuelto:val,progreso:val?100:e.progreso}):e;});
+    props.onSave(updated);
+  }
+  function confirmDel(){
+    var updated=entries.filter(function(e){return e.id!==toDelete.id;});
     setToDelete(null);
     props.onSave(updated);
   }
-  function agregarActualizacion(entryId, actualizaciones){
-    var updated = entries.map(function(e){return e.id===entryId?Object.assign({},e,{actualizaciones:actualizaciones}):e;});
+  function agregarEvolutivo(entryId,evolutivo){
+    var updated=entries.map(function(e){return e.id===entryId?Object.assign({},e,{evolutivo:evolutivo}):e;});
     return props.onSave(updated);
   }
 
   return h('div',null,
-    h('div',{className:'toolbar'},
-      h('input',{className:'search-input',placeholder:'Buscar tarea, acción, responsable, pilar...',value:query,onChange:function(e){setQuery(e.target.value);}}),
-      h('span',{className:'count-pill'},filtered.length+' de '+entries.length+' resultados'),
-      h('button',{className:'btn btn-primary',onClick:function(){setEditing({});}},'+ Nueva tarea')
+    h('div',{style:{display:'flex',gap:0,marginBottom:16,borderBottom:'2px solid var(--border)'}},
+      [['registro','📋 Registro de Acciones'],['analytics','📊 Analytics']].map(function(t){
+        return h('button',{key:t[0],onClick:function(){setAccTab(t[0]);},
+          style:{padding:'8px 18px',border:'none',background:'none',cursor:'pointer',fontWeight:700,fontSize:13,fontFamily:'inherit',
+            color:accTab===t[0]?'var(--navy)':'var(--text-muted)',borderBottom:accTab===t[0]?'3px solid var(--accent)':'3px solid transparent',marginBottom:-2}
+        },t[1]);
+      })
     ),
-    h('div',{className:'card'},
-      filtered.length===0 ? h('div',{className:'empty-state'},'No hay tareas que coincidan.') :
-      h('table',null,
-        h('thead',null,h('tr',null,
-          ['Fecha','Pilar','Tarea','Acción','Responsable','Vence','Estado',''].map(function(c){return h('th',{key:c},c);})
-        )),
-        h('tbody',null, filtered.map(function(e){
-          var mine = currentUser && (e.responsable||'').toLowerCase().indexOf(currentUser.toLowerCase())>=0;
-          var cls=[isOverdue(e.fechaLimite,e.resuelto)?'overdue':'', mine?'mine':''].join(' ').trim();
-          return h('tr',{key:e.id,className:cls},
-            h('td',null,fmtDate(e.fecha)),
-            h('td',null,e.pilar),
-            h('td',{style:{fontWeight:600}},e.tarea),
-            h('td',{style:{maxWidth:220,color:'var(--text-muted)'}},e.accion),
-            h('td',null,e.responsable),
-            h('td',null,fmtDate(e.fechaLimite)),
-            h('td',null,estadoBadge(e)),
-            h('td',null,h('div',{className:'row-actions'},
-              h('button',{className:'icon-btn',onClick:function(){setEditing(e);}},'✏️'),
-              h('button',{className:'icon-btn',onClick:function(){setToDelete(e);}},'🗑️')
-            ))
-          );
-        }))
+    accTab==='analytics' ? h(AnalyticsView,{entries:entries}) :
+    h('div',null,
+      myEntries.length>0 && h('div',{className:'collab-banner'},'⭐ Tenés ',h('strong',null,myEntries.length+' acción'+(myEntries.length!==1?'es':'')),' asignada'+(myEntries.length!==1?'s':'')+'. Podés actualizar el progreso y agregar comentarios.'),
+      h('div',{className:'stats-bar'},
+        h('div',{className:'stat-chip total'},h('span',{className:'stat-num'},stats.total),h('span',{style:{color:'var(--text-muted)'}},'Total')),
+        h('div',{className:'stat-chip resueltas'},h('span',{className:'stat-num'},stats.resueltas),h('span',{style:{color:'var(--text-muted)'}},'Resueltas')),
+        h('div',{className:'stat-chip pendientes'},h('span',{className:'stat-num'},stats.pendientes),h('span',{style:{color:'var(--text-muted)'}},'Pendientes')),
+        h('div',{className:'stat-chip vencidas'},h('span',{className:'stat-num'},stats.vencidas),h('span',{style:{color:'var(--text-muted)'}},'Vencidas'))
+      ),
+      h('div',{className:'filter-bar'},
+        h('div',{className:'filter-search'},h('span',{className:'filter-search-icon'},'🔍'),
+          h('input',{className:'filter-input',type:'text',placeholder:'Buscar tarea, acción, responsable...',value:query,onChange:function(e){setQuery(e.target.value);},style:{paddingLeft:30,width:'100%'}})),
+        h('select',{className:'filter-input',value:filterPilar,onChange:function(e){setFilterPilar(e.target.value);}},
+          h('option',{value:''},'Todos los pilares'), PILARES.map(function(p){return h('option',{key:p.id,value:p.id},p.id);})),
+        h('select',{className:'filter-input',value:filterEstado,onChange:function(e){setFilterEstado(e.target.value);}},
+          h('option',{value:''},'Todas'),h('option',{value:'Pendientes'},'Pendientes'),h('option',{value:'Resueltas'},'Resueltas')),
+        h('label',{style:{display:'flex',alignItems:'center',gap:6,cursor:'pointer',fontSize:13,color:'var(--text)'}},
+          h('input',{type:'checkbox',checked:filterMis,onChange:function(e){setFilterMis(e.target.checked);}}),'Solo mis tareas'),
+        h('button',{className:'btn btn-primary',style:{marginLeft:'auto'},onClick:handleNew},'+ Nueva Acción')
+      ),
+      h('div',{className:'table-container'},
+        h('div',{className:'table-header-row'},h('div',null,h('span',{className:'table-title'},'Registro de Acciones'),h('span',{className:'table-count'},filtered.length+' resultado'+(filtered.length!==1?'s':'')))),
+        h('div',{style:{overflowX:'auto'}},
+          h('table',null,
+            h('thead',null,h('tr',null,['#','Fecha','Pilar','Tarea','Acción','Responsables','Vence','Progreso','✓',''].map(function(c){return h('th',{key:c},c);}))),
+            h('tbody',null,
+              filtered.length===0 ? h('tr',null,h('td',{colSpan:10},h('div',{className:'empty-state'},'No hay acciones que coincidan.'))) :
+              filtered.map(function(entry,idx){
+                var overdue=isOverdue(entry.fechaLimite,entry.resuelto);
+                var mine=isMyTask(entry,currentUser);
+                return h('tr',{key:entry.id,className:(entry.resuelto?'resolved':'')+(mine?' my-task':'')},
+                  h('td',{className:'cell-num'},idx+1),
+                  h('td',null,fmtDate(entry.fecha)),
+                  h('td',null,h(PilarPill,{id:entry.pilar})),
+                  h('td',{className:'cell-tarea'},entry.tarea,mine&&h('span',{className:'my-badge'},'YO')),
+                  h('td',{className:'cell-accion'},entry.accion),
+                  h('td',{style:{fontSize:12,maxWidth:150,overflow:'hidden',textOverflow:'ellipsis',whiteSpace:'nowrap'}},entry.responsables),
+                  h('td',{className:overdue?'cell-overdue':'',style:{whiteSpace:'nowrap',fontSize:12}},fmtDate(entry.fechaLimite)),
+                  h('td',null,h('div',{className:'progress-cell'},h('div',{className:'progress-track'},h('div',{className:'progress-fill',style:{width:entry.progreso+'%',background:progColor(entry.progreso)}})),h('span',{className:'progress-label'},entry.progreso+'%'))),
+                  h('td',null,h('input',{type:'checkbox',checked:entry.resuelto,onChange:function(ev){toggleResuelto(entry.id,ev.target.checked);}})),
+                  h('td',{className:'cell-actions'},
+                    h('button',{className:'btn-icon edit',title:'Editar',onClick:function(){handleEdit(entry);}},'✏'),
+                    h('button',{className:'btn-icon del',title:'Eliminar',onClick:function(){setToDelete(entry);}},'🗑')
+                  )
+                );
+              })
+            )
+          )
+        )
       )
     ),
-    editing!==null && h(AccionFormModal,{entry:editing.id?editing:null,currentUser:currentUser,onAddUpdate:agregarActualizacion,onCancel:function(){setEditing(null);},onSave:guardarEntry}),
-    toDelete && h(ConfirmModal,{title:'Eliminar tarea',body:'¿Seguro que querés eliminar "'+toDelete.tarea+'"? Esta acción no se puede deshacer.',onCancel:function(){setToDelete(null);},onConfirm:confirmarBorrado})
+    editingEntry!==null && h(ActionModal,{entry:editingEntry,isNew:isNewFlag,currentUser:currentUser,onAddUpdate:agregarEvolutivo,onSave:handleSave,onClose:function(){setEditingEntry(null);}}),
+    toDelete && h(ConfirmModal,{title:'Eliminar acción',body:'¿Estás seguro que querés eliminar "'+toDelete.tarea+'"? No se puede deshacer.',onCancel:function(){setToDelete(null);},onConfirm:confirmDel})
   );
 }
-
 // ── Dotación ──
 function GgpChart(props) {
   var hist = props.hist;
@@ -741,7 +1117,6 @@ function SemanaWidget(props) {
 function DotacionView(props) {
   var DOT_KEY = 'dotacion_historico_sbu9';
   var CALC_KEY = 'dotacion_calc_state_sbu9';
-  // Load persisted calc state or use defaults
   function loadCalc() {
     try {
       var raw = localStorage.getItem(CALC_KEY);
@@ -749,25 +1124,16 @@ function DotacionView(props) {
     } catch(e) { return null; }
   }
   var _saved = props.calcState || loadCalc() || {};
-  var sbu9S=_useState(_saved.sbu9!==undefined?_saved.sbu9:6551);     var sbu9=sbu9S[0],setSbu9=sbu9S[1];
-  var ecz1S=_useState(_saved.ecz1!==undefined?_saved.ecz1:1758);     var ecz1=ecz1S[0],setEcz1=ecz1S[1];
-  var ecz2S=_useState(_saved.ecz2!==undefined?_saved.ecz2:1708);     var ecz2=ecz2S[0],setEcz2=ecz2S[1];
-  var pmS=_useState(_saved.sbu9Pm!==undefined?_saved.sbu9Pm:735);    var sbu9Pm=pmS[0],setSbu9Pm=pmS[1];
-  var vramS=_useState(_saved.volRealAm||0);  var volRealAm=vramS[0],setVolRealAm=vramS[1];
-  var vrpmS=_useState(_saved.volRealPm||0);  var volRealPm=vrpmS[0],setVolRealPm=vrpmS[1];
+  var volS=_useState(_saved.volumen!==undefined?_saved.volumen:10000);   var volumen=volS[0],setVolumen=volS[1];
+  var vrealS=_useState(_saved.volReal||0);   var volReal=vrealS[0],setVolReal=vrealS[1];
   var shareS=_useState(_saved.share!==undefined?_saved.share:5);      var share=shareS[0],setShare=shareS[1];
-  var rfamS=_useState(_saved.rfAm!==undefined?_saved.rfAm:22);        var rfAm=rfamS[0],setRfAm=rfamS[1];
-  var vacamS=_useState(_saved.vacAm||0);     var vacAm=vacamS[0],setVacAm=vacamS[1];
-  var ausAmS=_useState(_saved.ausAm!==undefined?_saved.ausAm:1);      var ausAm=ausAmS[0],setAusAm=ausAmS[1];
-  var ausAmRealS=_useState(_saved.ausAmReal!==undefined?_saved.ausAmReal:1); var ausAmReal=ausAmRealS[0],setAusAmReal=ausAmRealS[1];
-  var presAmS=_useState(_saved.presAm||0);   var presAm=presAmS[0],setPresAm=presAmS[1];
-  var rfpmS=_useState(_saved.rfPm!==undefined?_saved.rfPm:2);         var rfPm=rfpmS[0],setRfPm=rfpmS[1];
-  var vacpmS=_useState(_saved.vacPm||0);     var vacPm=vacpmS[0],setVacPm=vacpmS[1];
-  var auspmS=_useState(_saved.ausPm||0);     var ausPm=auspmS[0],setAusPm=auspmS[1];
-  var ausPmRealS=_useState(_saved.ausPmReal||0); var ausPmReal=ausPmRealS[0],setAusPmReal=ausPmRealS[1];
-  var prespmS=_useState(_saved.presPm||0);   var presPm=prespmS[0],setPresPm=prespmS[1];
-  var horaAmS=_useState(_saved.horaAm||'8:30hs');   var horaAm=horaAmS[0],setHoraAm=horaAmS[1];
-  var horaPmS=_useState(_saved.horaPm||'15:45hs');   var horaPm=horaPmS[0],setHoraPm=horaPmS[1];
+  var baseGrossS=_useState(_saved.baseGross!==undefined?_saved.baseGross:90);  var baseGross=baseGrossS[0],setBaseGross=baseGrossS[1];
+  var rfS=_useState(_saved.rf!==undefined?_saved.rf:22);        var rf=rfS[0],setRf=rfS[1];
+  var vacS=_useState(_saved.vac||0);     var vac=vacS[0],setVac=vacS[1];
+  var ausS=_useState(_saved.aus!==undefined?_saved.aus:1);      var aus=ausS[0],setAus=ausS[1];
+  var ausRealS=_useState(_saved.ausReal!==undefined?_saved.ausReal:1); var ausReal=ausRealS[0],setAusReal=ausRealS[1];
+  var presS=_useState(_saved.pres||0);   var pres=presS[0],setPres=presS[1];
+  var horaS=_useState(_saved.hora||'8:30hs');   var hora=horaS[0],setHora=horaS[1];
   var histS=_useState([]);        var hist=histS[0],setHist=histS[1];
   var subTabS=_useState('calc');  var subTab=subTabS[0],setSubTab=subTabS[1];
   var tarifFijoS=_useState(_saved.tarifFijo||0);   var tarifFijo=tarifFijoS[0],setTarifFijo=tarifFijoS[1];
@@ -775,7 +1141,7 @@ function DotacionView(props) {
   var histTabS=_useState('tabla'); var histTab=histTabS[0],setHistTab=histTabS[1];
   var targetGgpS=_useState(_saved.targetGgp||0);   var targetGgp=targetGgpS[0],setTargetGgp=targetGgpS[1];
   function buildCalcState(){
-    return {sbu9:sbu9,ecz1:ecz1,ecz2:ecz2,sbu9Pm:sbu9Pm,volRealAm:volRealAm,volRealPm:volRealPm,share:share,rfAm:rfAm,vacAm:vacAm,ausAm:ausAm,ausAmReal:ausAmReal,presAm:presAm,rfPm:rfPm,vacPm:vacPm,ausPm:ausPm,ausPmReal:ausPmReal,presPm:presPm,horaAm:horaAm,horaPm:horaPm,tarifFijo:tarifFijo,tarifEv:tarifEv,targetGgp:targetGgp};
+    return {volumen:volumen,volReal:volReal,share:share,baseGross:baseGross,rf:rf,vac:vac,aus:aus,ausReal:ausReal,pres:pres,hora:hora,tarifFijo:tarifFijo,tarifEv:tarifEv,targetGgp:targetGgp};
   }
   var calcBaseline=_useRef(buildCalcState());
   var calcFirstRender=_useRef(true);
@@ -789,107 +1155,75 @@ function DotacionView(props) {
       calcBaseline.current=JSON.parse(JSON.stringify(state));
     },1500);
     return function(){if(calcAutoTimer.current)clearTimeout(calcAutoTimer.current);};
-  },[sbu9,ecz1,ecz2,sbu9Pm,volRealAm,volRealPm,share,rfAm,vacAm,ausAm,ausAmReal,presAm,rfPm,vacPm,ausPm,ausPmReal,presPm,horaAm,horaPm,tarifFijo,tarifEv,targetGgp]);
+  },[volumen,volReal,share,baseGross,rf,vac,aus,ausReal,pres,hora,tarifFijo,tarifEv,targetGgp]);
   var copiedS=_useState(false);   var copied=copiedS[0],setCopied=copiedS[1];
   var savedS=_useState(false);    var saved=savedS[0],setSaved=savedS[1];
   _useEffect(function(){
     try{var raw=localStorage.getItem(DOT_KEY);if(raw)setHist(JSON.parse(raw));}catch(e){}
   },[]);
-  // Re-apply calc state when it arrives from GitHub (async load)
+  // Re-apply calc state when llega desde GitHub (carga async)
   _useEffect(function(){
     var s=props.calcState;
     if(!s)return;
-    if(s.sbu9!==undefined)setSbu9(s.sbu9);
-    if(s.ecz1!==undefined)setEcz1(s.ecz1);
-    if(s.ecz2!==undefined)setEcz2(s.ecz2);
-    if(s.sbu9Pm!==undefined)setSbu9Pm(s.sbu9Pm);
-    if(s.volRealAm!==undefined)setVolRealAm(s.volRealAm);
-    if(s.volRealPm!==undefined)setVolRealPm(s.volRealPm);
+    if(s.volumen!==undefined)setVolumen(s.volumen);
+    if(s.volReal!==undefined)setVolReal(s.volReal);
     if(s.share!==undefined)setShare(s.share);
-    if(s.rfAm!==undefined)setRfAm(s.rfAm);
-    if(s.vacAm!==undefined)setVacAm(s.vacAm);
-    if(s.ausAm!==undefined)setAusAm(s.ausAm);
-    if(s.ausAmReal!==undefined)setAusAmReal(s.ausAmReal);
-    if(s.presAm!==undefined)setPresAm(s.presAm);
-    if(s.rfPm!==undefined)setRfPm(s.rfPm);
-    if(s.vacPm!==undefined)setVacPm(s.vacPm);
-    if(s.ausPm!==undefined)setAusPm(s.ausPm);
-    if(s.ausPmReal!==undefined)setAusPmReal(s.ausPmReal);
-    if(s.presPm!==undefined)setPresPm(s.presPm);
-    if(s.horaAm!==undefined)setHoraAm(s.horaAm);
-    if(s.horaPm!==undefined)setHoraPm(s.horaPm);
+    if(s.baseGross!==undefined)setBaseGross(s.baseGross);
+    if(s.rf!==undefined)setRf(s.rf);
+    if(s.vac!==undefined)setVac(s.vac);
+    if(s.aus!==undefined)setAus(s.aus);
+    if(s.ausReal!==undefined)setAusReal(s.ausReal);
+    if(s.pres!==undefined)setPres(s.pres);
+    if(s.hora!==undefined)setHora(s.hora);
     if(s.tarifFijo!==undefined)setTarifFijo(s.tarifFijo);
     if(s.tarifEv!==undefined)setTarifEv(s.tarifEv);
     if(s.targetGgp!==undefined)setTargetGgp(s.targetGgp);
   },[props.calcState]);
-  // Persist calc state whenever any input changes
+  // Persistir en localStorage ante cualquier cambio
   _useEffect(function(){
     try{
       localStorage.setItem(CALC_KEY, JSON.stringify({
-        sbu9:sbu9,ecz1:ecz1,ecz2:ecz2,sbu9Pm:sbu9Pm,
-        volRealAm:volRealAm,volRealPm:volRealPm,share:share,
-        rfAm:rfAm,vacAm:vacAm,ausAm:ausAm,ausAmReal:ausAmReal,presAm:presAm,
-        rfPm:rfPm,vacPm:vacPm,ausPm:ausPm,ausPmReal:ausPmReal,presPm:presPm,
-        horaAm:horaAm,horaPm:horaPm,ausAmReal:ausAmReal,ausPmReal:ausPmReal,
-        tarifFijo:tarifFijo,tarifEv:tarifEv,targetGgp:targetGgp
+        volumen:volumen,volReal:volReal,share:share,baseGross:baseGross,
+        rf:rf,vac:vac,aus:aus,ausReal:ausReal,pres:pres,
+        hora:hora,tarifFijo:tarifFijo,tarifEv:tarifEv,targetGgp:targetGgp
       }));
     }catch(e){}
-  },[sbu9,ecz1,ecz2,sbu9Pm,volRealAm,volRealPm,share,rfAm,vacAm,ausAm,presAm,rfPm,vacPm,ausPm,presPm,horaAm,horaPm,tarifFijo,tarifEv,targetGgp]);
+  },[volumen,volReal,share,baseGross,rf,vac,aus,ausReal,pres,hora,tarifFijo,tarifEv,targetGgp]);
   var c = _useMemo(function(){
-    var gross=360-(share/100-0.05)*200;
-    var volFcstAm=sbu9+ecz1+ecz2;
-    var fijosAm=rfAm-vacAm-ausAm;
-    var fijosPm=rfPm-vacPm-ausPm;
-    var fijosAmReal=rfAm-vacAm-ausAmReal;
-    var fijosPmReal=rfPm-vacPm-ausPmReal;
-    var evFcstAm=Math.ceil(volFcstAm/gross)-fijosAm;
-    var evFcstPm=Math.ceil(sbu9Pm/gross)-fijosPm;
-    var evRealAm=volRealAm>0?Math.ceil(volRealAm/gross)-fijosAmReal:null;
-    var evRealPm=volRealPm>0?Math.ceil(volRealPm/gross)-fijosPmReal:null;
-    var difAm=evRealAm!==null?evRealAm-presAm:null;
-    var difPm=evRealPm!==null?evRealPm-presPm:null;
-    var totalNec=Math.ceil(volFcstAm/gross)+Math.ceil(sbu9Pm/gross);
-    var hfF=(fijosAm+fijosPm)*7.33;
-    var heF=Math.max(0,evFcstAm+evFcstPm)*8;
-    var htF=hfF+heF;
-    var ggpF=htF>0?(volFcstAm+sbu9Pm)/htF:0;
-    var hfR=(fijosAm+fijosPm)*7.33;
-    var heR=(presAm+presPm)*8;
-    var htR=hfR+heR;
-    var volRT=volRealAm+volRealPm;
-    var ggpR=htR>0&&volRT>0?volRT/htR:0;
-    return{gross:gross,volFcstAm:volFcstAm,fijosAm:fijosAm,fijosPm:fijosPm,fijosAmReal:fijosAmReal,fijosPmReal:fijosPmReal,evFcstAm:evFcstAm,evFcstPm:evFcstPm,evRealAm:evRealAm,evRealPm:evRealPm,difAm:difAm,difPm:difPm,totalNec:totalNec,hfF:hfF,heF:heF,htF:htF,ggpF:ggpF,hfR:hfR,heR:heR,htR:htR,ggpR:ggpR,volRT:volRT};
-  },[sbu9,ecz1,ecz2,sbu9Pm,volRealAm,volRealPm,share,rfAm,vacAm,ausAm,presAm,rfPm,vacPm,ausPm,presPm]);
+    var gross=baseGross-(share/100-0.05)*200;
+    var fijos=rf-vac-aus;
+    var fijosReal=rf-vac-ausReal;
+    var evFcst=Math.ceil(volumen/gross)-fijos;
+    var evReal=volReal>0?Math.ceil(volReal/gross)-fijosReal:null;
+    var dif=evReal!==null?evReal-pres:null;
+    var totalNec=Math.ceil(volumen/gross);
+    var hf=fijos*7.33;
+    var he=Math.max(0,evFcst)*8;
+    var ht=hf+he;
+    var ggpF=ht>0?volumen/ht:0;
+    var heR=pres*8;
+    var htR=hf+heR;
+    var ggpR=htR>0&&volReal>0?volReal/htR:0;
+    return{gross:gross,fijos:fijos,fijosReal:fijosReal,evFcst:evFcst,evReal:evReal,dif:dif,totalNec:totalNec,hf:hf,he:he,ht:ht,ggpF:ggpF,heR:heR,htR:htR,ggpR:ggpR};
+  },[volumen,volReal,share,baseGross,rf,vac,aus,ausReal,pres]);
   function fmtN(n){return Math.round(n).toLocaleString('es-AR');}
   function fmtD(n,d){d=d||1;return(isNaN(n)||!isFinite(n)||n===0)?'—':n.toFixed(d);}
-  var mensaje='Buenas equipo, les comparto el volumen estimado para mañana:\n\n*AM*\nSBU9     '+fmtN(sbu9)+'\nECZ1     '+fmtN(ecz1)+'\nECZ2     '+fmtN(ecz2)+'\nTOTAL AM     '+fmtN(c.volFcstAm)+'\n\n'+c.evFcstAm+' eventuales | Apertura '+horaAm+'\n\n*PM*\nSBU9     '+fmtN(sbu9Pm)+'\n\n'+c.evFcstPm+' eventual'+(c.evFcstPm===1?'':'es')+' | Apertura '+horaPm;
+  var mensaje='Buenas equipo, les comparto el volumen estimado para mañana:\n\n'+CONFIG.SITE_NAME+'     '+fmtN(volumen)+'\n\n'+c.evFcst+' eventual'+(c.evFcst===1?'':'es')+' | Apertura '+hora;
   function copiar(){navigator.clipboard.writeText(mensaje).then(function(){setCopied(true);setTimeout(function(){setCopied(false);},2000);});}
   function guardar(){
     var hoy=new Date().toLocaleDateString('es-AR',{day:'2-digit',month:'2-digit',year:'numeric'});
     var tf=parseFloat(tarifFijo)||0, te=parseFloat(tarifEv)||0;
-    // Horas AM
-    var hfAm=c.fijosAm*7.33, heAm=Math.max(0,c.evFcstAm)*8, htAm=hfAm+heAm;
-    var ggpFcstAm=htAm>0?parseFloat(((c.volFcstAm)/htAm).toFixed(1)):0;
-    var ggpRealAm=volRealAm>0&&htAm>0?parseFloat((volRealAm/htAm).toFixed(1)):0;
-    // Horas PM
-    var hfPm=c.fijosPm*7.33, hePm=Math.max(0,c.evFcstPm)*8, htPm=hfPm+hePm;
-    var ggpFcstPm=htPm>0?parseFloat((sbu9Pm/htPm).toFixed(1)):0;
-    var ggpRealPm=volRealPm>0&&htPm>0?parseFloat((volRealPm/htPm).toFixed(1)):0;
-    var recAm={id:genId(),fecha:hoy,turno:'AM',
-      volFcst:c.volFcstAm, volReal:volRealAm,
-      dotFija:c.fijosAm, dotEventual:Math.max(0,c.evFcstAm),
-      evPresentes:presAm, ausencias:ausAm,
-      ggpFcst:ggpFcstAm, ggpReal:ggpRealAm,
+    var hfijo=c.fijos*7.33, hev=Math.max(0,c.evFcst)*8, htotal=hfijo+hev;
+    var ggpFcst=htotal>0?parseFloat((volumen/htotal).toFixed(1)):0;
+    var ggpReal=volReal>0&&htotal>0?parseFloat((volReal/htotal).toFixed(1)):0;
+    var rec={id:genId(),fecha:hoy,
+      volFcst:volumen, volReal:volReal,
+      dotFija:c.fijos, dotEventual:Math.max(0,c.evFcst),
+      evPresentes:pres, ausencias:aus,
+      ggpFcst:ggpFcst, ggpReal:ggpReal,
       tarifFijo:tf, tarifEv:te,
-      hfijo:parseFloat(hfAm.toFixed(2)), hev:parseFloat(heAm.toFixed(2)), htotal:parseFloat(htAm.toFixed(2))};
-    var recPm={id:genId(),fecha:hoy,turno:'PM',
-      volFcst:sbu9Pm, volReal:volRealPm,
-      dotFija:c.fijosPm, dotEventual:Math.max(0,c.evFcstPm),
-      evPresentes:presPm, ausencias:ausPm,
-      ggpFcst:ggpFcstPm, ggpReal:ggpRealPm,
-      tarifFijo:tf, tarifEv:te,
-      hfijo:parseFloat(hfPm.toFixed(2)), hev:parseFloat(hePm.toFixed(2)), htotal:parseFloat(htPm.toFixed(2))};
-    var updated=hist.concat([recAm,recPm]);
+      hfijo:parseFloat(hfijo.toFixed(2)), hev:parseFloat(hev.toFixed(2)), htotal:parseFloat(htotal.toFixed(2))};
+    var updated=hist.concat([rec]);
     setHist(updated);
     try{localStorage.setItem(DOT_KEY,JSON.stringify(updated));}catch(e){}
     setSaved(true);setTimeout(function(){setSaved(false);},2500);
@@ -906,75 +1240,72 @@ function DotacionView(props) {
     var txt=vv>0?'+'+vv+' faltan':vv<0?vv+' sobran':'justo';
     return h('span',{className:'dot-diff-badge',style:{background:bg,color:col}},(vv>0?'▲':vv<0?'▼':'●')+' '+txt);
   }
-  function turnoSection(cfg){
-    var orangeLight='#FAEEDA',blueLight='#E6F1FB',orange='#854F0B',blue='#185FA5';
-    var isAm=cfg.label==='TURNO AM';
-    var bg=isAm?orangeLight:blueLight;
-    var accent=isAm?orange:blue;
-    var hdrBg=isAm?'#854F0B':'#185FA5';
-    return h('div',{className:'dot-card'},
-      h('div',{className:'dot-sec-hdr',style:{background:hdrBg}},cfg.label),
-      h('div',{className:'dot-col-hdr'},
-        h('div',{className:'dot-col-hdr-cell',style:{textAlign:'left',paddingLeft:10}},''),
-        h('div',{className:'dot-col-hdr-cell'},'FCST'),
-        h('div',{className:'dot-col-hdr-cell'},'VOL REAL'),
-        h('div',{className:'dot-col-hdr-cell'},'PRES.'),
-        h('div',{className:'dot-col-hdr-cell'},'DIFERENCIA')
-      ),
-      // Reps fijos
-      h('div',{className:'dot-row',style:{background:bg}},
-        h('div',{className:'dot-row-label'},'Reps fijos'),
-        h('div',{className:'dot-row-cell'},numInput(cfg.rf,cfg.setRf,bg,accent)),
-        h('div',{className:'dot-row-cell'},cfg.rf),
-        h('div',{className:'dot-row-cell'},numInput(cfg.rf,cfg.setRf,bg,accent)),
-        h('div',{className:'dot-row-cell'})
-      ),
-      h('div',{className:'dot-row',style:{background:bg}},
-        h('div',{className:'dot-row-label'},'Vacaciones'),
-        h('div',{className:'dot-row-cell'},numInput(cfg.vac,cfg.setVac,bg,accent)),
-        h('div',{className:'dot-row-cell'},cfg.vac),
-        h('div',{className:'dot-row-cell'},numInput(cfg.vac,cfg.setVac,bg,accent)),
-        h('div',{className:'dot-row-cell'})
-      ),
-      h('div',{className:'dot-row',style:{background:bg}},
-        h('div',{className:'dot-row-label'},'Ausencias'),
-        h('div',{className:'dot-row-cell'},numInput(cfg.aus,cfg.setAus,bg,accent)),
-        h('div',{className:'dot-row-cell'}),
-        h('div',{className:'dot-row-cell'},numInput(cfg.ausReal!==undefined?cfg.ausReal:cfg.aus,cfg.setAusReal||cfg.setAus,bg,accent)),
-        h('div',{className:'dot-row-cell'})
-      ),
-      h('div',{className:'dot-row',style:{background:'#EFEFEB',fontWeight:700}},
-        h('div',{className:'dot-row-label',style:{fontWeight:700}},'Fijos presentes'),
-        h('div',{className:'dot-row-cell',style:{fontWeight:700}},cfg.fijos),
-        h('div',{className:'dot-row-cell',style:{fontWeight:700}},cfg.fijos),
-        h('div',{className:'dot-row-cell',style:{fontWeight:700}},cfg.fijosReal!==undefined?cfg.fijosReal:cfg.fijos),
-        h('div',{className:'dot-row-cell'})
-      ),
-      h('div',{className:'dot-row',style:{background:'#EFEFEB'}},
-        h('div',{className:'dot-row-label',style:{fontWeight:700}},'Eventuales'),
-        h('div',{className:'dot-row-cell',style:{fontWeight:700}},cfg.evFcst),
-        h('div',{className:'dot-row-cell',style:{fontWeight:700}},cfg.evReal!==null?cfg.evReal:'—'),
-        h('div',{className:'dot-row-cell'},numInput(cfg.pres,cfg.setPres,'#FFF3CD','#C49A00')),
-        h('div',{className:'dot-row-cell'},diffBadge(cfg.dif))
-      )
-    );
-  }
+  var orangeLight='#FAEEDA',orange='#854F0B';
+  var turnoView=h('div',{className:'dot-card'},
+    h('div',{className:'dot-sec-hdr',style:{background:orange}},'DOTACIÓN DEL DÍA'),
+    h('div',{className:'dot-col-hdr'},
+      h('div',{className:'dot-col-hdr-cell',style:{textAlign:'left',paddingLeft:10}},''),
+      h('div',{className:'dot-col-hdr-cell'},'FCST'),
+      h('div',{className:'dot-col-hdr-cell'},'VOL REAL'),
+      h('div',{className:'dot-col-hdr-cell'},'PRES.'),
+      h('div',{className:'dot-col-hdr-cell'},'DIFERENCIA')
+    ),
+    h('div',{className:'dot-row',style:{background:orangeLight}},
+      h('div',{className:'dot-row-label'},'Reps fijos'),
+      h('div',{className:'dot-row-cell'},numInput(rf,setRf,orangeLight,orange)),
+      h('div',{className:'dot-row-cell'},rf),
+      h('div',{className:'dot-row-cell'},numInput(rf,setRf,orangeLight,orange)),
+      h('div',{className:'dot-row-cell'})
+    ),
+    h('div',{className:'dot-row',style:{background:orangeLight}},
+      h('div',{className:'dot-row-label'},'Vacaciones'),
+      h('div',{className:'dot-row-cell'},numInput(vac,setVac,orangeLight,orange)),
+      h('div',{className:'dot-row-cell'},vac),
+      h('div',{className:'dot-row-cell'},numInput(vac,setVac,orangeLight,orange)),
+      h('div',{className:'dot-row-cell'})
+    ),
+    h('div',{className:'dot-row',style:{background:orangeLight}},
+      h('div',{className:'dot-row-label'},'Ausencias'),
+      h('div',{className:'dot-row-cell'},numInput(aus,setAus,orangeLight,orange)),
+      h('div',{className:'dot-row-cell'}),
+      h('div',{className:'dot-row-cell'},numInput(ausReal,setAusReal,orangeLight,orange)),
+      h('div',{className:'dot-row-cell'})
+    ),
+    h('div',{className:'dot-row',style:{background:'#EFEFEB',fontWeight:700}},
+      h('div',{className:'dot-row-label',style:{fontWeight:700}},'Fijos presentes'),
+      h('div',{className:'dot-row-cell',style:{fontWeight:700}},c.fijos),
+      h('div',{className:'dot-row-cell',style:{fontWeight:700}},c.fijos),
+      h('div',{className:'dot-row-cell',style:{fontWeight:700}},c.fijosReal),
+      h('div',{className:'dot-row-cell'})
+    ),
+    h('div',{className:'dot-row',style:{background:'#EFEFEB'}},
+      h('div',{className:'dot-row-label',style:{fontWeight:700}},'Eventuales'),
+      h('div',{className:'dot-row-cell',style:{fontWeight:700}},c.evFcst),
+      h('div',{className:'dot-row-cell',style:{fontWeight:700}},c.evReal!==null?c.evReal:'—'),
+      h('div',{className:'dot-row-cell'},numInput(pres,setPres,'#FFF3CD','#C49A00')),
+      h('div',{className:'dot-row-cell'},diffBadge(c.dif))
+    )
+  );
   var tablaRows=[];for(var v=7500;v<=20000;v+=500)tablaRows.push({vol:v,nec:Math.ceil(v/c.gross)});
   // ── Calc tab ──
   var calcView=h('div',{className:'dot-grid'},
     // COL 1
     h('div',null,
-      // Vol real
       h('div',{className:'dot-card'},
         h('div',{className:'dot-sec-hdr'},'Volumen real'),
-        h('div',{className:'dot-param-row'},h('span',null,'Total AM'),numInput(volRealAm,setVolRealAm,'#FAEEDA','#854F0B',100)),
-        h('div',{className:'dot-param-row'},h('span',null,'SBU9 PM'),numInput(volRealPm,setVolRealPm,'#FAEEDA','#854F0B',100))
+        h('div',{className:'dot-param-row'},h('span',null,CONFIG.SITE_NAME),numInput(volReal,setVolReal,'#FAEEDA','#854F0B',100))
       ),
-      // Parametro
       h('div',{className:'dot-card'},
         h('div',{className:'dot-sec-hdr'},'Parámetro de productividad'),
         h('div',{className:'dot-param-row'},
-          h('div',null,h('div',{style:{fontSize:13}},'Share de voluminosos'),h('div',{style:{fontSize:11,color:'var(--text-muted)'}},'Base 5% = 360 · +1% → -2 pts')),
+          h('div',null,h('div',{style:{fontSize:13}},'Base pkg/hora'),h('div',{style:{fontSize:11,color:'var(--text-muted)'}},'Target de referencia con share 5% (editable)')),
+          h('div',{style:{display:'flex',alignItems:'center',gap:8}},
+            numInput(baseGross,setBaseGross,'#FFFBE6','#F0C900',58),
+            h('span',{style:{fontSize:12,color:'var(--text-muted)'}},'pkg/h')
+          )
+        ),
+        h('div',{className:'dot-param-row'},
+          h('div',null,h('div',{style:{fontSize:13}},'Share de voluminosos'),h('div',{style:{fontSize:11,color:'var(--text-muted)'}},'Base 5% = valor de arriba · +1% → -2 pts')),
           h('div',{style:{display:'flex',alignItems:'center',gap:8}},
             h('input',{type:'range',min:0,max:30,step:1,value:share,onChange:function(e){setShare(parseFloat(e.target.value));},style:{width:70,accentColor:'#FFE600'}}),
             numInput(share,setShare,'#FFFBE6','#F0C900',48),
@@ -986,19 +1317,13 @@ function DotacionView(props) {
           h('span',{style:{fontWeight:800,fontSize:16}},Math.round(c.gross)+' pkg/persona')
         )
       ),
-      // Horarios
       h('div',{className:'dot-card'},
-        h('div',{className:'dot-sec-hdr'},'Horarios de apertura'),
+        h('div',{className:'dot-sec-hdr'},'Horario de apertura'),
         h('div',{className:'dot-param-row'},
-          h('span',null,'Apertura AM'),
-          h('input',{type:'text',value:horaAm,onChange:function(e){setHoraAm(e.target.value);},className:'dot-num-input',style:{width:80,textAlign:'center',background:'#FAEEDA',borderColor:'#854F0B',color:'#854F0B'}})
-        ),
-        h('div',{className:'dot-param-row'},
-          h('span',null,'Apertura PM'),
-          h('input',{type:'text',value:horaPm,onChange:function(e){setHoraPm(e.target.value);},className:'dot-num-input',style:{width:80,textAlign:'center',background:'#E6F1FB',borderColor:'#185FA5',color:'#185FA5'}})
+          h('span',null,'Apertura'),
+          h('input',{type:'text',value:hora,onChange:function(e){setHora(e.target.value);},className:'dot-num-input',style:{width:80,textAlign:'center',background:'#FAEEDA',borderColor:'#854F0B',color:'#854F0B'}})
         )
       ),
-      // Mensaje WA
       h('div',{className:'dot-card'},
         h('div',{className:'dot-sec-hdr',style:{background:'#085041'}},'Mensaje WhatsApp'),
         h('div',{style:{background:'#0a1929',padding:12}},h('div',{className:'dot-wa-bubble'},h('pre',{className:'dot-wa-pre'},mensaje))),
@@ -1009,24 +1334,18 @@ function DotacionView(props) {
     ),
     // COL 2
     h('div',null,
-      turnoSection({label:'TURNO AM',rf:rfAm,setRf:setRfAm,vac:vacAm,setVac:setVacAm,aus:ausAm,setAus:setAusAm,ausReal:ausAmReal,setAusReal:setAusAmReal,fijos:c.fijosAm,fijosReal:c.fijosAmReal,evFcst:c.evFcstAm,evReal:c.evRealAm,pres:presAm,setPres:setPresAm,dif:c.difAm}),
-      turnoSection({label:'TURNO PM',rf:rfPm,setRf:setRfPm,vac:vacPm,setVac:setVacPm,aus:ausPm,setAus:setAusPm,ausReal:ausPmReal,setAusReal:setAusPmReal,fijos:c.fijosPm,fijosReal:c.fijosPmReal,evFcst:c.evFcstPm,evReal:c.evRealPm,pres:presPm,setPres:setPresPm,dif:c.difPm}),
+      turnoView,
       h('div',{style:{padding:'6px 10px',background:'var(--border)',borderRadius:6,fontSize:11,color:'var(--text)',fontStyle:'italic',marginBottom:12}},'DIFERENCIA: positivo = faltan personas · negativo = sobran personas')
     ),
     // COL 3
     h('div',null,
-      // Resumen
       h('div',{className:'dot-card'},
         h('div',{className:'dot-sec-hdr'},'Resumen'),
         h('div',{className:'dot-stat-row',style:{background:'#E6F4EA',fontWeight:700}},h('span',null,'Total personas necesarias'),h('span',{style:{color:'#1D7A4A',fontWeight:800}},c.totalNec)),
-        h('div',{className:'dot-stat-row'},h('span',null,'Fijos presentes AM'),h('span',{fontWeight:600},c.fijosAm)),
-        h('div',{className:'dot-stat-row'},h('span',null,'Fijos presentes PM'),h('span',null,c.fijosPm)),
-        h('div',{className:'dot-stat-row',style:{background:'#FAEEDA'}},h('span',null,'Eventuales AM (FCST)'),h('span',null,c.evFcstAm)),
-        h('div',{className:'dot-stat-row',style:{background:'#E6F1FB'}},h('span',null,'Eventuales PM (FCST)'),h('span',null,c.evFcstPm)),
-        h('div',{className:'dot-stat-row',style:{background:'#FAEEDA'}},h('span',null,'Eventuales AM presentes'),h('span',null,presAm)),
-        h('div',{className:'dot-stat-row',style:{background:'#E6F1FB'}},h('span',null,'Eventuales PM presentes'),h('span',null,presPm))
+        h('div',{className:'dot-stat-row'},h('span',null,'Fijos presentes'),h('span',{fontWeight:600},c.fijos)),
+        h('div',{className:'dot-stat-row',style:{background:'#FAEEDA'}},h('span',null,'Eventuales (FCST)'),h('span',null,c.evFcst)),
+        h('div',{className:'dot-stat-row',style:{background:'#FAEEDA'}},h('span',null,'Eventuales presentes'),h('span',null,pres))
       ),
-      // GGP
       h('div',{className:'dot-card'},
         h('div',{className:'dot-sec-hdr',style:{background:'#4B3A8A'}},'GGP (paq/hora)'),
         h('div',{className:'dot-ggp-grid',style:{background:'#EFEFEB',borderBottom:'1px solid var(--border)'}},
@@ -1034,7 +1353,7 @@ function DotacionView(props) {
           h('div',{className:'dot-ggp-cell',style:{fontWeight:700,fontSize:10,textTransform:'uppercase'}},'FCST'),
           h('div',{className:'dot-ggp-cell',style:{fontWeight:700,fontSize:10,textTransform:'uppercase'}},'REAL')
         ),
-        [['Hs fijos (7,33hs)',fmtD(c.hfF,2),fmtD(c.hfR,2)],['Hs eventuales (8hs)',fmtD(c.heF,2),fmtD(c.heR,2)],['Horas totales',fmtD(c.htF,2),fmtD(c.htR,2)]].map(function(row,i){
+        [['Hs fijos (7,33hs)',fmtD(c.hf,2),fmtD(c.hf,2)],['Hs eventuales (8hs)',fmtD(c.he,2),fmtD(c.heR,2)],['Horas totales',fmtD(c.ht,2),fmtD(c.htR,2)]].map(function(row,i){
           return h('div',{key:i,className:'dot-ggp-grid',style:{background:i===2?'#EFEFEB':'#F0EDFB',borderBottom:'1px solid var(--border)'}},
             h('div',{className:'dot-ggp-cell',style:{textAlign:'left',fontWeight:i===2?700:400}},row[0]),
             h('div',{className:'dot-ggp-cell',style:{fontWeight:i===2?700:500}},row[1]),
@@ -1042,18 +1361,17 @@ function DotacionView(props) {
           );
         }),
         h('div',{className:'dot-ggp-grid',style:{background:'#F0EDFB',borderBottom:'1px solid var(--border)'}},h('div',{className:'dot-ggp-cell',style:{textAlign:'left',fontWeight:700}},'GGP FCST'),h('div',{className:'dot-ggp-cell',style:{fontWeight:800,fontSize:16,color:'#4B3A8A',gridColumn:'2/-1'}},fmtD(c.ggpF))),
-        h('div',{className:'dot-ggp-grid',style:{background:'#F0EDFB'}},h('div',{className:'dot-ggp-cell',style:{textAlign:'left',fontWeight:700}},'GGP REAL'),h('div',{className:'dot-ggp-cell',style:{fontWeight:800,fontSize:16,color:'#4B3A8A',gridColumn:'2/-1'}},c.volRT>0?fmtD(c.ggpR):'—'))
+        h('div',{className:'dot-ggp-grid',style:{background:'#F0EDFB'}},h('div',{className:'dot-ggp-cell',style:{textAlign:'left',fontWeight:700}},'GGP REAL'),h('div',{className:'dot-ggp-cell',style:{fontWeight:800,fontSize:16,color:'#4B3A8A',gridColumn:'2/-1'}},volReal>0?fmtD(c.ggpR):'—'))
       ),
-      // Tabla
       h('div',{className:'dot-card'},
         h('div',{className:'dot-sec-hdr'},'Tabla dotación estimada'),
         h('div',{style:{display:'grid',gridTemplateColumns:'1fr 1fr',background:'#EFEFEB',borderBottom:'1px solid var(--border)'}},
-          h('div',{style:{padding:'4px 8px',fontSize:10,fontWeight:700,textAlign:'center',textTransform:'uppercase'}},fmtN(c.volFcstAm+sbu9Pm)+' pkg actual'),
+          h('div',{style:{padding:'4px 8px',fontSize:10,fontWeight:700,textAlign:'center',textTransform:'uppercase'}},fmtN(volumen)+' pkg actual'),
           h('div',{style:{padding:'4px 8px',fontSize:10,fontWeight:700,textAlign:'center',textTransform:'uppercase'}},'Dotación nec.')
         ),
         h('div',{style:{maxHeight:200,overflowY:'auto'}},
           tablaRows.map(function(r){
-            var near=Math.abs(r.vol-(c.volFcstAm+sbu9Pm))<300;
+            var near=Math.abs(r.vol-volumen)<300;
             return h('div',{key:r.vol,className:'dot-tabla-row',style:{background:near?'#FFE600':'var(--surface)'}},
               h('div',{className:'dot-tabla-cell',style:{fontWeight:near?700:400}},fmtN(r.vol)),
               h('div',{className:'dot-tabla-cell',style:{fontWeight:near?700:600,color:near?'#1a1f2e':'#185FA5'}},r.nec)
@@ -1061,12 +1379,10 @@ function DotacionView(props) {
           })
         )
       ),
-      // Guardar
       h('button',{onClick:guardar,className:'dot-save-btn',style:{background:saved?'#E6F4EA':'#1D7A4A',color:saved?'#1D7A4A':'#fff'}},saved?'✓ Guardado en histórico':'💾 Guardar en histórico')
     )
   );
   // ── Hist tab ──
-  // analytics helpers
   function computeAnalytics() {
     if (!hist.length) return null;
     var totalCostFijo=0,totalCostEv=0;
@@ -1094,7 +1410,6 @@ function DotacionView(props) {
        h('div',{style:{fontSize:13}},'Guardá el primer registro desde la calculadora')
       )
     :h('div',{className:'dot-analytics-wrap'},
-      // tarifa bar
       h('div',{className:'dot-tarifa-bar'},
         h('span',{style:{fontSize:12,fontWeight:700,color:'var(--text-muted)',textTransform:'uppercase',letterSpacing:'.05em'}},'Tarifas por hora:'),
         h('div',{className:'dot-tarifa-field'},
@@ -1113,7 +1428,6 @@ function DotacionView(props) {
         ),
         h('span',{style:{fontSize:11,color:'var(--text-muted)',fontStyle:'italic'}},'* Se guarda con cada registro')
       ),
-      // target GGP semanal
       h('div',{style:{background:'#F0EDFB',border:'2px solid #4B3A8A',borderRadius:8,padding:'12px 16px',display:'flex',alignItems:'center',gap:16,flexWrap:'wrap'}},
         h('div',null,
           h('div',{style:{fontSize:13,fontWeight:700,color:'#4B3A8A'}},'🎯 Target GGP semanal'),
@@ -1129,7 +1443,6 @@ function DotacionView(props) {
         ),
         targetGgp>0&&h(SemanaWidget,{hist:hist,targetGgp:targetGgp})
       ),
-      // sub-tabs tabla / analytics
       h('div',{style:{display:'flex',gap:0,background:'var(--surface)',border:'1px solid var(--border)',borderRadius:'8px 8px 0 0',overflow:'hidden'}},
         [['tabla','📋 Registros'],['analytics','📊 Análisis GGP & Costos']].map(function(t){
           return h('button',{key:t[0],onClick:function(){setHistTab(t[0]);},
@@ -1141,7 +1454,6 @@ function DotacionView(props) {
               transition:'all .15s'}},t[1]);
         })
       ),
-      // TABLA
       histTab==='tabla'&&h('div',{style:{overflowX:'auto',background:'var(--surface)',border:'1px solid var(--border)',borderTop:'none',borderRadius:'0 0 8px 8px'}},
         h('div',{style:{display:'flex',justifyContent:'flex-end',padding:'10px 14px',borderBottom:'1px solid var(--border)'}},
           h('button',{onClick:function(){if(window.confirm('¿Eliminar todo el histórico?')){setHist([]);try{localStorage.removeItem(DOT_KEY);}catch(e){}}},
@@ -1149,22 +1461,16 @@ function DotacionView(props) {
         ),
         h('table',{className:'dot-hist-table'},
           h('thead',null,h('tr',null,
-            ['Fecha','Turno','Vol FCST','Vol Real','Dot. Fija','Dot. Ev.','Ev. Presentes','Ausencias','GGP FCST','GGP Real','Var% GGP','Tarifa Fijo','Tarifa Ev.','Costo Turno',''].map(function(l,i){return h('th',{key:i},l);})
+            ['Fecha','Vol FCST','Vol Real','Dot. Fija','Dot. Ev.','Ev. Presentes','Ausencias','GGP FCST','GGP Real','Var% GGP','Tarifa Fijo','Tarifa Ev.','Costo',''].map(function(l,i){return h('th',{key:i},l);})
           )),
           h('tbody',null,[...hist].reverse().map(function(r,i){
             var varPct=(r.ggpReal&&r.ggpFcst)?((r.ggpReal-r.ggpFcst)/r.ggpFcst*100):null;
             var vcol=varPct===null?'var(--text-muted)':varPct>5?'#1D7A4A':varPct<-5?'#ef4444':'#f59e0b';
             var vbg=varPct===null?'':varPct>5?'#E6F4EA':varPct<-5?'#FDECEA':'#FFF3CD';
             var tf=r.tarifFijo||0,te=r.tarifEv||0;
-            var costoTurno=(r.dotFija||0)*7.33*tf+(r.dotEventual||0)*8*te;
-            var isAm=r.turno==='AM';
-            var turnoBg=isAm?'#FFF8E6':'#EEF6FF';
-            var turnoColor=isAm?'#854F0B':'#185FA5';
-            return h('tr',{key:r.id,style:{background:turnoBg,borderLeft:'3px solid '+turnoColor}},
+            var costoTotal=(r.dotFija||0)*7.33*tf+(r.dotEventual||0)*8*te;
+            return h('tr',{key:r.id},
               h('td',{style:{fontWeight:700}},r.fecha),
-              h('td',{style:{textAlign:'center'}},
-                h('span',{style:{background:turnoBg,color:turnoColor,fontWeight:800,fontSize:11,padding:'2px 8px',borderRadius:20,border:'1.5px solid '+turnoColor}},r.turno||'—')
-              ),
               h('td',{style:{textAlign:'center'}},fmtN(r.volFcst)),
               h('td',{style:{textAlign:'center'}},r.volReal>0?fmtN(r.volReal):'—'),
               h('td',{style:{textAlign:'center'}},r.dotFija),
@@ -1176,13 +1482,12 @@ function DotacionView(props) {
               h('td',{style:{textAlign:'center',background:vbg}},h('span',{style:{color:vcol,fontWeight:700}},varPct!==null?(varPct>0?'+':'')+varPct.toFixed(1)+'%':'—')),
               h('td',{style:{textAlign:'center',color:'#185FA5',fontWeight:600}},tf?'$'+fmtN(tf):'—'),
               h('td',{style:{textAlign:'center',color:'#854F0B',fontWeight:600}},te?'$'+fmtN(te):'—'),
-              h('td',{style:{textAlign:'center',fontWeight:700,color:costoTurno>0?'#1D7A4A':'var(--text-muted)'}},costoTurno>0?'$'+fmtN(costoTurno):'—'),
+              h('td',{style:{textAlign:'center',fontWeight:700,color:costoTotal>0?'#1D7A4A':'var(--text-muted)'}},costoTotal>0?'$'+fmtN(costoTotal):'—'),
               h('td',{style:{textAlign:'center'}},h('button',{onClick:function(){delHist(r.id);},style:{background:'none',border:'none',cursor:'pointer',color:'var(--text-muted)',fontSize:14,padding:'2px 6px',fontFamily:'inherit'}},'✕'))
             );
           }))
         )
       ),
-      // ANALYTICS
       histTab==='analytics'&&h('div',{style:{background:'var(--surface)',border:'1px solid var(--border)',borderTop:'none',borderRadius:'0 0 8px 8px',padding:16}},
         analytics&&h('div',{className:'dot-kpi-row',style:{marginBottom:16}},
           h('div',{className:'dot-kpi-box'},h('div',{className:'dot-kpi-box-num',style:{color:'#1D7A4A'}},analytics.ggpAvg>0?analytics.ggpAvg.toFixed(1):'—'),h('div',{className:'dot-kpi-box-lbl'},'GGP Real promedio')),
@@ -1196,7 +1501,7 @@ function DotacionView(props) {
           h('div',{style:{overflowX:'auto'}},
             h('table',{className:'dot-analysis-table'},
               h('thead',null,h('tr',null,
-                ['Fecha','GGP FCST','GGP Real','Var%','Aus AM','Aus PM','Ev. reales vs FCST','Diagnóstico'].map(function(l,i){return h('th',{key:i},l);})
+                ['Fecha','GGP FCST','GGP Real','Var%','Ausencias','Ev. reales vs FCST','Diagnóstico'].map(function(l,i){return h('th',{key:i},l);})
               )),
               h('tbody',null,(function(){
                 var byDate={};
@@ -1227,7 +1532,6 @@ function DotacionView(props) {
                     h('td',{style:{textAlign:'center',color:'#4B3A8A',fontWeight:700}},ggpR||'—'),
                     h('td',{style:{textAlign:'center',background:vbg}},h('span',{style:{color:vcol,fontWeight:700}},(varPct>0?'+':'')+varPct.toFixed(1)+'%')),
                     h('td',{style:{textAlign:'center',color:d.ausencias>0?'#ef4444':'var(--text-muted)'}},d.ausencias),
-                    h('td',{style:{textAlign:'center'}},'—'),
                     h('td',{style:{textAlign:'center',color:evDif===null?'var(--text-muted)':evDif<0?'#ef4444':evDif>0?'#1D7A4A':'var(--text-muted)'}},evDif!==null?(evDif>0?'+':'')+evDif:'—'),
                     h('td',null,h('span',{style:{fontSize:11,color:vcol}},diag.join(' · ')))
                   );
@@ -1246,7 +1550,7 @@ function DotacionView(props) {
     // FCST bar
     h('div',{className:'dot-fcst-bar'},
       h('div',{style:{background:'var(--navy)',display:'flex',justifyContent:'space-between',alignItems:'center',padding:'7px 12px'}},
-        h('span',{style:{color:'#fff',fontWeight:700,fontSize:11,letterSpacing:'.07em',textTransform:'uppercase'}},'Volumen FCST — actualizá estos valores diariamente'),
+        h('span',{style:{color:'#fff',fontWeight:700,fontSize:11,letterSpacing:'.07em',textTransform:'uppercase'}},'Volumen FCST — actualizá este valor diariamente'),
         h('button',{
           onClick:function(){
             var state=buildCalcState();
@@ -1257,11 +1561,7 @@ function DotacionView(props) {
         },'💾 Sincronizar')
       ),
       h('div',{className:'dot-fcst-inputs'},
-        h('div',{className:'dot-fcst-box dot-fcst-box-sbu9'},h('div',{className:'dot-fcst-label',style:{color:'#1a1f2e'}},'SBU9 AM'),h('input',{type:'number',value:sbu9,min:0,step:100,onChange:function(e){setSbu9(parseFloat(e.target.value)||0);},className:'dot-fcst-input',style:{color:'#1a1f2e'}}),h('div',{className:'dot-fcst-sub'},'paquetes FCST')),
-        h('div',{className:'dot-fcst-box dot-fcst-box-ecz'},h('div',{className:'dot-fcst-label',style:{color:'#185FA5'}},'ECZ1 AM'),h('input',{type:'number',value:ecz1,min:0,step:100,onChange:function(e){setEcz1(parseFloat(e.target.value)||0);},className:'dot-fcst-input',style:{color:'#185FA5'}}),h('div',{className:'dot-fcst-sub'},'paquetes FCST')),
-        h('div',{className:'dot-fcst-box dot-fcst-box-ecz'},h('div',{className:'dot-fcst-label',style:{color:'#185FA5'}},'ECZ2 AM'),h('input',{type:'number',value:ecz2,min:0,step:100,onChange:function(e){setEcz2(parseFloat(e.target.value)||0);},className:'dot-fcst-input',style:{color:'#185FA5'}}),h('div',{className:'dot-fcst-sub'},'paquetes FCST')),
-        h('div',{className:'dot-fcst-box dot-fcst-box-pm'},h('div',{className:'dot-fcst-label',style:{color:'#1D7A4A'}},'SBU9 PM'),h('input',{type:'number',value:sbu9Pm,min:0,step:100,onChange:function(e){setSbu9Pm(parseFloat(e.target.value)||0);},className:'dot-fcst-input',style:{color:'#1D7A4A'}}),h('div',{className:'dot-fcst-sub'},'paquetes FCST')),
-        h('div',{className:'dot-fcst-box-total'},h('div',{style:{fontSize:10,fontWeight:700,color:'var(--text-muted)',textTransform:'uppercase',letterSpacing:'.06em',marginBottom:4}},'Total AM'),h('div',{style:{fontSize:22,fontWeight:800}},fmtN(c.volFcstAm)),h('div',{style:{fontSize:10,color:'var(--text-muted)'}},'paquetes'))
+        h('div',{className:'dot-fcst-box dot-fcst-box-sbu9'},h('div',{className:'dot-fcst-label',style:{color:'#1a1f2e'}},CONFIG.SITE_NAME),h('input',{type:'number',value:volumen,min:0,step:100,onChange:function(e){setVolumen(parseFloat(e.target.value)||0);},className:'dot-fcst-input',style:{color:'#1a1f2e'}}),h('div',{className:'dot-fcst-sub'},'paquetes FCST'))
       )
     ),
     // Sub-tabs calc/hist
