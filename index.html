@@ -1126,7 +1126,9 @@ function DotacionView(props) {
   var _saved = props.calcState || loadCalc() || {};
   var volS=_useState(_saved.volumen!==undefined?_saved.volumen:10000);   var volumen=volS[0],setVolumen=volS[1];
   var vrealS=_useState(_saved.volReal||0);   var volReal=vrealS[0],setVolReal=vrealS[1];
-  var shareS=_useState(_saved.share!==undefined?_saved.share:5);      var share=shareS[0],setShare=shareS[1];
+  var shareLargeS=_useState(_saved.shareLarge!==undefined?_saved.shareLarge:5);      var shareLarge=shareLargeS[0],setShareLarge=shareLargeS[1];
+  var shareOverS=_useState(_saved.shareOversize!==undefined?_saved.shareOversize:0);  var shareOversize=shareOverS[0],setShareOversize=shareOverS[1];
+  var horasProcesoS=_useState(_saved.horasProceso!==undefined?_saved.horasProceso:5); var horasProceso=horasProcesoS[0],setHorasProceso=horasProcesoS[1];
   var baseGrossS=_useState(_saved.baseGross!==undefined?_saved.baseGross:90);  var baseGross=baseGrossS[0],setBaseGross=baseGrossS[1];
   var rfS=_useState(_saved.rf!==undefined?_saved.rf:22);        var rf=rfS[0],setRf=rfS[1];
   var vacS=_useState(_saved.vac||0);     var vac=vacS[0],setVac=vacS[1];
@@ -1141,7 +1143,7 @@ function DotacionView(props) {
   var histTabS=_useState('tabla'); var histTab=histTabS[0],setHistTab=histTabS[1];
   var targetGgpS=_useState(_saved.targetGgp||0);   var targetGgp=targetGgpS[0],setTargetGgp=targetGgpS[1];
   function buildCalcState(){
-    return {volumen:volumen,volReal:volReal,share:share,baseGross:baseGross,rf:rf,vac:vac,aus:aus,ausReal:ausReal,pres:pres,hora:hora,tarifFijo:tarifFijo,tarifEv:tarifEv,targetGgp:targetGgp};
+    return {volumen:volumen,volReal:volReal,shareLarge:shareLarge,shareOversize:shareOversize,horasProceso:horasProceso,baseGross:baseGross,rf:rf,vac:vac,aus:aus,ausReal:ausReal,pres:pres,hora:hora,tarifFijo:tarifFijo,tarifEv:tarifEv,targetGgp:targetGgp};
   }
   var calcBaseline=_useRef(buildCalcState());
   var calcFirstRender=_useRef(true);
@@ -1155,7 +1157,7 @@ function DotacionView(props) {
       calcBaseline.current=JSON.parse(JSON.stringify(state));
     },1500);
     return function(){if(calcAutoTimer.current)clearTimeout(calcAutoTimer.current);};
-  },[volumen,volReal,share,baseGross,rf,vac,aus,ausReal,pres,hora,tarifFijo,tarifEv,targetGgp]);
+  },[volumen,volReal,shareLarge,shareOversize,horasProceso,baseGross,rf,vac,aus,ausReal,pres,hora,tarifFijo,tarifEv,targetGgp]);
   var copiedS=_useState(false);   var copied=copiedS[0],setCopied=copiedS[1];
   var savedS=_useState(false);    var saved=savedS[0],setSaved=savedS[1];
   _useEffect(function(){
@@ -1167,7 +1169,9 @@ function DotacionView(props) {
     if(!s)return;
     if(s.volumen!==undefined)setVolumen(s.volumen);
     if(s.volReal!==undefined)setVolReal(s.volReal);
-    if(s.share!==undefined)setShare(s.share);
+    if(s.shareLarge!==undefined)setShareLarge(s.shareLarge);
+    if(s.shareOversize!==undefined)setShareOversize(s.shareOversize);
+    if(s.horasProceso!==undefined)setHorasProceso(s.horasProceso);
     if(s.baseGross!==undefined)setBaseGross(s.baseGross);
     if(s.rf!==undefined)setRf(s.rf);
     if(s.vac!==undefined)setVac(s.vac);
@@ -1183,29 +1187,34 @@ function DotacionView(props) {
   _useEffect(function(){
     try{
       localStorage.setItem(CALC_KEY, JSON.stringify({
-        volumen:volumen,volReal:volReal,share:share,baseGross:baseGross,
+        volumen:volumen,volReal:volReal,shareLarge:shareLarge,shareOversize:shareOversize,horasProceso:horasProceso,baseGross:baseGross,
         rf:rf,vac:vac,aus:aus,ausReal:ausReal,pres:pres,
         hora:hora,tarifFijo:tarifFijo,tarifEv:tarifEv,targetGgp:targetGgp
       }));
     }catch(e){}
-  },[volumen,volReal,share,baseGross,rf,vac,aus,ausReal,pres,hora,tarifFijo,tarifEv,targetGgp]);
+  },[volumen,volReal,shareLarge,shareOversize,horasProceso,baseGross,rf,vac,aus,ausReal,pres,hora,tarifFijo,tarifEv,targetGgp]);
   var c = _useMemo(function(){
-    var gross=baseGross-(share/100-0.05)*200;
+    var shareTotal=shareLarge+shareOversize;
+    var gross=baseGross-(shareTotal/100-0.05)*200;
     var fijos=rf-vac-aus;
     var fijosReal=rf-vac-ausReal;
     var evFcst=Math.ceil(volumen/gross)-fijos;
     var evReal=volReal>0?Math.ceil(volReal/gross)-fijosReal:null;
     var dif=evReal!==null?evReal-pres:null;
     var totalNec=Math.ceil(volumen/gross);
+    // Horas pagas (para costo): fijos 7,33hs, eventuales 8hs
     var hf=fijos*7.33;
     var he=Math.max(0,evFcst)*8;
     var ht=hf+he;
-    var ggpF=ht>0?volumen/ht:0;
     var heR=pres*8;
     var htR=hf+heR;
-    var ggpR=htR>0&&volReal>0?volReal/htR:0;
-    return{gross:gross,fijos:fijos,fijosReal:fijosReal,evFcst:evFcst,evReal:evReal,dif:dif,totalNec:totalNec,hf:hf,he:he,ht:ht,ggpF:ggpF,heR:heR,htR:htR,ggpR:ggpR};
-  },[volumen,volReal,share,baseGross,rf,vac,aus,ausReal,pres]);
+    // Horas de proceso (para GGP real de productividad, editable — no todo el turno se procesa)
+    var htProcesoF=(fijos+Math.max(0,evFcst))*horasProceso;
+    var htProcesoR=(fijos+pres)*horasProceso;
+    var ggpF=htProcesoF>0?volumen/htProcesoF:0;
+    var ggpR=htProcesoR>0&&volReal>0?volReal/htProcesoR:0;
+    return{gross:gross,fijos:fijos,fijosReal:fijosReal,evFcst:evFcst,evReal:evReal,dif:dif,totalNec:totalNec,hf:hf,he:he,ht:ht,heR:heR,htR:htR,htProcesoF:htProcesoF,htProcesoR:htProcesoR,ggpF:ggpF,ggpR:ggpR};
+  },[volumen,volReal,shareLarge,shareOversize,horasProceso,baseGross,rf,vac,aus,ausReal,pres]);
   function fmtN(n){return Math.round(n).toLocaleString('es-AR');}
   function fmtD(n,d){d=d||1;return(isNaN(n)||!isFinite(n)||n===0)?'—':n.toFixed(d);}
   var mensaje='Buenas equipo, les comparto el volumen estimado para mañana:\n\n'+CONFIG.SITE_NAME+'     '+fmtN(volumen)+'\n\n'+c.evFcst+' eventual'+(c.evFcst===1?'':'es')+' | Apertura '+hora;
@@ -1214,8 +1223,8 @@ function DotacionView(props) {
     var hoy=new Date().toLocaleDateString('es-AR',{day:'2-digit',month:'2-digit',year:'numeric'});
     var tf=parseFloat(tarifFijo)||0, te=parseFloat(tarifEv)||0;
     var hfijo=c.fijos*7.33, hev=Math.max(0,c.evFcst)*8, htotal=hfijo+hev;
-    var ggpFcst=htotal>0?parseFloat((volumen/htotal).toFixed(1)):0;
-    var ggpReal=volReal>0&&htotal>0?parseFloat((volReal/htotal).toFixed(1)):0;
+    var ggpFcst=c.htProcesoF>0?parseFloat((volumen/c.htProcesoF).toFixed(1)):0;
+    var ggpReal=volReal>0&&c.htProcesoR>0?parseFloat((volReal/c.htProcesoR).toFixed(1)):0;
     var rec={id:genId(),fecha:hoy,
       volFcst:volumen, volReal:volReal,
       dotFija:c.fijos, dotEventual:Math.max(0,c.evFcst),
@@ -1305,16 +1314,31 @@ function DotacionView(props) {
           )
         ),
         h('div',{className:'dot-param-row'},
-          h('div',null,h('div',{style:{fontSize:13}},'Share de voluminosos'),h('div',{style:{fontSize:11,color:'var(--text-muted)'}},'Base 5% = valor de arriba · +1% → -2 pts')),
+          h('div',null,h('div',{style:{fontSize:13}},'Share de Large'),h('div',{style:{fontSize:11,color:'var(--text-muted)'}},'Editable — productividad exacta a definir')),
           h('div',{style:{display:'flex',alignItems:'center',gap:8}},
-            h('input',{type:'range',min:0,max:30,step:1,value:share,onChange:function(e){setShare(parseFloat(e.target.value));},style:{width:70,accentColor:'#FFE600'}}),
-            numInput(share,setShare,'#FFFBE6','#F0C900',48),
+            h('input',{type:'range',min:0,max:30,step:1,value:shareLarge,onChange:function(e){setShareLarge(parseFloat(e.target.value));},style:{width:70,accentColor:'#FFE600'}}),
+            numInput(shareLarge,setShareLarge,'#FFFBE6','#F0C900',48),
+            h('span',{style:{fontSize:12,color:'var(--text-muted)'}},'%')
+          )
+        ),
+        h('div',{className:'dot-param-row'},
+          h('div',null,h('div',{style:{fontSize:13}},'Share de Oversize'),h('div',{style:{fontSize:11,color:'var(--text-muted)'}},'Editable — productividad exacta a definir')),
+          h('div',{style:{display:'flex',alignItems:'center',gap:8}},
+            h('input',{type:'range',min:0,max:30,step:1,value:shareOversize,onChange:function(e){setShareOversize(parseFloat(e.target.value));},style:{width:70,accentColor:'#FFE600'}}),
+            numInput(shareOversize,setShareOversize,'#FFFBE6','#F0C900',48),
             h('span',{style:{fontSize:12,color:'var(--text-muted)'}},'%')
           )
         ),
         h('div',{className:'dot-param-row',style:{background:'var(--bg)'}},
           h('span',{style:{fontSize:13,color:'var(--text-muted)'}},'Gross calculada'),
           h('span',{style:{fontWeight:800,fontSize:16}},Math.round(c.gross)+' pkg/persona')
+        ),
+        h('div',{className:'dot-param-row'},
+          h('div',null,h('div',{style:{fontSize:13}},'Horas de proceso'),h('div',{style:{fontSize:11,color:'var(--text-muted)'}},'No todo el turno se procesa · usada para el GGP')),
+          h('div',{style:{display:'flex',alignItems:'center',gap:8}},
+            numInput(horasProceso,setHorasProceso,'#F0EDFB','#4B3A8A',48),
+            h('span',{style:{fontSize:12,color:'var(--text-muted)'}},'hs')
+          )
         )
       ),
       h('div',{className:'dot-card'},
@@ -1353,11 +1377,12 @@ function DotacionView(props) {
           h('div',{className:'dot-ggp-cell',style:{fontWeight:700,fontSize:10,textTransform:'uppercase'}},'FCST'),
           h('div',{className:'dot-ggp-cell',style:{fontWeight:700,fontSize:10,textTransform:'uppercase'}},'REAL')
         ),
-        [['Hs fijos (7,33hs)',fmtD(c.hf,2),fmtD(c.hf,2)],['Hs eventuales (8hs)',fmtD(c.he,2),fmtD(c.heR,2)],['Horas totales',fmtD(c.ht,2),fmtD(c.htR,2)]].map(function(row,i){
-          return h('div',{key:i,className:'dot-ggp-grid',style:{background:i===2?'#EFEFEB':'#F0EDFB',borderBottom:'1px solid var(--border)'}},
-            h('div',{className:'dot-ggp-cell',style:{textAlign:'left',fontWeight:i===2?700:400}},row[0]),
-            h('div',{className:'dot-ggp-cell',style:{fontWeight:i===2?700:500}},row[1]),
-            h('div',{className:'dot-ggp-cell',style:{fontWeight:i===2?700:500}},row[2])
+        [['Hs fijos (7,33hs)',fmtD(c.hf,2),fmtD(c.hf,2)],['Hs eventuales (8hs)',fmtD(c.he,2),fmtD(c.heR,2)],['Horas pagas (total)',fmtD(c.ht,2),fmtD(c.htR,2)],['Horas de proceso ('+horasProceso+'hs c/u)',fmtD(c.htProcesoF,2),fmtD(c.htProcesoR,2)]].map(function(row,i){
+          var bold=i>=2;
+          return h('div',{key:i,className:'dot-ggp-grid',style:{background:bold?'#EFEFEB':'#F0EDFB',borderBottom:'1px solid var(--border)'}},
+            h('div',{className:'dot-ggp-cell',style:{textAlign:'left',fontWeight:bold?700:400}},row[0]),
+            h('div',{className:'dot-ggp-cell',style:{fontWeight:bold?700:500}},row[1]),
+            h('div',{className:'dot-ggp-cell',style:{fontWeight:bold?700:500}},row[2])
           );
         }),
         h('div',{className:'dot-ggp-grid',style:{background:'#F0EDFB',borderBottom:'1px solid var(--border)'}},h('div',{className:'dot-ggp-cell',style:{textAlign:'left',fontWeight:700}},'GGP FCST'),h('div',{className:'dot-ggp-cell',style:{fontWeight:800,fontSize:16,color:'#4B3A8A',gridColumn:'2/-1'}},fmtD(c.ggpF))),
