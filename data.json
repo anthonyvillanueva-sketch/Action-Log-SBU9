@@ -26,12 +26,28 @@
     }
   ],
   "calcState": {
-    "volumen": 3000,
-    "rutas": 66,
-    "prodSorteo": 33,
-    "prodEtiq": 33,
-    "prodReflujo": 150,
-    "horasTurno": 5
+    "sbu9": 6551,
+    "ecz1": 1800,
+    "ecz2": 1708,
+    "sbu9Pm": 735,
+    "volRealAm": 0,
+    "volRealPm": 0,
+    "share": 5,
+    "rfAm": 22,
+    "vacAm": 0,
+    "ausAm": 1,
+    "ausAmReal": 1,
+    "presAm": 0,
+    "rfPm": 2,
+    "vacPm": 0,
+    "ausPm": 0,
+    "ausPmReal": 0,
+    "presPm": 0,
+    "horaAm": "8:30hs",
+    "horaPm": "15:45hs",
+    "tarifFijo": 0,
+    "tarifEv": 0,
+    "targetGgp": 0
   },
   "tier1": {
     "current": {},
@@ -39,6 +55,7 @@
   },
   "tier1Hist": [],
   "inventory": [],
+  "equipamiento": [],
   "mantenimiento": [],
   "layout": {
     "am": {
