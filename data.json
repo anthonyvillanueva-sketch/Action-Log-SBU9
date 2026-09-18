@@ -28,7 +28,7 @@
   "calcState": {
     "volumen": 10000,
     "volReal": 0,
-    "share": 5,
+    "share": 0,
     "baseGross": 90,
     "rf": 11,
     "vac": 0,
