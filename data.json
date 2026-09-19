@@ -42,7 +42,8 @@
   },
   "tier1": {
     "current": {},
-    "targets": {}
+    "targets": {},
+    "semana": 0
   },
   "tier1Hist": [],
   "inventory": [],
