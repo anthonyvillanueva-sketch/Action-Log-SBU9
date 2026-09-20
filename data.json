@@ -74,20 +74,7 @@
   },
   "tier1Hist": [],
   "inventory": {
-    "items": [
-      {
-        "id": "4df65265-eef8-450d-8da2-eff90c1731b8",
-        "tipo": "Insumo",
-        "item": "asdadasdas",
-        "minimo": 3,
-        "conteos": [
-          {
-            "fecha": "20/09/2026",
-            "valor": 100
-          }
-        ]
-      }
-    ],
+    "items": [],
     "activos": []
   },
   "equipamiento": [],
