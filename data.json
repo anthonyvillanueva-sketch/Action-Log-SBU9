@@ -1,5 +1,21 @@
 {
-  "entries": [],
+  "entries": [
+    {
+      "evolutivo": [],
+      "fotos": [],
+      "emails": "",
+      "fecha": "2026-09-21",
+      "pilar": "5S",
+      "tarea": "5S en todo el sector de PS",
+      "accion": "",
+      "responsables": "",
+      "fechaLimite": "",
+      "progreso": 0,
+      "resuelto": false,
+      "id": "b29838a4-2c49-4083-8ab2-473c5dedbb54",
+      "createdAt": "2026-09-20T22:01:09.627Z"
+    }
+  ],
   "calcState": {
     "volumen": 5000,
     "volReal": 3000,
