@@ -28,7 +28,14 @@
       "createdAt": "2026-09-17T14:17:36.005Z"
     },
     {
-      "evolutivo": [],
+      "evolutivo": [
+        {
+          "id": "343da4af-4fc5-4fbe-ae7e-5565d8abdccd",
+          "texto": "actualizar",
+          "fecha": "2026-09-20T19:26:37.062Z",
+          "autor": "Anthony Alexander Villanueva Montilla"
+        }
+      ],
       "fotos": [],
       "emails": "",
       "fecha": "2026-09-20",
