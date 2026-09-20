@@ -1012,7 +1012,476 @@
         ]
       }
     ],
-    "activos": []
+    "activos": [
+      {
+        "id": "b918cd86-cbaf-482c-b810-eee035a09e88",
+        "categoria": "IS",
+        "item": "Base de Carga HH",
+        "total": 0,
+        "danados": 0,
+        "operativos": 0,
+        "comentarios": ""
+      },
+      {
+        "id": "c37d4908-c70c-4da2-b809-6f525a776c33",
+        "categoria": "IS",
+        "item": "Base de Carga Scanner",
+        "total": 0,
+        "danados": 0,
+        "operativos": 0,
+        "comentarios": ""
+      },
+      {
+        "id": "3f707a57-798a-4a0c-ba76-c680395a44a7",
+        "categoria": "IS",
+        "item": "Equipamiento sala de reunión",
+        "total": 0,
+        "danados": 0,
+        "operativos": 0,
+        "comentarios": ""
+      },
+      {
+        "id": "c02245dc-ee38-4111-a10b-db286c2b7244",
+        "categoria": "IS",
+        "item": "Handheld",
+        "total": 0,
+        "danados": 0,
+        "operativos": 0,
+        "comentarios": ""
+      },
+      {
+        "id": "47d52518-90ab-4cac-bb83-2df47346acbb",
+        "categoria": "IS",
+        "item": "Impresora ZQ",
+        "total": 0,
+        "danados": 0,
+        "operativos": 0,
+        "comentarios": ""
+      },
+      {
+        "id": "882703a3-5ce7-44b8-b34f-078406ec70ae",
+        "categoria": "IS",
+        "item": "Impresora ZT",
+        "total": 0,
+        "danados": 0,
+        "operativos": 0,
+        "comentarios": ""
+      },
+      {
+        "id": "208e202e-ec79-4899-bad3-16afb02514b4",
+        "categoria": "IS",
+        "item": "Lectoras 2D",
+        "total": 0,
+        "danados": 0,
+        "operativos": 0,
+        "comentarios": ""
+      },
+      {
+        "id": "5432839e-ac3a-4c62-ac96-6aa5d622974e",
+        "categoria": "IS",
+        "item": "Monitores",
+        "total": 0,
+        "danados": 0,
+        "operativos": 0,
+        "comentarios": ""
+      },
+      {
+        "id": "6adb8152-092d-4193-9ce4-3fe32d9919cf",
+        "categoria": "IS",
+        "item": "Tablet LMS",
+        "total": 0,
+        "danados": 0,
+        "operativos": 0,
+        "comentarios": ""
+      },
+      {
+        "id": "2d65e952-f4cf-476d-adf8-47e4a9be04f2",
+        "categoria": "IS",
+        "item": "Televisores",
+        "total": 0,
+        "danados": 0,
+        "operativos": 0,
+        "comentarios": ""
+      },
+      {
+        "id": "d8c00f17-abc4-4dcb-b284-90c48951d6c3",
+        "categoria": "IS",
+        "item": "Cantidad de Baterías HH",
+        "total": 0,
+        "danados": 0,
+        "operativos": 0,
+        "comentarios": ""
+      },
+      {
+        "id": "3b686871-2160-4053-ab5a-46cf67433cd6",
+        "categoria": "IS",
+        "item": "Gatillos",
+        "total": 0,
+        "danados": 0,
+        "operativos": 0,
+        "comentarios": ""
+      },
+      {
+        "id": "834aa184-8986-4e2d-b7b5-589c9cd3aaac",
+        "categoria": "IS",
+        "item": "Impresoras inalámbricas",
+        "total": 0,
+        "danados": 0,
+        "operativos": 0,
+        "comentarios": ""
+      },
+      {
+        "id": "e768547b-8aa4-40b1-b629-6c5c0ba43020",
+        "categoria": "Oficina",
+        "item": "Cafeteras",
+        "total": 0,
+        "danados": 0,
+        "operativos": 0,
+        "comentarios": ""
+      },
+      {
+        "id": "40ad5ebc-f94c-4d05-9723-973db09429da",
+        "categoria": "Oficina",
+        "item": "Heladeras Chicas",
+        "total": 0,
+        "danados": 0,
+        "operativos": 0,
+        "comentarios": ""
+      },
+      {
+        "id": "8da94896-6b90-4dcf-9048-00431719299b",
+        "categoria": "Oficina",
+        "item": "Heladeras Grandes",
+        "total": 0,
+        "danados": 0,
+        "operativos": 0,
+        "comentarios": ""
+      },
+      {
+        "id": "31631075-6d95-4aad-a2ce-0c0f6328d1f0",
+        "categoria": "Oficina",
+        "item": "Hornos Eléctricos",
+        "total": 0,
+        "danados": 0,
+        "operativos": 0,
+        "comentarios": ""
+      },
+      {
+        "id": "7d3cf0b3-8aee-444f-8b35-ed205cad01fa",
+        "categoria": "Oficina",
+        "item": "Licuadoras",
+        "total": 0,
+        "danados": 0,
+        "operativos": 0,
+        "comentarios": ""
+      },
+      {
+        "id": "ed2301cb-e885-4bca-ba50-25610e97de1c",
+        "categoria": "Oficina",
+        "item": "Microondas",
+        "total": 0,
+        "danados": 0,
+        "operativos": 0,
+        "comentarios": ""
+      },
+      {
+        "id": "b5cf8ae2-8668-40f1-be8d-320a60ba0840",
+        "categoria": "Oficina",
+        "item": "Pava eléctrica",
+        "total": 0,
+        "danados": 0,
+        "operativos": 0,
+        "comentarios": ""
+      },
+      {
+        "id": "13ad66d9-8517-4e4d-9de8-e427c69f33ee",
+        "categoria": "Oficina",
+        "item": "Soda",
+        "total": 0,
+        "danados": 0,
+        "operativos": 0,
+        "comentarios": ""
+      },
+      {
+        "id": "b954b84b-fc14-40f9-bcf4-ad41a9edf8ce",
+        "categoria": "Oficina",
+        "item": "Tostadoras",
+        "total": 0,
+        "danados": 0,
+        "operativos": 0,
+        "comentarios": ""
+      },
+      {
+        "id": "59c8d34b-9eb0-462a-bedc-820752094c45",
+        "categoria": "Operativo",
+        "item": "Apiladores Eléctricos",
+        "total": 0,
+        "danados": 0,
+        "operativos": 0,
+        "comentarios": ""
+      },
+      {
+        "id": "98c799fa-d3c7-4957-8c28-2efa87faae0b",
+        "categoria": "Operativo",
+        "item": "Baker Clasico",
+        "total": 0,
+        "danados": 0,
+        "operativos": 0,
+        "comentarios": ""
+      },
+      {
+        "id": "f19c67dd-814a-4167-9a31-bf9df3c61e37",
+        "categoria": "Operativo",
+        "item": "Baker Voluminoso",
+        "total": 0,
+        "danados": 0,
+        "operativos": 0,
+        "comentarios": ""
+      },
+      {
+        "id": "c0bab9be-ddc3-415a-9e28-bde7bc8fbc56",
+        "categoria": "Operativo",
+        "item": "Bines Plásticos",
+        "total": 0,
+        "danados": 0,
+        "operativos": 0,
+        "comentarios": ""
+      },
+      {
+        "id": "4bfc3de9-5712-4491-bc11-9b24cb32edd4",
+        "categoria": "Operativo",
+        "item": "Carros H&B",
+        "total": 0,
+        "danados": 0,
+        "operativos": 0,
+        "comentarios": ""
+      },
+      {
+        "id": "9b47997a-7ba2-45c1-8492-0c2c4f32e7ae",
+        "categoria": "Operativo",
+        "item": "Conveyor",
+        "total": 0,
+        "danados": 0,
+        "operativos": 0,
+        "comentarios": ""
+      },
+      {
+        "id": "37523c8a-2ef4-4161-bdd1-2eae2404eac9",
+        "categoria": "Operativo",
+        "item": "Mesas móviles",
+        "total": 0,
+        "danados": 0,
+        "operativos": 0,
+        "comentarios": ""
+      },
+      {
+        "id": "418f2487-d00e-498d-81fe-c4d52f8361b7",
+        "categoria": "Operativo",
+        "item": "Roll Containers",
+        "total": 0,
+        "danados": 0,
+        "operativos": 0,
+        "comentarios": ""
+      },
+      {
+        "id": "43a31223-4639-4eaa-9c09-8c9384b67f25",
+        "categoria": "Operativo",
+        "item": "Sacas",
+        "total": 0,
+        "danados": 0,
+        "operativos": 0,
+        "comentarios": ""
+      },
+      {
+        "id": "22af095d-202d-41bf-a917-09b864a27525",
+        "categoria": "Operativo",
+        "item": "Telescópicas",
+        "total": 0,
+        "danados": 0,
+        "operativos": 0,
+        "comentarios": ""
+      },
+      {
+        "id": "01789dce-ea09-47d5-9f46-e5af5a490ffd",
+        "categoria": "Operativo",
+        "item": "Tolva GM",
+        "total": 0,
+        "danados": 0,
+        "operativos": 0,
+        "comentarios": ""
+      },
+      {
+        "id": "22df645f-a630-4044-b91a-0bc96492a3d0",
+        "categoria": "Operativo",
+        "item": "Tolva Voluminoso",
+        "total": 0,
+        "danados": 0,
+        "operativos": 0,
+        "comentarios": ""
+      },
+      {
+        "id": "0a87d321-3574-4760-9474-797afa27b30f",
+        "categoria": "Operativo",
+        "item": "Zorras Eléctricas",
+        "total": 0,
+        "danados": 0,
+        "operativos": 0,
+        "comentarios": ""
+      },
+      {
+        "id": "35d0f9d2-fc3c-4e56-9c40-e07a6818a9a3",
+        "categoria": "Operativo",
+        "item": "Zorras Eléctricas (HAB)",
+        "total": 0,
+        "danados": 0,
+        "operativos": 0,
+        "comentarios": ""
+      },
+      {
+        "id": "d51ab7d3-5153-47e3-8ec5-d059e37d7e97",
+        "categoria": "Operativo",
+        "item": "Zorras Manuales",
+        "total": 0,
+        "danados": 0,
+        "operativos": 0,
+        "comentarios": ""
+      },
+      {
+        "id": "abc282b2-883b-4ec7-804f-7001e54cb4e3",
+        "categoria": "Operativo",
+        "item": "Bakers Over",
+        "total": 0,
+        "danados": 0,
+        "operativos": 0,
+        "comentarios": ""
+      },
+      {
+        "id": "30e3766c-e5c5-409c-8933-8595b0548e87",
+        "categoria": "Operativo",
+        "item": "Flow Racks",
+        "total": 0,
+        "danados": 0,
+        "operativos": 0,
+        "comentarios": ""
+      },
+      {
+        "id": "a7ff11df-8b52-4d17-afed-db1b068cca73",
+        "categoria": "Operativo",
+        "item": "Metros de Conveyor",
+        "total": 0,
+        "danados": 0,
+        "operativos": 0,
+        "comentarios": ""
+      },
+      {
+        "id": "d7bcc6de-5dc5-4ac5-86cf-f88bdf54c338",
+        "categoria": "SHE",
+        "item": "Alfombra Ergonómica Etiquetador",
+        "total": 0,
+        "danados": 0,
+        "operativos": 0,
+        "comentarios": ""
+      },
+      {
+        "id": "f5aa04f2-8f9d-4f27-b222-43b0e7147806",
+        "categoria": "SHE",
+        "item": "Alfombra Ergonómica Pescador",
+        "total": 0,
+        "danados": 0,
+        "operativos": 0,
+        "comentarios": ""
+      },
+      {
+        "id": "b223ff50-f3b2-4c8d-9aa5-5a095909ba54",
+        "categoria": "SHE",
+        "item": "Cadenas",
+        "total": 0,
+        "danados": 0,
+        "operativos": 0,
+        "comentarios": ""
+      },
+      {
+        "id": "8e663760-108f-4e69-9d02-051ef8827775",
+        "categoria": "SHE",
+        "item": "Camilla",
+        "total": 0,
+        "danados": 0,
+        "operativos": 0,
+        "comentarios": ""
+      },
+      {
+        "id": "14d4ecc7-c41c-42c9-9cbe-29993ed15c45",
+        "categoria": "SHE",
+        "item": "Chalecos",
+        "total": 0,
+        "danados": 0,
+        "operativos": 0,
+        "comentarios": ""
+      },
+      {
+        "id": "3361c4fb-da8d-4d80-b87f-af95167acaec",
+        "categoria": "SHE",
+        "item": "Conos",
+        "total": 0,
+        "danados": 0,
+        "operativos": 0,
+        "comentarios": ""
+      },
+      {
+        "id": "a1811829-9943-4e7f-a8e9-4892044fc6fe",
+        "categoria": "SHE",
+        "item": "DEA",
+        "total": 0,
+        "danados": 0,
+        "operativos": 0,
+        "comentarios": ""
+      },
+      {
+        "id": "0e8388d9-0ba5-424e-bca3-bb121dd63a0e",
+        "categoria": "SHE",
+        "item": "Escalera Burro",
+        "total": 0,
+        "danados": 0,
+        "operativos": 0,
+        "comentarios": ""
+      },
+      {
+        "id": "86c376a4-97cb-4084-a65d-7e7599fd04cc",
+        "categoria": "SHE",
+        "item": "Punteras",
+        "total": 0,
+        "danados": 0,
+        "operativos": 0,
+        "comentarios": ""
+      },
+      {
+        "id": "134e59b8-87ca-4401-894a-92411ba7e4c8",
+        "categoria": "SHE",
+        "item": "Silla de Ruedas",
+        "total": 0,
+        "danados": 0,
+        "operativos": 0,
+        "comentarios": ""
+      },
+      {
+        "id": "da109280-fb03-4f12-8b88-f48577212221",
+        "categoria": "Zona de Descanso",
+        "item": "Lockers",
+        "total": 0,
+        "danados": 0,
+        "operativos": 0,
+        "comentarios": ""
+      },
+      {
+        "id": "680b1197-04af-4158-887c-8268135c334b",
+        "categoria": "Zona de Descanso",
+        "item": "Mesa plástico",
+        "total": 0,
+        "danados": 0,
+        "operativos": 0,
+        "comentarios": ""
+      }
+    ]
   },
   "equipamiento": [],
   "mantenimiento": [],
