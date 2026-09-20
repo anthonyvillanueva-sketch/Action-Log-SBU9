@@ -2059,18 +2059,33 @@ function InvConsumoChart(props){
 function RowMenu(props){
   var onDelete=props.onDelete;
   var openS=_useState(false);var open=openS[0],setOpen=openS[1];
+  var btnRef=_useRef(null);
+  var posS=_useState({top:0,left:0});var pos=posS[0],setPos=posS[1];
+  function toggle(e){
+    e.stopPropagation();
+    if(!open&&btnRef.current){
+      var r=btnRef.current.getBoundingClientRect();
+      setPos({top:r.bottom+4,left:Math.max(4,r.right-130)});
+    }
+    setOpen(function(o){return !o;});
+  }
   _useEffect(function(){
     if(!open)return;
     function close(){setOpen(false);}
     document.addEventListener('click',close);
-    return function(){document.removeEventListener('click',close);};
+    window.addEventListener('scroll',close,true);
+    window.addEventListener('resize',close);
+    return function(){document.removeEventListener('click',close);window.removeEventListener('scroll',close,true);window.removeEventListener('resize',close);};
   },[open]);
-  return h('div',{style:{position:'relative',display:'inline-block'}},
-    h('button',{onClick:function(e){e.stopPropagation();setOpen(!open);},title:'Opciones',
+  return h('div',{style:{display:'inline-block'}},
+    h('button',{ref:btnRef,onClick:toggle,title:'Opciones',
       style:{background:'none',border:'none',cursor:'pointer',color:'var(--text-muted)',fontSize:18,fontFamily:'inherit',lineHeight:1,padding:'0 6px'}},'⋮'),
-    open&&h('div',{style:{position:'absolute',right:0,top:'100%',background:'var(--surface)',border:'1px solid var(--border)',borderRadius:6,boxShadow:'0 4px 12px rgba(0,0,0,.2)',zIndex:50,minWidth:130,overflow:'hidden'}},
-      h('button',{onClick:function(e){e.stopPropagation();setOpen(false);if(window.confirm('¿Borrar este item?'))onDelete();},
-        style:{display:'block',width:'100%',textAlign:'left',padding:'8px 14px',border:'none',background:'none',cursor:'pointer',fontSize:13,color:'#ef4444',fontFamily:'inherit',fontWeight:600}},'🗑 Borrar item')
+    open&&ReactDOM.createPortal(
+      h('div',{onClick:function(e){e.stopPropagation();},style:{position:'fixed',top:pos.top,left:pos.left,background:'var(--surface)',border:'1px solid var(--border)',borderRadius:6,boxShadow:'0 4px 12px rgba(0,0,0,.2)',zIndex:9999,minWidth:130,overflow:'hidden'}},
+        h('button',{onClick:function(e){e.stopPropagation();setOpen(false);if(window.confirm('¿Borrar este item?'))onDelete();},
+          style:{display:'block',width:'100%',textAlign:'left',padding:'8px 14px',border:'none',background:'none',cursor:'pointer',fontSize:13,color:'#ef4444',fontFamily:'inherit',fontWeight:600}},'🗑 Borrar item')
+      ),
+      document.body
     )
   );
 }
@@ -2637,23 +2652,35 @@ async function mantDownloadAll(row){
 }
 function MantRowMenu(props){
   var openS=_useState(false);var open=openS[0],setOpen=openS[1];
+  var btnRef=_useRef(null);
+  var posS=_useState({top:0,left:0});var pos=posS[0],setPos=posS[1];
+  function toggle(e){
+    e.stopPropagation();
+    if(!open&&btnRef.current){
+      var r=btnRef.current.getBoundingClientRect();
+      setPos({top:r.bottom+4,left:Math.max(4,r.right-150)});
+    }
+    setOpen(function(o){return !o;});
+  }
   _useEffect(function(){
     if(!open)return;
     function close(){setOpen(false);}
     document.addEventListener('click',close);
-    return function(){document.removeEventListener('click',close);};
+    window.addEventListener('scroll',close,true);
+    window.addEventListener('resize',close);
+    return function(){document.removeEventListener('click',close);window.removeEventListener('scroll',close,true);window.removeEventListener('resize',close);};
   },[open]);
-  return h('div',{style:{position:'relative',display:'inline-block'}},
-    h('button',{onClick:function(e){e.stopPropagation();setOpen(!open);},title:'Opciones',
+  return h('div',{style:{display:'inline-block'}},
+    h('button',{ref:btnRef,onClick:toggle,title:'Opciones',
       style:{background:'none',border:'none',cursor:'pointer',color:'var(--text-muted)',fontSize:18,fontFamily:'inherit',lineHeight:1,padding:'0 6px'}},'⋮'),
-    open&&h('div',{style:{position:'absolute',right:0,top:'100%',background:'var(--surface)',border:'1px solid var(--border)',borderRadius:6,boxShadow:'0 4px 12px rgba(0,0,0,.2)',zIndex:60,minWidth:150,overflow:'hidden'}},
+    open&&ReactDOM.createPortal(h('div',{onClick:function(e){e.stopPropagation();},style:{position:'fixed',top:pos.top,left:pos.left,background:'var(--surface)',border:'1px solid var(--border)',borderRadius:6,boxShadow:'0 4px 12px rgba(0,0,0,.2)',zIndex:9999,minWidth:150,overflow:'hidden'}},
       (props.fotosCount>0)&&h('button',{onClick:function(e){e.stopPropagation();setOpen(false);props.onDownloadAll&&props.onDownloadAll();},
         style:{display:'block',width:'100%',textAlign:'left',padding:'8px 14px',border:'none',background:'none',cursor:'pointer',fontSize:13,color:'#0F766E',fontFamily:'inherit',fontWeight:600}},'\u2B07 Descargar fotos ('+props.fotosCount+')'),
       h('button',{onClick:function(e){e.stopPropagation();setOpen(false);props.onDuplicate&&props.onDuplicate();},
         style:{display:'block',width:'100%',textAlign:'left',padding:'8px 14px',border:'none',background:'none',cursor:'pointer',fontSize:13,color:'var(--text)',fontFamily:'inherit',fontWeight:600}},'⧉ Duplicar'),
       h('button',{onClick:function(e){e.stopPropagation();setOpen(false);if(window.confirm('¿Borrar esta solicitud?'))props.onDelete();},
         style:{display:'block',width:'100%',textAlign:'left',padding:'8px 14px',border:'none',background:'none',cursor:'pointer',fontSize:13,color:'#ef4444',fontFamily:'inherit',fontWeight:600}},'🗑 Borrar')
-    )
+    ),document.body)
   );
 }
 
