@@ -1,21 +1,6 @@
 {
   "entries": [
     {
-      "evolutivo": [],
-      "fotos": [],
-      "emails": "",
-      "fecha": "2026-09-17",
-      "pilar": "Devoluciones",
-      "tarea": "Realizar tickets",
-      "accion": "cerrar todos los casos estancados para darle \"en espera de devolución\"",
-      "responsable": "Kevin Pelozo",
-      "fechaLimite": "2026-09-18",
-      "progreso": 0,
-      "resuelto": false,
-      "id": "1a2b2c8a-74c8-4617-a2d5-1acd8131c745",
-      "createdAt": "2026-09-17T14:06:53.710Z"
-    },
-    {
       "fecha": "2026-09-17",
       "pilar": "Gestión de Paquetes",
       "tarea": "Solución de problemas",
