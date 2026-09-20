@@ -86,6 +86,930 @@
             "valor": 0
           }
         ]
+      },
+      {
+        "id": "5d9e2735-f407-4342-bd0f-5395a906b36e",
+        "tipo": "Insumo",
+        "item": "Bolsa N°1",
+        "minimo": 0,
+        "conteos": [
+          {
+            "fecha": "20/09/2026",
+            "valor": 0
+          }
+        ]
+      },
+      {
+        "id": "19e74cab-68f6-409a-8663-c0397b6c91d3",
+        "tipo": "Insumo",
+        "item": "Bolsa N°2",
+        "minimo": 0,
+        "conteos": [
+          {
+            "fecha": "20/09/2026",
+            "valor": 0
+          }
+        ]
+      },
+      {
+        "id": "3af81f30-fddc-4e48-af8c-19b6ede1f5e7",
+        "tipo": "Insumo",
+        "item": "Bolsa N°3",
+        "minimo": 0,
+        "conteos": [
+          {
+            "fecha": "20/09/2026",
+            "valor": 0
+          }
+        ]
+      },
+      {
+        "id": "60a04525-dab6-4eec-8f8f-567b387cce88",
+        "tipo": "Insumo",
+        "item": "Bolsa N°3,5",
+        "minimo": 0,
+        "conteos": [
+          {
+            "fecha": "20/09/2026",
+            "valor": 0
+          }
+        ]
+      },
+      {
+        "id": "0f05570d-6d91-4ac9-b577-324d5a5058a8",
+        "tipo": "Insumo",
+        "item": "Bolsa N°4",
+        "minimo": 0,
+        "conteos": [
+          {
+            "fecha": "20/09/2026",
+            "valor": 0
+          }
+        ]
+      },
+      {
+        "id": "e28abd0e-5bf7-4049-8efa-7cefcdd29102",
+        "tipo": "Insumo",
+        "item": "Bolsa N°5",
+        "minimo": 0,
+        "conteos": [
+          {
+            "fecha": "20/09/2026",
+            "valor": 0
+          }
+        ]
+      },
+      {
+        "id": "67e4a9c0-c7dd-4809-8605-3535dd904689",
+        "tipo": "Insumo",
+        "item": "Bolsa N°6",
+        "minimo": 0,
+        "conteos": [
+          {
+            "fecha": "20/09/2026",
+            "valor": 0
+          }
+        ]
+      },
+      {
+        "id": "0879f8bf-6ad9-4564-88aa-812233868583",
+        "tipo": "Insumo",
+        "item": "Bolsa N°7",
+        "minimo": 0,
+        "conteos": [
+          {
+            "fecha": "20/09/2026",
+            "valor": 0
+          }
+        ]
+      },
+      {
+        "id": "091008f2-d58b-40c2-ba17-6c8ed9c46890",
+        "tipo": "Insumo",
+        "item": "Bolsa PLACES",
+        "minimo": 0,
+        "conteos": [
+          {
+            "fecha": "20/09/2026",
+            "valor": 0
+          }
+        ]
+      },
+      {
+        "id": "3bff5123-126e-46f3-849f-c23760b30a0d",
+        "tipo": "Insumo",
+        "item": "Caja 4V",
+        "minimo": 0,
+        "conteos": [
+          {
+            "fecha": "20/09/2026",
+            "valor": 0
+          }
+        ]
+      },
+      {
+        "id": "010fcdc4-8be7-438f-bc02-180afa73f109",
+        "tipo": "Insumo",
+        "item": "Caja 6V",
+        "minimo": 0,
+        "conteos": [
+          {
+            "fecha": "20/09/2026",
+            "valor": 0
+          }
+        ]
+      },
+      {
+        "id": "40a4826c-89ba-4698-a8aa-cb5a14f6398c",
+        "tipo": "Insumo",
+        "item": "Caja C1",
+        "minimo": 0,
+        "conteos": [
+          {
+            "fecha": "20/09/2026",
+            "valor": 0
+          }
+        ]
+      },
+      {
+        "id": "6dc1565b-0971-4d3c-99a3-6cd9e881afae",
+        "tipo": "Insumo",
+        "item": "Caja C10",
+        "minimo": 0,
+        "conteos": [
+          {
+            "fecha": "20/09/2026",
+            "valor": 0
+          }
+        ]
+      },
+      {
+        "id": "9fc728b1-0d4e-4316-8a61-37cf935769f9",
+        "tipo": "Insumo",
+        "item": "Caja C11",
+        "minimo": 0,
+        "conteos": [
+          {
+            "fecha": "20/09/2026",
+            "valor": 0
+          }
+        ]
+      },
+      {
+        "id": "4848855a-b93c-45db-8354-1ea422cdcb51",
+        "tipo": "Insumo",
+        "item": "Caja C12",
+        "minimo": 0,
+        "conteos": [
+          {
+            "fecha": "20/09/2026",
+            "valor": 0
+          }
+        ]
+      },
+      {
+        "id": "6af9a306-f79a-4ef8-9c99-f1e6329ed8f7",
+        "tipo": "Insumo",
+        "item": "Caja C2",
+        "minimo": 0,
+        "conteos": [
+          {
+            "fecha": "20/09/2026",
+            "valor": 0
+          }
+        ]
+      },
+      {
+        "id": "f3005b31-d259-4f71-b7c1-799a0739091f",
+        "tipo": "Insumo",
+        "item": "Caja C3",
+        "minimo": 0,
+        "conteos": [
+          {
+            "fecha": "20/09/2026",
+            "valor": 0
+          }
+        ]
+      },
+      {
+        "id": "a6d47186-3eee-40da-8aab-7720f0f4e1a5",
+        "tipo": "Insumo",
+        "item": "Caja C4",
+        "minimo": 0,
+        "conteos": [
+          {
+            "fecha": "20/09/2026",
+            "valor": 0
+          }
+        ]
+      },
+      {
+        "id": "b56528eb-ac62-4291-96c0-374e0ed1d3c7",
+        "tipo": "Insumo",
+        "item": "Caja C5",
+        "minimo": 0,
+        "conteos": [
+          {
+            "fecha": "20/09/2026",
+            "valor": 0
+          }
+        ]
+      },
+      {
+        "id": "4ae4d390-fdce-4806-9741-627d89556a44",
+        "tipo": "Insumo",
+        "item": "Caja C6",
+        "minimo": 0,
+        "conteos": [
+          {
+            "fecha": "20/09/2026",
+            "valor": 0
+          }
+        ]
+      },
+      {
+        "id": "8fd872e4-8eb8-4475-9f1e-293e2c00de37",
+        "tipo": "Insumo",
+        "item": "Caja C7",
+        "minimo": 0,
+        "conteos": [
+          {
+            "fecha": "20/09/2026",
+            "valor": 0
+          }
+        ]
+      },
+      {
+        "id": "aa51f893-ae8d-49cc-9722-cbfd7e924f7b",
+        "tipo": "Insumo",
+        "item": "Caja C8",
+        "minimo": 0,
+        "conteos": [
+          {
+            "fecha": "20/09/2026",
+            "valor": 0
+          }
+        ]
+      },
+      {
+        "id": "53213c50-4457-4745-b581-5ac92dda07e5",
+        "tipo": "Insumo",
+        "item": "Caja C9",
+        "minimo": 0,
+        "conteos": [
+          {
+            "fecha": "20/09/2026",
+            "valor": 0
+          }
+        ]
+      },
+      {
+        "id": "11d6f31a-7668-423e-a33a-55d7f90c1e60",
+        "tipo": "Insumo",
+        "item": "Caja R12",
+        "minimo": 0,
+        "conteos": [
+          {
+            "fecha": "20/09/2026",
+            "valor": 0
+          }
+        ]
+      },
+      {
+        "id": "bd860296-c5f6-4fb5-8baa-22512a6be545",
+        "tipo": "Insumo",
+        "item": "Cinta adhesiva Meli",
+        "minimo": 0,
+        "conteos": [
+          {
+            "fecha": "20/09/2026",
+            "valor": 0
+          }
+        ]
+      },
+      {
+        "id": "4113a815-c615-474b-ac91-18454a77220d",
+        "tipo": "Insumo",
+        "item": "Cinta de embalar",
+        "minimo": 0,
+        "conteos": [
+          {
+            "fecha": "20/09/2026",
+            "valor": 0
+          }
+        ]
+      },
+      {
+        "id": "111becc6-1610-4ec8-8976-bd10a275ccee",
+        "tipo": "Insumo",
+        "item": "Cinta de papel",
+        "minimo": 0,
+        "conteos": [
+          {
+            "fecha": "20/09/2026",
+            "valor": 0
+          }
+        ]
+      },
+      {
+        "id": "1612b5c6-0b72-44b5-bfaf-23fa71e6035e",
+        "tipo": "Insumo",
+        "item": "Cintas Demarcatorias Amarillas",
+        "minimo": 0,
+        "conteos": [
+          {
+            "fecha": "20/09/2026",
+            "valor": 0
+          }
+        ]
+      },
+      {
+        "id": "f11b6305-ba36-4557-b9aa-254e241844a0",
+        "tipo": "Insumo",
+        "item": "Cintas Demarcatorias Blancas",
+        "minimo": 0,
+        "conteos": [
+          {
+            "fecha": "20/09/2026",
+            "valor": 0
+          }
+        ]
+      },
+      {
+        "id": "82cc7d1d-04e1-4e51-a06f-2b54e0b5f9b8",
+        "tipo": "Insumo",
+        "item": "Cintas Demarcatorias Cebradas",
+        "minimo": 0,
+        "conteos": [
+          {
+            "fecha": "20/09/2026",
+            "valor": 0
+          }
+        ]
+      },
+      {
+        "id": "16d71087-8524-4394-87d7-cec458b01b7a",
+        "tipo": "Insumo",
+        "item": "Cintas Demarcatorias Rojas",
+        "minimo": 0,
+        "conteos": [
+          {
+            "fecha": "20/09/2026",
+            "valor": 0
+          }
+        ]
+      },
+      {
+        "id": "4c6c92df-efdf-4feb-ae7b-5b0fd9f643d9",
+        "tipo": "Insumo",
+        "item": "Cintas Demarcatorias Verdes",
+        "minimo": 0,
+        "conteos": [
+          {
+            "fecha": "20/09/2026",
+            "valor": 0
+          }
+        ]
+      },
+      {
+        "id": "69061b15-6d0a-475c-86f0-adb84d32ca9d",
+        "tipo": "Insumo",
+        "item": "Etiqueta fragil x rollo",
+        "minimo": 0,
+        "conteos": [
+          {
+            "fecha": "20/09/2026",
+            "valor": 0
+          }
+        ]
+      },
+      {
+        "id": "0277a812-c4d7-4197-b0a1-13bd02892c84",
+        "tipo": "Insumo",
+        "item": "Etiqueta portatil",
+        "minimo": 0,
+        "conteos": [
+          {
+            "fecha": "20/09/2026",
+            "valor": 0
+          }
+        ]
+      },
+      {
+        "id": "a7dd5d84-464a-4d0f-8510-2aeade64b840",
+        "tipo": "Insumo",
+        "item": "Etiquetas de ruta x Rollo",
+        "minimo": 0,
+        "conteos": [
+          {
+            "fecha": "20/09/2026",
+            "valor": 0
+          }
+        ]
+      },
+      {
+        "id": "177f17f4-1d69-4894-982c-da2116242cd2",
+        "tipo": "Insumo",
+        "item": "Etiquetas madre x Rollo",
+        "minimo": 0,
+        "conteos": [
+          {
+            "fecha": "20/09/2026",
+            "valor": 0
+          }
+        ]
+      },
+      {
+        "id": "aadb2297-7131-4948-8b21-f840b718d079",
+        "tipo": "Insumo",
+        "item": "Film amarillo",
+        "minimo": 0,
+        "conteos": [
+          {
+            "fecha": "20/09/2026",
+            "valor": 0
+          }
+        ]
+      },
+      {
+        "id": "0057e2fe-73c0-4325-8bd3-24d2811108db",
+        "tipo": "Insumo",
+        "item": "Film Cristal",
+        "minimo": 0,
+        "conteos": [
+          {
+            "fecha": "20/09/2026",
+            "valor": 0
+          }
+        ]
+      },
+      {
+        "id": "802d2de9-d66b-440e-a40e-d55ba5689b93",
+        "tipo": "Insumo",
+        "item": "Pila AAA",
+        "minimo": 0,
+        "conteos": [
+          {
+            "fecha": "20/09/2026",
+            "valor": 0
+          }
+        ]
+      },
+      {
+        "id": "57d936b8-ee44-4f9c-80f8-31ffe6fb7504",
+        "tipo": "Insumo",
+        "item": "Pilas AA",
+        "minimo": 0,
+        "conteos": [
+          {
+            "fecha": "20/09/2026",
+            "valor": 0
+          }
+        ]
+      },
+      {
+        "id": "f8e2ba57-1377-49ef-9651-afdca55ad738",
+        "tipo": "Insumo",
+        "item": "Precintos Amarillos (alambre)",
+        "minimo": 0,
+        "conteos": [
+          {
+            "fecha": "20/09/2026",
+            "valor": 0
+          }
+        ]
+      },
+      {
+        "id": "e2d9478a-08f2-4733-a89c-34e52e95dc46",
+        "tipo": "Insumo",
+        "item": "Precintos Azules (Indistinto)",
+        "minimo": 0,
+        "conteos": [
+          {
+            "fecha": "20/09/2026",
+            "valor": 0
+          }
+        ]
+      },
+      {
+        "id": "3e9a6f03-47dd-4acc-acf4-ad547ab442fd",
+        "tipo": "Insumo",
+        "item": "Resmas x unidad",
+        "minimo": 0,
+        "conteos": [
+          {
+            "fecha": "20/09/2026",
+            "valor": 0
+          }
+        ]
+      },
+      {
+        "id": "f15dd295-6e50-45e9-885b-6fd11d23efd9",
+        "tipo": "Insumo",
+        "item": "Ribbon x unidad",
+        "minimo": 0,
+        "conteos": [
+          {
+            "fecha": "20/09/2026",
+            "valor": 0
+          }
+        ]
+      },
+      {
+        "id": "15c91d1c-09dd-4fcf-b65f-0901a706ca90",
+        "tipo": "Insumo",
+        "item": "Sacas SVC",
+        "minimo": 0,
+        "conteos": [
+          {
+            "fecha": "20/09/2026",
+            "valor": 0
+          }
+        ]
+      },
+      {
+        "id": "7beff32e-36e7-4b56-800a-cdd682f3541b",
+        "tipo": "Insumos SHE",
+        "item": "Anteojos",
+        "minimo": 0,
+        "conteos": [
+          {
+            "fecha": "20/09/2026",
+            "valor": 0
+          }
+        ]
+      },
+      {
+        "id": "9c6d770a-6545-423b-b6b5-1d5b345243f1",
+        "tipo": "Insumos SHE",
+        "item": "Cascos",
+        "minimo": 0,
+        "conteos": [
+          {
+            "fecha": "20/09/2026",
+            "valor": 0
+          }
+        ]
+      },
+      {
+        "id": "fd3547d3-6d42-40b0-8d6b-a899fc344f87",
+        "tipo": "Insumos SHE",
+        "item": "Chaleco con cierre",
+        "minimo": 0,
+        "conteos": [
+          {
+            "fecha": "20/09/2026",
+            "valor": 0
+          }
+        ]
+      },
+      {
+        "id": "c01ddafa-77f2-4df8-9f6c-05685511869e",
+        "tipo": "Insumos SHE",
+        "item": "Chaleco Naranja",
+        "minimo": 0,
+        "conteos": [
+          {
+            "fecha": "20/09/2026",
+            "valor": 0
+          }
+        ]
+      },
+      {
+        "id": "c30a932a-8836-419b-80f3-baec981fe526",
+        "tipo": "Insumos SHE",
+        "item": "Chaleco Verde",
+        "minimo": 0,
+        "conteos": [
+          {
+            "fecha": "20/09/2026",
+            "valor": 0
+          }
+        ]
+      },
+      {
+        "id": "843325ec-bf26-471b-9b3c-ab1f66423d93",
+        "tipo": "Insumos SHE",
+        "item": "Guante Anti corte T9",
+        "minimo": 0,
+        "conteos": [
+          {
+            "fecha": "20/09/2026",
+            "valor": 0
+          }
+        ]
+      },
+      {
+        "id": "6630cf18-5760-4f85-8cfb-ac52f562c4e9",
+        "tipo": "Insumos SHE",
+        "item": "Guante Anticorte T7",
+        "minimo": 0,
+        "conteos": [
+          {
+            "fecha": "20/09/2026",
+            "valor": 0
+          }
+        ]
+      },
+      {
+        "id": "619a5b01-0bd9-43ad-92d3-1401acaecee8",
+        "tipo": "Insumos SHE",
+        "item": "Guante Anticorte T8",
+        "minimo": 0,
+        "conteos": [
+          {
+            "fecha": "20/09/2026",
+            "valor": 0
+          }
+        ]
+      },
+      {
+        "id": "610b27a8-33b5-4803-9059-bb2cf85fb973",
+        "tipo": "Insumos SHE",
+        "item": "Guante Talle 10",
+        "minimo": 0,
+        "conteos": [
+          {
+            "fecha": "20/09/2026",
+            "valor": 0
+          }
+        ]
+      },
+      {
+        "id": "a61520a8-fc20-4108-b778-d226606a9099",
+        "tipo": "Insumos SHE",
+        "item": "Guante Talle 6",
+        "minimo": 0,
+        "conteos": [
+          {
+            "fecha": "20/09/2026",
+            "valor": 0
+          }
+        ]
+      },
+      {
+        "id": "20bc26ff-fb38-4a5b-bce4-c3fff0ffdbca",
+        "tipo": "Insumos SHE",
+        "item": "Guante Talle 7",
+        "minimo": 0,
+        "conteos": [
+          {
+            "fecha": "20/09/2026",
+            "valor": 0
+          }
+        ]
+      },
+      {
+        "id": "59678274-b518-496d-8884-bcb167b65e41",
+        "tipo": "Insumos SHE",
+        "item": "Guante Talle 8",
+        "minimo": 0,
+        "conteos": [
+          {
+            "fecha": "20/09/2026",
+            "valor": 0
+          }
+        ]
+      },
+      {
+        "id": "0a658c46-5187-4e52-862b-e6227c58ef45",
+        "tipo": "Insumos SHE",
+        "item": "Guante Talle 9",
+        "minimo": 0,
+        "conteos": [
+          {
+            "fecha": "20/09/2026",
+            "valor": 0
+          }
+        ]
+      },
+      {
+        "id": "6e521b9d-92a1-4bf2-8f38-913b2e25ecd6",
+        "tipo": "Insumos SHE",
+        "item": "Guantes Kit Antiderrame x par",
+        "minimo": 0,
+        "conteos": [
+          {
+            "fecha": "20/09/2026",
+            "valor": 0
+          }
+        ]
+      },
+      {
+        "id": "77482f83-d07f-41a3-9089-337d80599419",
+        "tipo": "Insumos SHE",
+        "item": "Punteras x par",
+        "minimo": 0,
+        "conteos": [
+          {
+            "fecha": "20/09/2026",
+            "valor": 0
+          }
+        ]
+      },
+      {
+        "id": "cd4939c7-c17d-4ea1-ad34-6c4bd8a23311",
+        "tipo": "Librería",
+        "item": "Abrochadora",
+        "minimo": 0,
+        "conteos": [
+          {
+            "fecha": "20/09/2026",
+            "valor": 0
+          }
+        ]
+      },
+      {
+        "id": "96dd3e6f-2e7e-49ea-a778-94ba4ac2829b",
+        "tipo": "Librería",
+        "item": "Biblorato",
+        "minimo": 0,
+        "conteos": [
+          {
+            "fecha": "20/09/2026",
+            "valor": 0
+          }
+        ]
+      },
+      {
+        "id": "2fd3629e-3290-4247-a1a4-1315726daf39",
+        "tipo": "Librería",
+        "item": "Borrador de pizarra",
+        "minimo": 0,
+        "conteos": [
+          {
+            "fecha": "20/09/2026",
+            "valor": 0
+          }
+        ]
+      },
+      {
+        "id": "dcc5a898-2383-48f7-b4fa-56f46d9598da",
+        "tipo": "Librería",
+        "item": "Cutter",
+        "minimo": 0,
+        "conteos": [
+          {
+            "fecha": "20/09/2026",
+            "valor": 0
+          }
+        ]
+      },
+      {
+        "id": "c80e071f-8ca9-43d3-9963-8e16dd7bdd1b",
+        "tipo": "Librería",
+        "item": "Folios",
+        "minimo": 0,
+        "conteos": [
+          {
+            "fecha": "20/09/2026",
+            "valor": 0
+          }
+        ]
+      },
+      {
+        "id": "a50623ba-9fc5-4f46-9d5a-2f431a65aafb",
+        "tipo": "Librería",
+        "item": "Lapicera azul",
+        "minimo": 0,
+        "conteos": [
+          {
+            "fecha": "20/09/2026",
+            "valor": 0
+          }
+        ]
+      },
+      {
+        "id": "094fddc9-f955-4382-b08c-e1e32e9fdaa3",
+        "tipo": "Librería",
+        "item": "Lapicera negra",
+        "minimo": 0,
+        "conteos": [
+          {
+            "fecha": "20/09/2026",
+            "valor": 0
+          }
+        ]
+      },
+      {
+        "id": "c8cf4215-a7ae-4597-94de-219bcd6992f5",
+        "tipo": "Librería",
+        "item": "Marcador AZUL",
+        "minimo": 0,
+        "conteos": [
+          {
+            "fecha": "20/09/2026",
+            "valor": 0
+          }
+        ]
+      },
+      {
+        "id": "c7191d93-0990-40dd-9686-f6af2a087245",
+        "tipo": "Librería",
+        "item": "Marcador NEGRO",
+        "minimo": 0,
+        "conteos": [
+          {
+            "fecha": "20/09/2026",
+            "valor": 0
+          }
+        ]
+      },
+      {
+        "id": "0a188742-1304-4a73-b585-c8cf88f85a48",
+        "tipo": "Librería",
+        "item": "Marcador ROJO",
+        "minimo": 0,
+        "conteos": [
+          {
+            "fecha": "20/09/2026",
+            "valor": 0
+          }
+        ]
+      },
+      {
+        "id": "cf62200d-6b3e-4463-84a8-96c9ba43df17",
+        "tipo": "Librería",
+        "item": "Marcador VERDE",
+        "minimo": 0,
+        "conteos": [
+          {
+            "fecha": "20/09/2026",
+            "valor": 0
+          }
+        ]
+      },
+      {
+        "id": "acd28bc0-0167-4ce7-9c49-5e9b3addc11c",
+        "tipo": "Librería",
+        "item": "Racionador de cinta",
+        "minimo": 0,
+        "conteos": [
+          {
+            "fecha": "20/09/2026",
+            "valor": 0
+          }
+        ]
+      },
+      {
+        "id": "789055f6-3145-48cd-9da7-6c92686864a6",
+        "tipo": "Librería",
+        "item": "Raspines",
+        "minimo": 0,
+        "conteos": [
+          {
+            "fecha": "20/09/2026",
+            "valor": 0
+          }
+        ]
+      },
+      {
+        "id": "750afd84-0343-4b0e-bc2a-f49170a1f251",
+        "tipo": "Librería",
+        "item": "Repuesto abrochadora",
+        "minimo": 0,
+        "conteos": [
+          {
+            "fecha": "20/09/2026",
+            "valor": 0
+          }
+        ]
+      },
+      {
+        "id": "f91150ae-4f3b-4faa-96fa-9228d1c95dea",
+        "tipo": "Librería",
+        "item": "Repuesto cutter",
+        "minimo": 0,
+        "conteos": [
+          {
+            "fecha": "20/09/2026",
+            "valor": 0
+          }
+        ]
+      },
+      {
+        "id": "e3b27c04-dbb5-4ace-95e9-b9f66833feac",
+        "tipo": "Librería",
+        "item": "Taquitos multicolor",
+        "minimo": 0,
+        "conteos": [
+          {
+            "fecha": "20/09/2026",
+            "valor": 0
+          }
+        ]
+      },
+      {
+        "id": "9fb5c6d1-b336-49db-90b8-baf4d84950de",
+        "tipo": "Librería",
+        "item": "Tijera chica",
+        "minimo": 0,
+        "conteos": [
+          {
+            "fecha": "20/09/2026",
+            "valor": 0
+          }
+        ]
       }
     ],
     "activos": []
