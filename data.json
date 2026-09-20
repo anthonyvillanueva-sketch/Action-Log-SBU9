@@ -86,6 +86,18 @@
             "valor": 0
           }
         ]
+      },
+      {
+        "id": "ac542bba-ddba-4a13-8329-318b093d8b42",
+        "tipo": "Insumo",
+        "item": "",
+        "minimo": 0,
+        "conteos": [
+          {
+            "fecha": "20/09/2026",
+            "valor": 0
+          }
+        ]
       }
     ],
     "activos": []
