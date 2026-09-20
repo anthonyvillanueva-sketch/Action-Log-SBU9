@@ -103,7 +103,20 @@
     "activos": []
   },
   "equipamiento": [],
-  "mantenimiento": [],
+  "mantenimiento": [
+    {
+      "id": "41b89d4b-f07e-4aa8-b679-581addf17ff7",
+      "fecha": "2026-09-20",
+      "prioridad": "Necesaria",
+      "titulo": "",
+      "descripcion": "",
+      "comentarios": "",
+      "ticket": "",
+      "observaciones": "",
+      "estado": "Pendiente",
+      "fotos": []
+    }
+  ],
   "layout": {
     "am": {
       "elements": [],
