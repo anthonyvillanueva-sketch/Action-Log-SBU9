@@ -79,7 +79,7 @@
         "id": "154098e1-ff00-4c06-8ee7-b122b650f0f4",
         "tipo": "Insumo",
         "item": "Cinta de embalar",
-        "minimo": 10,
+        "minimo": 30,
         "conteos": [
           {
             "fecha": "20/09/2026",
