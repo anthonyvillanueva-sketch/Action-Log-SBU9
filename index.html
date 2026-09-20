@@ -2111,7 +2111,8 @@ function InventarioView(props){
     return function(){if(equipAutoTimer.current)clearTimeout(equipAutoTimer.current);};
   },[equip]);
     var invS=_useState(function(){
-    var base=JSON.parse(JSON.stringify(init));
+    // formato viejo/roto: el inventario guardado como array plano en vez de {items,activos}
+    var base=Array.isArray(init)?{items:JSON.parse(JSON.stringify(init)),activos:[]}:JSON.parse(JSON.stringify(init));
     // migrate old structure {insumos, libreria} -> {items}
     if(!base.items){
       base.items=[];
