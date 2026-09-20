@@ -28,7 +28,9 @@
   "calcState": {
     "volumen": 10000,
     "volReal": 3000,
-    "share": 0,
+    "shareLarge": 0,
+    "shareOversize": 0,
+    "horasProceso": 5,
     "baseGross": 90,
     "rf": 22,
     "vac": 0,
