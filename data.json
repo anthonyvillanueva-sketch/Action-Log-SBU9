@@ -29,6 +29,21 @@
       "resuelto": false,
       "id": "6d081498-3140-4364-9ff8-bff2dacbd529",
       "createdAt": "2026-09-20T22:01:50.677Z"
+    },
+    {
+      "evolutivo": [],
+      "fotos": [],
+      "emails": "",
+      "fecha": "2026-09-20",
+      "pilar": "Gestión de Paquetes",
+      "tarea": "Limpiar Gestion de Paquetes",
+      "accion": "entrar a cada modulo y darle una resolución. ",
+      "responsables": "Jose ",
+      "fechaLimite": "2026-09-25",
+      "progreso": 0,
+      "resuelto": false,
+      "id": "3c6d782a-e11a-48f3-817e-fa3fdf92e401",
+      "createdAt": "2026-09-20T22:02:38.265Z"
     }
   ],
   "calcState": {
