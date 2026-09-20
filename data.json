@@ -51,18 +51,18 @@
     }
   ],
   "calcState": {
-    "volumen": 10000,
+    "volumen": 5000,
     "volReal": 3000,
     "shareLarge": 0,
     "shareOversize": 0,
     "horasProceso": 5,
     "baseGross": 90,
+    "grossOverride": null,
     "rf": 22,
     "vac": 0,
     "aus": 1,
     "ausReal": 1,
     "pres": 9,
-    "hora": "11",
     "tarifFijo": 0,
     "tarifEv": 0,
     "targetGgp": 0
@@ -89,5 +89,6 @@
       "roster": [],
       "minimos": {}
     }
-  }
+  },
+  "entrenamientos": null
 }
