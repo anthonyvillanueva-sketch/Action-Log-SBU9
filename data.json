@@ -14,6 +14,21 @@
       "resuelto": false,
       "id": "b29838a4-2c49-4083-8ab2-473c5dedbb54",
       "createdAt": "2026-09-20T22:01:09.627Z"
+    },
+    {
+      "evolutivo": [],
+      "fotos": [],
+      "emails": "",
+      "fecha": "2026-09-25",
+      "pilar": "Inventario",
+      "tarea": "Inventarios diarios",
+      "accion": "Realizar todos los inventarios para darle trazabilidad a los SHP",
+      "responsables": "Kevin Pelozo",
+      "fechaLimite": "2026-09-30",
+      "progreso": 0,
+      "resuelto": false,
+      "id": "6d081498-3140-4364-9ff8-bff2dacbd529",
+      "createdAt": "2026-09-20T22:01:50.677Z"
     }
   ],
   "calcState": {
