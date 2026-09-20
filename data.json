@@ -76,18 +76,6 @@
   "inventory": {
     "items": [
       {
-        "id": "154098e1-ff00-4c06-8ee7-b122b650f0f4",
-        "tipo": "Insumo",
-        "item": "Cinta de embalar",
-        "minimo": 30,
-        "conteos": [
-          {
-            "fecha": "20/09/2026",
-            "valor": 555
-          }
-        ]
-      },
-      {
         "id": "4df65265-eef8-450d-8da2-eff90c1731b8",
         "tipo": "Insumo",
         "item": "asdadasdas",
