@@ -113,11 +113,11 @@ tr.mine td{box-shadow:inset 3px 0 0 var(--accent)}
 .dot-fcst-bar{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-bottom:16px;box-shadow:var(--shadow)}
 .dot-sec-hdr{background:var(--navy);color:#fff;font-weight:700;font-size:11px;letter-spacing:.07em;text-transform:uppercase;padding:7px 12px}
 .dot-fcst-inputs{display:flex;gap:10px;padding:12px;flex-wrap:wrap}
-.dot-fcst-box{flex:1;min-width:120px;border-radius:8px;padding:10px 12px;display:flex;flex-direction:column;gap:4px}
+.dot-fcst-box{flex:0 1 220px;min-width:160px;max-width:260px;border-radius:8px;padding:10px 12px;display:flex;flex-direction:column;gap:4px}
 .dot-fcst-box-sbu9{background:#FFFBEA;border:2px solid #F0C900}
 .dot-fcst-box-ecz{background:#EEF6FF;border:2px solid #185FA5}
 .dot-fcst-box-pm{background:#F0FFF6;border:2px solid #1D7A4A}
-.dot-fcst-box-total{background:#EFEFEB;border:2px solid #D3D1C7;min-width:100px;display:flex;flex-direction:column;justify-content:center;align-items:center}
+.dot-fcst-box-total{background:#EFEFEB;border:2px solid #D3D1C7;flex:0 1 150px;min-width:110px;max-width:170px;display:flex;flex-direction:column;justify-content:center;align-items:center}
 .dot-fcst-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em}
 .dot-fcst-input{border:none;background:transparent;font-size:22px;font-weight:800;font-family:inherit;outline:none;padding:0;text-align:right;width:100%}
 .dot-fcst-sub{font-size:10px;color:var(--text-muted);text-align:right}
@@ -135,8 +135,6 @@ tr.mine td{box-shadow:inset 3px 0 0 var(--accent)}
 .dot-ggp-grid{display:grid;grid-template-columns:1fr 60px 60px;border-bottom:1px solid var(--border)}
 .dot-ggp-cell{padding:5px 6px;font-size:12px;text-align:center}
 .dot-ggp-cell:first-child{text-align:left;padding-left:8px}
-.dot-wa-bubble{background:#E1F5EE;border-radius:12px 12px 12px 2px;padding:10px 14px}
-.dot-wa-pre{margin:0;white-space:pre-wrap;font-family:inherit;font-size:12px;color:#085041;line-height:1.6}
 .dot-save-btn{width:100%;padding:10px;border-radius:7px;border:none;cursor:pointer;font-weight:700;font-size:13px;font-family:inherit;transition:all .2s}
 .dot-tabla-row{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--border)}
 .dot-tabla-cell{padding:4px 8px;font-size:12px;text-align:center}
@@ -286,6 +284,35 @@ body.dark .mant-table tbody tr:nth-child(even){background:rgba(255,255,255,.02)}
 .mant-legend{font-size:11px;color:var(--text-muted);margin-top:10px;font-style:italic}
 .mant-thumb-dl{position:absolute;bottom:1px;right:1px;background:rgba(15,118,110,.85);color:#fff;border:none;border-radius:50%;width:15px;height:15px;cursor:pointer;font-size:8px;line-height:1;display:none;align-items:center;justify-content:center;padding:0}
 .mant-thumb:hover .mant-thumb-dl{display:flex}
+.train-section-title{font-size:15px;font-weight:800;margin:18px 0 10px;color:#0F766E}
+.train-updated{font-size:12px;color:var(--text-muted);display:flex;align-items:center;gap:6px}
+.train-bulk-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:14px;margin-bottom:14px;box-shadow:var(--shadow)}
+.train-bulk-hint{font-size:11.5px;color:var(--text-muted);margin-bottom:8px}
+.train-bulk-hint code{background:rgba(0,0,0,.06);padding:1px 5px;border-radius:3px}
+.train-bulk-textarea{width:100%;min-height:76px;border:1px solid var(--border);border-radius:6px;padding:8px;font-size:12px;font-family:monospace;background:var(--bg);color:var(--text);resize:vertical;outline:none;box-sizing:border-box}
+.train-bulk-textarea:focus{border-color:#0F766E}
+.train-course-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:12px 14px;margin-bottom:10px;box-shadow:var(--shadow)}
+.train-course-row-top{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:8px}
+.train-course-name{flex:1;min-width:180px;border:1px solid transparent;background:transparent;font-size:13px;font-weight:700;font-family:inherit;padding:4px 6px;border-radius:4px;outline:none;color:var(--text)}
+.train-course-name:focus{border-color:#0F766E;background:var(--bg)}
+.train-qr-badge{background:var(--bg);border:1px solid var(--border);border-radius:12px;padding:2px 8px;font-size:10px;font-weight:700;cursor:pointer;white-space:nowrap;font-family:inherit}
+.train-course-pct-input{width:52px;border:1px solid var(--border);border-radius:4px;padding:2px 4px;font-size:14px;font-weight:800;text-align:right;font-family:inherit;background:var(--bg);outline:none}
+.train-course-bottom{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.train-course-vence{border:1px solid var(--border);border-radius:6px;padding:4px 8px;font-size:11px;font-family:inherit;background:var(--bg);color:var(--text-muted);outline:none;min-width:140px}
+.train-del{background:none;border:none;color:#A32D2D;cursor:pointer;font-size:14px;padding:2px 6px;font-family:inherit}
+.train-leader-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:12px 14px;margin-bottom:10px;box-shadow:var(--shadow)}
+.train-leader-hdr{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;margin-bottom:10px;flex-wrap:wrap}
+.train-leader-name{font-weight:800;font-size:14px;border:1px solid transparent;background:transparent;font-family:inherit;padding:2px 4px;border-radius:4px;outline:none;color:var(--text);display:block}
+.train-leader-name:focus{border-color:#0F766E;background:var(--bg)}
+.train-leader-rol{font-size:11px;color:var(--text-muted);border:1px solid transparent;background:transparent;font-family:inherit;padding:2px 4px;border-radius:4px;outline:none;display:block}
+.train-leader-rol:focus{border-color:#0F766E;background:var(--bg)}
+.train-leader-pct{font-size:20px;font-weight:800}
+.train-leader-courses{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:6px}
+.train-leader-course{display:flex;align-items:center;justify-content:space-between;gap:6px;background:var(--bg);border:1px solid var(--border);border-radius:6px;padding:4px 8px;font-size:11px}
+.train-leader-course-name{flex:1;border:none;background:transparent;font-size:11px;font-family:inherit;outline:none;color:var(--text)}
+.train-leader-course-pct{width:52px;border:1px solid var(--border);border-radius:4px;padding:2px 4px;font-size:11px;text-align:right;font-family:inherit;background:var(--surface)}
+.train-qr-pop{position:fixed;inset:0;background:rgba(0,0,0,.45);display:flex;align-items:center;justify-content:center;z-index:9999}
+.train-qr-box{background:#fff;border-radius:12px;padding:18px;text-align:center}
 .mant-lb-btns{position:absolute;top:20px;right:20px;display:flex;gap:8px;align-items:center;z-index:1}
 .mant-lb-dl{background:rgba(255,255,255,.15);border:none;color:#fff;height:36px;padding:0 16px;border-radius:18px;cursor:pointer;font-size:13px;font-weight:700;font-family:inherit;display:flex;align-items:center;gap:6px}
 .mant-lb-dl:hover{background:rgba(255,255,255,.3)}
@@ -487,7 +514,8 @@ function defaultData(){
     inventory: null,
     equipamiento: [],
     mantenimiento: [],
-    layout: null
+    layout: null,
+    entrenamientos: null
   };
 }
 
@@ -1130,12 +1158,12 @@ function DotacionView(props) {
   var shareOverS=_useState(_saved.shareOversize!==undefined?_saved.shareOversize:0);  var shareOversize=shareOverS[0],setShareOversize=shareOverS[1];
   var horasProcesoS=_useState(_saved.horasProceso!==undefined?_saved.horasProceso:5); var horasProceso=horasProcesoS[0],setHorasProceso=horasProcesoS[1];
   var baseGrossS=_useState(_saved.baseGross!==undefined?_saved.baseGross:90);  var baseGross=baseGrossS[0],setBaseGross=baseGrossS[1];
+  var grossOverrideS=_useState(_saved.grossOverride!==undefined?_saved.grossOverride:null); var grossOverride=grossOverrideS[0],setGrossOverride=grossOverrideS[1];
   var rfS=_useState(_saved.rf!==undefined?_saved.rf:22);        var rf=rfS[0],setRf=rfS[1];
   var vacS=_useState(_saved.vac||0);     var vac=vacS[0],setVac=vacS[1];
   var ausS=_useState(_saved.aus!==undefined?_saved.aus:1);      var aus=ausS[0],setAus=ausS[1];
   var ausRealS=_useState(_saved.ausReal!==undefined?_saved.ausReal:1); var ausReal=ausRealS[0],setAusReal=ausRealS[1];
   var presS=_useState(_saved.pres||0);   var pres=presS[0],setPres=presS[1];
-  var horaS=_useState(_saved.hora||'8:30hs');   var hora=horaS[0],setHora=horaS[1];
   var histS=_useState([]);        var hist=histS[0],setHist=histS[1];
   var subTabS=_useState('calc');  var subTab=subTabS[0],setSubTab=subTabS[1];
   var tarifFijoS=_useState(_saved.tarifFijo||0);   var tarifFijo=tarifFijoS[0],setTarifFijo=tarifFijoS[1];
@@ -1143,7 +1171,7 @@ function DotacionView(props) {
   var histTabS=_useState('tabla'); var histTab=histTabS[0],setHistTab=histTabS[1];
   var targetGgpS=_useState(_saved.targetGgp||0);   var targetGgp=targetGgpS[0],setTargetGgp=targetGgpS[1];
   function buildCalcState(){
-    return {volumen:volumen,volReal:volReal,shareLarge:shareLarge,shareOversize:shareOversize,horasProceso:horasProceso,baseGross:baseGross,rf:rf,vac:vac,aus:aus,ausReal:ausReal,pres:pres,hora:hora,tarifFijo:tarifFijo,tarifEv:tarifEv,targetGgp:targetGgp};
+    return {volumen:volumen,volReal:volReal,shareLarge:shareLarge,shareOversize:shareOversize,horasProceso:horasProceso,baseGross:baseGross,grossOverride:grossOverride,rf:rf,vac:vac,aus:aus,ausReal:ausReal,pres:pres,tarifFijo:tarifFijo,tarifEv:tarifEv,targetGgp:targetGgp};
   }
   var calcBaseline=_useRef(buildCalcState());
   var calcFirstRender=_useRef(true);
@@ -1157,8 +1185,7 @@ function DotacionView(props) {
       calcBaseline.current=JSON.parse(JSON.stringify(state));
     },1500);
     return function(){if(calcAutoTimer.current)clearTimeout(calcAutoTimer.current);};
-  },[volumen,volReal,shareLarge,shareOversize,horasProceso,baseGross,rf,vac,aus,ausReal,pres,hora,tarifFijo,tarifEv,targetGgp]);
-  var copiedS=_useState(false);   var copied=copiedS[0],setCopied=copiedS[1];
+  },[volumen,volReal,shareLarge,shareOversize,horasProceso,baseGross,grossOverride,rf,vac,aus,ausReal,pres,tarifFijo,tarifEv,targetGgp]);
   var savedS=_useState(false);    var saved=savedS[0],setSaved=savedS[1];
   _useEffect(function(){
     try{var raw=localStorage.getItem(DOT_KEY);if(raw)setHist(JSON.parse(raw));}catch(e){}
@@ -1173,12 +1200,12 @@ function DotacionView(props) {
     if(s.shareOversize!==undefined)setShareOversize(s.shareOversize);
     if(s.horasProceso!==undefined)setHorasProceso(s.horasProceso);
     if(s.baseGross!==undefined)setBaseGross(s.baseGross);
+    if(s.grossOverride!==undefined)setGrossOverride(s.grossOverride);
     if(s.rf!==undefined)setRf(s.rf);
     if(s.vac!==undefined)setVac(s.vac);
     if(s.aus!==undefined)setAus(s.aus);
     if(s.ausReal!==undefined)setAusReal(s.ausReal);
     if(s.pres!==undefined)setPres(s.pres);
-    if(s.hora!==undefined)setHora(s.hora);
     if(s.tarifFijo!==undefined)setTarifFijo(s.tarifFijo);
     if(s.tarifEv!==undefined)setTarifEv(s.tarifEv);
     if(s.targetGgp!==undefined)setTargetGgp(s.targetGgp);
@@ -1187,15 +1214,16 @@ function DotacionView(props) {
   _useEffect(function(){
     try{
       localStorage.setItem(CALC_KEY, JSON.stringify({
-        volumen:volumen,volReal:volReal,shareLarge:shareLarge,shareOversize:shareOversize,horasProceso:horasProceso,baseGross:baseGross,
+        volumen:volumen,volReal:volReal,shareLarge:shareLarge,shareOversize:shareOversize,horasProceso:horasProceso,baseGross:baseGross,grossOverride:grossOverride,
         rf:rf,vac:vac,aus:aus,ausReal:ausReal,pres:pres,
-        hora:hora,tarifFijo:tarifFijo,tarifEv:tarifEv,targetGgp:targetGgp
+        tarifFijo:tarifFijo,tarifEv:tarifEv,targetGgp:targetGgp
       }));
     }catch(e){}
-  },[volumen,volReal,shareLarge,shareOversize,horasProceso,baseGross,rf,vac,aus,ausReal,pres,hora,tarifFijo,tarifEv,targetGgp]);
+  },[volumen,volReal,shareLarge,shareOversize,horasProceso,baseGross,grossOverride,rf,vac,aus,ausReal,pres,tarifFijo,tarifEv,targetGgp]);
   var c = _useMemo(function(){
     var shareTotal=shareLarge+shareOversize;
-    var gross=baseGross-(shareTotal/100-0.05)*200;
+    var autoGross=baseGross-(shareTotal/100-0.05)*200;
+    var gross=grossOverride!=null?grossOverride:autoGross;
     var fijos=rf-vac-aus;
     var fijosReal=rf-vac-ausReal;
     var evFcst=Math.ceil(volumen/gross)-fijos;
@@ -1213,12 +1241,10 @@ function DotacionView(props) {
     var htProcesoR=(fijos+pres)*horasProceso;
     var ggpF=htProcesoF>0?volumen/htProcesoF:0;
     var ggpR=htProcesoR>0&&volReal>0?volReal/htProcesoR:0;
-    return{gross:gross,fijos:fijos,fijosReal:fijosReal,evFcst:evFcst,evReal:evReal,dif:dif,totalNec:totalNec,hf:hf,he:he,ht:ht,heR:heR,htR:htR,htProcesoF:htProcesoF,htProcesoR:htProcesoR,ggpF:ggpF,ggpR:ggpR};
-  },[volumen,volReal,shareLarge,shareOversize,horasProceso,baseGross,rf,vac,aus,ausReal,pres]);
+    return{gross:gross,autoGross:autoGross,fijos:fijos,fijosReal:fijosReal,evFcst:evFcst,evReal:evReal,dif:dif,totalNec:totalNec,hf:hf,he:he,ht:ht,heR:heR,htR:htR,htProcesoF:htProcesoF,htProcesoR:htProcesoR,ggpF:ggpF,ggpR:ggpR};
+  },[volumen,volReal,shareLarge,shareOversize,horasProceso,baseGross,grossOverride,rf,vac,aus,ausReal,pres]);
   function fmtN(n){return Math.round(n).toLocaleString('es-AR');}
   function fmtD(n,d){d=d||1;return(isNaN(n)||!isFinite(n)||n===0)?'—':n.toFixed(d);}
-  var mensaje='Buenas equipo, les comparto el volumen estimado para mañana:\n\n'+CONFIG.SITE_NAME+'     '+fmtN(volumen)+'\n\n'+c.evFcst+' eventual'+(c.evFcst===1?'':'es')+' | Apertura '+hora;
-  function copiar(){navigator.clipboard.writeText(mensaje).then(function(){setCopied(true);setTimeout(function(){setCopied(false);},2000);});}
   function guardar(){
     var hoy=new Date().toLocaleDateString('es-AR',{day:'2-digit',month:'2-digit',year:'numeric'});
     var tf=parseFloat(tarifFijo)||0, te=parseFloat(tarifEv)||0;
@@ -1241,6 +1267,10 @@ function DotacionView(props) {
   function numInput(val,setter,bgColor,borderColor,w){
     return h('input',{type:'number',value:val,min:0,className:'dot-num-input',style:{background:bgColor,borderColor:borderColor,color:borderColor,width:w||58},onChange:function(e){setter(parseFloat(e.target.value)||0);}});
   }
+  // Tocar Base pkg/hora o los Shares vuelve al cálculo automático del gross (limpia el override manual)
+  function setBaseGrossAuto(v){setGrossOverride(null);setBaseGross(v);}
+  function setShareLargeAuto(v){setGrossOverride(null);setShareLarge(v);}
+  function setShareOversizeAuto(v){setGrossOverride(null);setShareOversize(v);}
   function diffBadge(v){
     if(v===null||v===undefined||isNaN(v))return h('span',{style:{color:'var(--text-muted)',fontSize:12}},'—');
     var vv=Math.round(v);
@@ -1309,29 +1339,32 @@ function DotacionView(props) {
         h('div',{className:'dot-param-row'},
           h('div',null,h('div',{style:{fontSize:13}},'Base pkg/hora'),h('div',{style:{fontSize:11,color:'var(--text-muted)'}},'Target de referencia con share 5% (editable)')),
           h('div',{style:{display:'flex',alignItems:'center',gap:8}},
-            numInput(baseGross,setBaseGross,'#FFFBE6','#F0C900',58),
+            numInput(baseGross,setBaseGrossAuto,'#FFFBE6','#F0C900',58),
             h('span',{style:{fontSize:12,color:'var(--text-muted)'}},'pkg/h')
           )
         ),
         h('div',{className:'dot-param-row'},
           h('div',null,h('div',{style:{fontSize:13}},'Share de Large'),h('div',{style:{fontSize:11,color:'var(--text-muted)'}},'Editable — productividad exacta a definir')),
           h('div',{style:{display:'flex',alignItems:'center',gap:8}},
-            h('input',{type:'range',min:0,max:30,step:1,value:shareLarge,onChange:function(e){setShareLarge(parseFloat(e.target.value));},style:{width:70,accentColor:'#FFE600'}}),
-            numInput(shareLarge,setShareLarge,'#FFFBE6','#F0C900',48),
+            h('input',{type:'range',min:0,max:30,step:1,value:shareLarge,onChange:function(e){setShareLargeAuto(parseFloat(e.target.value));},style:{width:70,accentColor:'#FFE600'}}),
+            numInput(shareLarge,setShareLargeAuto,'#FFFBE6','#F0C900',48),
             h('span',{style:{fontSize:12,color:'var(--text-muted)'}},'%')
           )
         ),
         h('div',{className:'dot-param-row'},
           h('div',null,h('div',{style:{fontSize:13}},'Share de Oversize'),h('div',{style:{fontSize:11,color:'var(--text-muted)'}},'Editable — productividad exacta a definir')),
           h('div',{style:{display:'flex',alignItems:'center',gap:8}},
-            h('input',{type:'range',min:0,max:30,step:1,value:shareOversize,onChange:function(e){setShareOversize(parseFloat(e.target.value));},style:{width:70,accentColor:'#FFE600'}}),
-            numInput(shareOversize,setShareOversize,'#FFFBE6','#F0C900',48),
+            h('input',{type:'range',min:0,max:30,step:1,value:shareOversize,onChange:function(e){setShareOversizeAuto(parseFloat(e.target.value));},style:{width:70,accentColor:'#FFE600'}}),
+            numInput(shareOversize,setShareOversizeAuto,'#FFFBE6','#F0C900',48),
             h('span',{style:{fontSize:12,color:'var(--text-muted)'}},'%')
           )
         ),
         h('div',{className:'dot-param-row',style:{background:'var(--bg)'}},
-          h('span',{style:{fontSize:13,color:'var(--text-muted)'}},'Gross calculada'),
-          h('span',{style:{fontWeight:800,fontSize:16}},Math.round(c.gross)+' pkg/persona')
+          h('div',null,h('div',{style:{fontSize:13,color:'var(--text-muted)'}},'Gross calculada'),h('div',{style:{fontSize:11,color:'var(--text-muted)'}},grossOverride!=null?'Manual — se recalcula si tocás Base/Share':'Automático (Base pkg/hora ajustado por Share)')),
+          h('div',{style:{display:'flex',alignItems:'center',gap:8}},
+            numInput(Math.round(c.gross),setGrossOverride,'#F0EDFB','#4B3A8A',58),
+            h('span',{style:{fontSize:12,color:'var(--text-muted)'}},'pkg/persona')
+          )
         ),
         h('div',{className:'dot-param-row'},
           h('div',null,h('div',{style:{fontSize:13}},'Horas de proceso'),h('div',{style:{fontSize:11,color:'var(--text-muted)'}},'No todo el turno se procesa · usada para el GGP')),
@@ -1339,20 +1372,6 @@ function DotacionView(props) {
             numInput(horasProceso,setHorasProceso,'#F0EDFB','#4B3A8A',48),
             h('span',{style:{fontSize:12,color:'var(--text-muted)'}},'hs')
           )
-        )
-      ),
-      h('div',{className:'dot-card'},
-        h('div',{className:'dot-sec-hdr'},'Horario de apertura'),
-        h('div',{className:'dot-param-row'},
-          h('span',null,'Apertura'),
-          h('input',{type:'text',value:hora,onChange:function(e){setHora(e.target.value);},className:'dot-num-input',style:{width:80,textAlign:'center',background:'#FAEEDA',borderColor:'#854F0B',color:'#854F0B'}})
-        )
-      ),
-      h('div',{className:'dot-card'},
-        h('div',{className:'dot-sec-hdr',style:{background:'#085041'}},'Mensaje WhatsApp'),
-        h('div',{style:{background:'#0a1929',padding:12}},h('div',{className:'dot-wa-bubble'},h('pre',{className:'dot-wa-pre'},mensaje))),
-        h('div',{style:{padding:10}},
-          h('button',{onClick:copiar,style:{width:'100%',padding:'8px 0',borderRadius:6,border:'none',cursor:'pointer',fontWeight:700,fontSize:13,fontFamily:'inherit',background:copied?'#E6F4EA':'#085041',color:copied?'#1D7A4A':'#fff',transition:'all .2s'}},copied?'✓ Copiado!':'Copiar mensaje')
         )
       )
     ),
@@ -1586,7 +1605,8 @@ function DotacionView(props) {
         },'💾 Sincronizar')
       ),
       h('div',{className:'dot-fcst-inputs'},
-        h('div',{className:'dot-fcst-box dot-fcst-box-sbu9'},h('div',{className:'dot-fcst-label',style:{color:'#1a1f2e'}},CONFIG.SITE_NAME),h('input',{type:'number',value:volumen,min:0,step:100,onChange:function(e){setVolumen(parseFloat(e.target.value)||0);},className:'dot-fcst-input',style:{color:'#1a1f2e'}}),h('div',{className:'dot-fcst-sub'},'paquetes FCST'))
+        h('div',{className:'dot-fcst-box dot-fcst-box-sbu9'},h('div',{className:'dot-fcst-label',style:{color:'#1a1f2e'}},CONFIG.SITE_NAME),h('input',{type:'number',value:volumen,min:0,step:100,onChange:function(e){setVolumen(parseFloat(e.target.value)||0);},className:'dot-fcst-input',style:{color:'#1a1f2e'}}),h('div',{className:'dot-fcst-sub'},'paquetes FCST')),
+        h('div',{className:'dot-fcst-box dot-fcst-box-total'},h('div',{className:'dot-fcst-label'},'TOTAL'),h('div',{className:'dot-fcst-input',style:{textAlign:'center'}},fmtN(volumen)),h('div',{className:'dot-fcst-sub',style:{textAlign:'center'}},'paquetes FCST'))
       )
     ),
     // Sub-tabs calc/hist
@@ -2108,6 +2128,7 @@ function InventarioView(props){
   var filterS=_useState('Todos');var filter=filterS[0],setFilter=filterS[1];
   var sortS=_useState('tipo');var sortBy=sortS[0],setSortBy=sortS[1];
   var savedS=_useState(false);var saved=savedS[0],setSaved=savedS[1];
+  var newCatS=_useState('');var newCat=newCatS[0],setNewCat=newCatS[1];
   function sync(){onSave(inv);invBaseline.current=JSON.parse(JSON.stringify(inv));setSaved(true);setTimeout(function(){setSaved(false);},2500);}
   var invFirstRender=_useRef(true);
   var invAutoTimer=_useRef(null);
@@ -2121,6 +2142,13 @@ function InventarioView(props){
   function updActivo(id,field,val){setInv(function(prev){var n=JSON.parse(JSON.stringify(prev));n.activos=n.activos.map(function(a){return a.id===id?Object.assign({},a,{[field]:val}):a;});return n;});}
   function addActivo(cat){setInv(function(prev){var n=JSON.parse(JSON.stringify(prev));n.activos.push({id:genId(),categoria:cat,item:'',total:0,danados:0,operativos:0,comentarios:''});return n;});}
   function delActivo(id){setInv(function(prev){var n=JSON.parse(JSON.stringify(prev));n.activos=n.activos.filter(function(a){return a.id!==id;});return n;});}
+  function addCategoria(){
+    var name=newCat.trim(); if(!name)return;
+    var existe=inv.activos.some(function(a){return (a.categoria||'').trim().toLowerCase()===name.toLowerCase();});
+    if(existe){showToast('Esa categoría ya existe','error');return;}
+    addActivo(name);
+    setNewCat('');
+  }
   function downloadActivosCSV(){
     var rows=[['Categoria','Item','Total','Dañados','Operativos','Comentarios']];
     inv.activos.forEach(function(a){rows.push([a.categoria,a.item,a.total,a.danados,a.operativos,(a.comentarios||'').replace(/"/g,'""')]);});
@@ -2149,17 +2177,29 @@ function InventarioView(props){
       rows.push(h('tr',{key:'add-'+cat},h('td',{colSpan:6},h('button',{onClick:function(){addActivo(cat);},style:{background:'var(--bg)',border:'1px dashed var(--border)',borderRadius:5,padding:'4px 12px',cursor:'pointer',fontSize:11,color:'var(--text-muted)',fontFamily:'inherit',width:'100%'}},'+ Agregar item a '+cat))));
     });
     return h('div',null,
-      h('div',{style:{display:'flex',justifyContent:'flex-end',marginBottom:10}},
+      h('div',{style:{display:'flex',justifyContent:'space-between',alignItems:'center',gap:8,marginBottom:10,flexWrap:'wrap'}},
+        h('div',{style:{display:'flex',gap:6}},
+          h('input',{type:'text',value:newCat,placeholder:'Nueva categoría (ej: Handhelds)',
+            onChange:function(e){setNewCat(e.target.value);},
+            onKeyDown:function(e){if(e.key==='Enter')addCategoria();},
+            style:{border:'1px solid var(--border)',borderRadius:6,padding:'6px 10px',fontSize:12,fontFamily:'inherit',background:'var(--surface)',color:'var(--text)',outline:'none',minWidth:200}}),
+          h('button',{className:'inv-btn inv-btn-add',onClick:addCategoria,disabled:!newCat.trim()},'+ Nueva categoría')
+        ),
         h('button',{className:'inv-btn inv-btn-count',onClick:downloadActivosCSV},'⬇ Descargar CSV')
       ),
-      h('div',{className:'inv-scroll'},
-        h('table',{className:'inv-table'},
-          h('thead',null,h('tr',null,
-            h('th',null,'Item'),h('th',{style:{textAlign:'center'}},'Total'),h('th',{style:{textAlign:'center'}},'Dañados'),h('th',{style:{textAlign:'center'}},'Operativos'),h('th',null,'Comentarios'),h('th',null,'')
-          )),
-          h('tbody',null,rows)
-        )
-      )
+      Object.keys(cats).length===0
+        ? h('div',{className:'mant-empty'},
+            h('div',{style:{fontSize:40,marginBottom:12}},'🗄'),
+            h('div',{style:{fontSize:16,fontWeight:600}},'No hay categorías de activos fijos todavía'),
+            h('div',{style:{fontSize:13,marginTop:6}},'Escribí un nombre arriba (ej: "Handhelds", "Radios") y tocá "+ Nueva categoría" para empezar'))
+        : h('div',{className:'inv-scroll'},
+            h('table',{className:'inv-table'},
+              h('thead',null,h('tr',null,
+                h('th',null,'Item'),h('th',{style:{textAlign:'center'}},'Total'),h('th',{style:{textAlign:'center'}},'Dañados'),h('th',{style:{textAlign:'center'}},'Operativos'),h('th',null,'Comentarios'),h('th',null,'')
+              )),
+              h('tbody',null,rows)
+            )
+          )
     );
   })();
   // ── ITEMS (unified insumos+libreria) ──
@@ -2862,6 +2902,250 @@ function MantenimientoView(props){
           onClick:function(e){e.stopPropagation();setLightbox(null);}},'✕')
       ),
       h('img',{src:lightbox.url,alt:'foto',className:'lightbox-img',onClick:function(e){e.stopPropagation();}})
+    )
+  );
+}
+// ── Entrenamientos ──
+function adherColor(p){ if(p===null||p===undefined) return '#888780'; return p>=90?'#10b981':p>0?'#f59e0b':'#ef4444'; }
+function parsePct(v){
+  if(v===undefined||v===null) return null;
+  var s=String(v).trim();
+  if(!s || /^n\/?a$/i.test(s)) return null;
+  var n=parseFloat(s.replace('%','').replace(',','.'));
+  return isNaN(n)?null:n;
+}
+function trainSplitRow(l){
+  if(l.indexOf('\t')!==-1)return l.split('\t').map(function(x){return x.trim();});
+  if(l.indexOf(';')!==-1)return l.split(';').map(function(x){return x.trim();});
+  return l.split(',').map(function(x){return x.trim();});
+}
+function EntrenamientosView(props){
+  var onSave=props.onSave||function(){};
+  var dataS=_useState(function(){
+    var base=props.data||{};
+    return {cursos:JSON.parse(JSON.stringify(base.cursos||[])),lideres:JSON.parse(JSON.stringify(base.lideres||[]))};
+  });
+  var tdata=dataS[0],setTdata=dataS[1];
+  var lastSavedS=_useState((props.data&&props.data.actualizado)||null); var lastSaved=lastSavedS[0],setLastSaved=lastSavedS[1];
+  var savedS=_useState(false); var saved=savedS[0],setSaved=savedS[1];
+  var firstRender=_useRef(true);
+  var skipAuto=_useRef(false);
+  var autoTimer=_useRef(null);
+  var bulkCursosS=_useState(''); var bulkCursos=bulkCursosS[0],setBulkCursos=bulkCursosS[1];
+  var bulkLideresS=_useState(''); var bulkLideres=bulkLideresS[0],setBulkLideres=bulkLideresS[1];
+  var qrS=_useState(null); var qrLink=qrS[0],setQrLink=qrS[1];
+
+  _useEffect(function(){
+    if(props.data){
+      skipAuto.current=true;
+      setTdata({cursos:JSON.parse(JSON.stringify(props.data.cursos||[])),lideres:JSON.parse(JSON.stringify(props.data.lideres||[]))});
+      if(props.data.actualizado)setLastSaved(props.data.actualizado);
+    }
+  },[props.data]);
+
+  function persist(next){
+    var stamp=new Date().toISOString();
+    onSave(Object.assign({},next,{actualizado:stamp}));
+    setLastSaved(stamp);
+    setSaved(true);setTimeout(function(){setSaved(false);},2500);
+  }
+  _useEffect(function(){
+    if(firstRender.current){firstRender.current=false;return;}
+    if(skipAuto.current){skipAuto.current=false;return;}
+    if(autoTimer.current)clearTimeout(autoTimer.current);
+    autoTimer.current=setTimeout(function(){persist(tdata);},1500);
+    return function(){if(autoTimer.current)clearTimeout(autoTimer.current);};
+  },[tdata]);
+  function sync(){persist(tdata);}
+
+  // ── Cursos ──
+  function updCurso(id,field,val){setTdata(function(prev){return Object.assign({},prev,{cursos:prev.cursos.map(function(c){return c.id===id?Object.assign({},c,{[field]:val}):c;})});});}
+  function addCurso(){
+    var nuevo={id:genId(),nombre:'',link:'',porcentaje:0,vence:''};
+    setTdata(function(prev){
+      var next=Object.assign({},prev,{cursos:[nuevo].concat(prev.cursos)});
+      persist(next);
+      return next;
+    });
+  }
+  function delCurso(id){setTdata(function(prev){return Object.assign({},prev,{cursos:prev.cursos.filter(function(c){return c.id!==id;})});});}
+  function procesarBulkCursos(){
+    var lineas=bulkCursos.split(/\r?\n/).map(function(l){return l.trim();}).filter(Boolean);
+    if(!lineas.length)return;
+    setTdata(function(prev){
+      var cursos=prev.cursos.map(function(c){return Object.assign({},c);});
+      var agregados=0,actualizados=0;
+      lineas.forEach(function(l,idx){
+        var c=trainSplitRow(l);
+        if(idx===0 && /^(curso|nombre)$/i.test((c[0]||'').trim()))return;
+        if(!c.length||!c[0])return;
+        var nombre=c[0].trim(); if(!nombre)return;
+        var pct=parsePct(c[1]);
+        var vence=(c[2]||'').trim();
+        var i=cursos.findIndex(function(x){return x.nombre.trim().toLowerCase()===nombre.toLowerCase();});
+        if(i>=0){
+          cursos[i]=Object.assign({},cursos[i],pct!==null?{porcentaje:pct}:{},vence?{vence:vence}:{});
+          actualizados++;
+        }else{
+          cursos.push({id:genId(),nombre:nombre,link:'',porcentaje:pct===null?0:pct,vence:vence});
+          agregados++;
+        }
+      });
+      var next=Object.assign({},prev,{cursos:cursos});
+      persist(next);
+      showToast('✓ '+agregados+' curso'+(agregados===1?'':'s')+' agregado'+(agregados===1?'':'s')+', '+actualizados+' actualizado'+(actualizados===1?'':'s'),'success');
+      return next;
+    });
+    setBulkCursos('');
+  }
+
+  // ── Líderes ──
+  function updLider(id,field,val){setTdata(function(prev){return Object.assign({},prev,{lideres:prev.lideres.map(function(l){return l.id===id?Object.assign({},l,{[field]:val}):l;})});});}
+  function addLider(){
+    var nuevo={id:genId(),nombre:'',rol:'',cursos:[]};
+    setTdata(function(prev){
+      var next=Object.assign({},prev,{lideres:[nuevo].concat(prev.lideres)});
+      persist(next);
+      return next;
+    });
+  }
+  function delLider(id){setTdata(function(prev){return Object.assign({},prev,{lideres:prev.lideres.filter(function(l){return l.id!==id;})});});}
+  function addLiderCurso(liderId){
+    setTdata(function(prev){return Object.assign({},prev,{lideres:prev.lideres.map(function(l){
+      return l.id===liderId?Object.assign({},l,{cursos:(l.cursos||[]).concat([{id:genId(),nombre:'',porcentaje:null}])}):l;
+    })});});
+  }
+  function updLiderCurso(liderId,cursoId,field,val){
+    setTdata(function(prev){return Object.assign({},prev,{lideres:prev.lideres.map(function(l){
+      if(l.id!==liderId)return l;
+      return Object.assign({},l,{cursos:l.cursos.map(function(c){return c.id===cursoId?Object.assign({},c,{[field]:val}):c;})});
+    })});});
+  }
+  function delLiderCurso(liderId,cursoId){
+    setTdata(function(prev){return Object.assign({},prev,{lideres:prev.lideres.map(function(l){
+      if(l.id!==liderId)return l;
+      return Object.assign({},l,{cursos:l.cursos.filter(function(c){return c.id!==cursoId;})});
+    })});});
+  }
+  function procesarBulkLideres(){
+    var lineas=bulkLideres.split(/\r?\n/).map(function(l){return l.trim();}).filter(Boolean);
+    if(!lineas.length)return;
+    setTdata(function(prev){
+      var lideres=prev.lideres.map(function(l){return Object.assign({},l,{cursos:(l.cursos||[]).map(function(c){return Object.assign({},c);})});});
+      var filas=0;
+      lineas.forEach(function(l,idx){
+        var c=trainSplitRow(l);
+        if(idx===0 && /^l[ií]der$/i.test((c[0]||'').trim()))return;
+        if(c.length<3)return;
+        var nombreLider=(c[0]||'').trim();
+        var rol=(c[1]||'').trim();
+        var nombreCurso=(c[2]||'').trim();
+        var pct=parsePct(c[3]);
+        if(!nombreLider||!nombreCurso)return;
+        var li=lideres.findIndex(function(x){return x.nombre.trim().toLowerCase()===nombreLider.toLowerCase();});
+        if(li<0){lideres.push({id:genId(),nombre:nombreLider,rol:rol,cursos:[]});li=lideres.length-1;}
+        else if(rol)lideres[li].rol=rol;
+        var ci=lideres[li].cursos.findIndex(function(x){return x.nombre.trim().toLowerCase()===nombreCurso.toLowerCase();});
+        if(ci>=0)lideres[li].cursos[ci]=Object.assign({},lideres[li].cursos[ci],{porcentaje:pct});
+        else lideres[li].cursos.push({id:genId(),nombre:nombreCurso,porcentaje:pct});
+        filas++;
+      });
+      var next=Object.assign({},prev,{lideres:lideres});
+      persist(next);
+      showToast('✓ '+filas+' fila'+(filas===1?'':'s')+' de líderes procesada'+(filas===1?'':'s'),'success');
+      return next;
+    });
+    setBulkLideres('');
+  }
+
+  var cursos=tdata.cursos||[];
+  var lideres=tdata.lideres||[];
+
+  return h('div',{className:'mant-wrap'},
+    h('div',{className:'mant-hdr'},
+      h('span',{className:'mant-title'},'🎓 Entrenamientos '+CONFIG.SITE_NAME),
+      h('div',{className:'train-updated'},'🕐 Actualizado: '+(lastSaved?fmtFechaHora(lastSaved):'—')),
+      h('button',{className:'mant-btn mant-btn-sync',onClick:sync},saved?'✓ Guardado':'💾 Sincronizar')
+    ),
+
+    h('div',{className:'train-section-title'},'📊 Reps — Adherencia por curso'),
+    h('div',{className:'train-bulk-card'},
+      h('div',{style:{fontWeight:700,fontSize:13,marginBottom:6}},'📥 Carga masiva'),
+      h('div',{className:'train-bulk-hint'},'Pegá desde Excel: ',h('code',null,'Curso   Porcentaje   Vence'),' — una fila por curso, separada por tabulador o punto y coma. Si el curso ya existe (por nombre) se actualiza, si no se agrega.'),
+      h('textarea',{className:'train-bulk-textarea',value:bulkCursos,onChange:function(e){setBulkCursos(e.target.value);},placeholder:'Desafío EnoE | HISP\t71\tMLA 5/6 MLU 8/5'}),
+      h('button',{className:'mant-btn mant-btn-add',style:{marginTop:8},onClick:procesarBulkCursos,disabled:!bulkCursos.trim()},'✓ Procesar')
+    ),
+    h('button',{className:'mant-btn mant-btn-add',style:{marginBottom:12},onClick:addCurso},'+ Agregar curso'),
+    cursos.length===0
+      ? h('div',{className:'mant-empty'},'No hay cursos cargados todavía.')
+      : cursos.map(function(c){
+          return h('div',{key:c.id,className:'train-course-card'},
+            h('div',{className:'train-course-row-top'},
+              h('input',{className:'train-course-name',value:c.nombre,placeholder:'Nombre del curso',onChange:function(e){updCurso(c.id,'nombre',e.target.value);}}),
+              c.link ? h('button',{className:'train-qr-badge',type:'button',onClick:function(){setQrLink(c.link);}},'🔗 QR') : null,
+              h('div',{style:{display:'flex',alignItems:'center',gap:4}},
+                h('input',{type:'number',min:0,max:100,className:'train-course-pct-input',value:c.porcentaje,
+                  style:{color:adherColor(c.porcentaje)},
+                  onChange:function(e){updCurso(c.id,'porcentaje',Math.max(0,Math.min(100,parseFloat(e.target.value)||0)));}}),
+                h('span',{style:{color:adherColor(c.porcentaje),fontWeight:800}},'%')
+              )
+            ),
+            h('div',{className:'progress-cell',style:{marginBottom:8}},
+              h('div',{className:'progress-track',style:{width:'100%'}},
+                h('div',{className:'progress-fill',style:{width:c.porcentaje+'%',background:adherColor(c.porcentaje)}}))
+            ),
+            h('div',{className:'train-course-bottom'},
+              h('input',{type:'text',className:'train-course-vence',placeholder:'Vence (ej: 10/04)',value:c.vence,onChange:function(e){updCurso(c.id,'vence',e.target.value);}}),
+              h('input',{type:'text',className:'mant-txt',style:{minWidth:160,flex:1},placeholder:'Link (opcional, para QR)',value:c.link,onChange:function(e){updCurso(c.id,'link',e.target.value);}}),
+              h('button',{className:'train-del',title:'Eliminar curso',onClick:function(){delCurso(c.id);}},'🗑')
+            )
+          );
+        }),
+
+    h('div',{className:'train-section-title'},'👤 Líderes'),
+    h('div',{className:'train-bulk-card'},
+      h('div',{style:{fontWeight:700,fontSize:13,marginBottom:6}},'📥 Carga masiva'),
+      h('div',{className:'train-bulk-hint'},'Pegá desde Excel: ',h('code',null,'Líder   Rol   Curso   Porcentaje'),' — una fila por cada par líder+curso. Dejá el porcentaje vacío o "N/A" si no aplica.'),
+      h('textarea',{className:'train-bulk-textarea',value:bulkLideres,onChange:function(e){setBulkLideres(e.target.value);},placeholder:'Sebastian Nievas\tSite Líder\tDESAFIO NTM\t100'}),
+      h('button',{className:'mant-btn mant-btn-add',style:{marginTop:8},onClick:procesarBulkLideres,disabled:!bulkLideres.trim()},'✓ Procesar')
+    ),
+    h('button',{className:'mant-btn mant-btn-add',style:{marginBottom:12},onClick:addLider},'+ Agregar líder'),
+    lideres.length===0
+      ? h('div',{className:'mant-empty'},'No hay líderes cargados todavía.')
+      : lideres.map(function(l){
+          var pcts=(l.cursos||[]).map(function(c){return c.porcentaje;}).filter(function(p){return p!==null&&p!==undefined;});
+          var pctGeneral=pcts.length?Math.round(pcts.reduce(function(a,b){return a+b;},0)/pcts.length):null;
+          return h('div',{key:l.id,className:'train-leader-card'},
+            h('div',{className:'train-leader-hdr'},
+              h('div',null,
+                h('input',{className:'train-leader-name',value:l.nombre,placeholder:'Nombre',onChange:function(e){updLider(l.id,'nombre',e.target.value);}}),
+                h('input',{className:'train-leader-rol',value:l.rol,placeholder:'Rol',onChange:function(e){updLider(l.id,'rol',e.target.value);}})
+              ),
+              h('div',{style:{display:'flex',alignItems:'center',gap:10}},
+                h('span',{className:'train-leader-pct',style:{color:adherColor(pctGeneral)}},pctGeneral===null?'—':pctGeneral+'%'),
+                h('button',{className:'train-del',title:'Eliminar líder',onClick:function(){delLider(l.id);}},'🗑')
+              )
+            ),
+            h('div',{className:'train-leader-courses'},
+              (l.cursos||[]).map(function(c){
+                return h('div',{key:c.id,className:'train-leader-course'},
+                  h('input',{className:'train-leader-course-name',value:c.nombre,placeholder:'Curso',onChange:function(e){updLiderCurso(l.id,c.id,'nombre',e.target.value);}}),
+                  h('input',{className:'train-leader-course-pct',value:c.porcentaje===null||c.porcentaje===undefined?'':c.porcentaje,placeholder:'N/A',
+                    style:{color:adherColor(c.porcentaje)},
+                    onChange:function(e){var v=e.target.value.trim();updLiderCurso(l.id,c.id,'porcentaje',v===''?null:(parseFloat(v.replace(',','.'))||0));}}),
+                  h('button',{className:'train-del',title:'Quitar curso',onClick:function(){delLiderCurso(l.id,c.id);}},'✕')
+                );
+              })
+            ),
+            h('button',{className:'mant-btn',style:{marginTop:8,background:'var(--bg)',color:'var(--text)',border:'1px solid var(--border)'},onClick:function(){addLiderCurso(l.id);}},'+ curso')
+          );
+        }),
+
+    qrLink && h('div',{className:'train-qr-pop',onClick:function(){setQrLink(null);}},
+      h('div',{className:'train-qr-box',onClick:function(e){e.stopPropagation();}},
+        h('img',{src:'https://api.qrserver.com/v1/create-qr-code/?size=180x180&data='+encodeURIComponent(qrLink),alt:'QR',width:180,height:180}),
+        h('div',{style:{marginTop:10}},h('button',{className:'mant-btn mant-btn-sync',onClick:function(){setQrLink(null);}},'Cerrar'))
+      )
     )
   );
 }
@@ -4069,7 +4353,8 @@ var TABS = [
   {k:'tier1',label:'📈 TIER 1'},
   {k:'inventario',label:'📦 Inventario'},
   {k:'mantenimiento',label:'🔧 Mantenimiento'},
-  {k:'layout',label:'📐 Layout'}
+  {k:'layout',label:'📐 Layout'},
+  {k:'entrenamientos',label:'🎓 Entrenamientos'}
 ];
 function App(props){
   var currentUser=props.currentUser, onLogout=props.onLogout;
@@ -4108,6 +4393,7 @@ function App(props){
   var saveEquip=makeSaver('equipamiento');
   var saveMant=makeSaver('mantenimiento');
   var saveLayout=makeSaver('layout');
+  var saveTrain=makeSaver('entrenamientos');
 
   if(loading) return h('div',{style:{padding:60,textAlign:'center',color:'var(--text-muted)'}},'Cargando...');
 
@@ -4134,7 +4420,8 @@ function App(props){
       page==='tier1' && h(Tier1View,{tier1:data.tier1,tier1Hist:data.tier1Hist,onSave:saveTier1}),
       page==='inventario' && h(InventarioView,{inventory:data.inventory,equipamiento:data.equipamiento,onSave:saveInventory,onSaveEquip:saveEquip}),
       page==='mantenimiento' && h(MantenimientoView,{mantenimiento:data.mantenimiento,onSave:saveMant}),
-      page==='layout' && h(LayoutView,{layout:data.layout,onSave:saveLayout})
+      page==='layout' && h(LayoutView,{layout:data.layout,onSave:saveLayout}),
+      page==='entrenamientos' && h(EntrenamientosView,{data:data.entrenamientos,onSave:saveTrain})
     )
   );
 }
