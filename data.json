@@ -72,18 +72,6 @@
   "inventory": {
     "items": [
       {
-        "id": "846d8b3c-9e1c-4cd1-b169-b4516103a8d1",
-        "tipo": "Insumo",
-        "item": "",
-        "minimo": 0,
-        "conteos": [
-          {
-            "fecha": "20/09/2026",
-            "valor": 0
-          }
-        ]
-      },
-      {
         "id": "5d9e2735-f407-4342-bd0f-5395a906b36e",
         "tipo": "Insumo",
         "item": "Bolsa N°1",
